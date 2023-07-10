@@ -1,4 +1,4 @@
-# pds-project-3
+# PDS Grupo 3
 # Projeto
 
 Para o `[cliente]`, cujo `[problema que precisa ser resolvido]`, o `[projeto]` é um `[categoria do produto],`que diferentemente do `[alternativa`], o nosso produto `[diferença chave]`.
