@@ -5,15 +5,15 @@ Para o `Instituto de Computação da UFAL`, cujo `local em que ficam os materiai
 
 ### Problemas
 
-1) Problema 1
-2) Problema 2
-3) Problema 3
+1) Falta de padronização quanto a organização dos materiais disponibilizados 
+2) Visibilidade baixa do local em que estão disponibilizados os materiais de apoio
+3) Interface não tão amigável
 
 ### Expectativas
 
-1) Expectativa 1
-2) Expectativa 2
-3) Expectativa 3
+1) Criar um ambiente que possa ajudar alunos nas disciplinas de computação do IC
+2) Facilitar a busca por materiais de apoio
+3) Melhorar a quantidade/qualidade de materiais disponibilizados
 
 ## Personas
 
