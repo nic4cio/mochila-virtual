@@ -1,7 +1,7 @@
 # PDS Grupo 3
 # Projeto
 
-Para o `[cliente]`, cujo `[problema que precisa ser resolvido]`, o `[projeto]` é um `[categoria do produto],`que diferentemente do `[alternativa`], o nosso produto `[diferença chave]`.
+Para o `Instituto de Computação da UFAL`, cujo `local em que ficam os materiais de apoio às disciplinas para os alunos terem acesso não tem uma padronização, não é tão visível e há poucos materiais`, o `[?] - Mochila Virtual do IC` é um `sistema de gerenciamento de conteúdo,`que diferentemente do `modo como os materiais são disponibilizados e organizados no google drive`, o nosso produto `fornece uma solução mais organizada e centralizada dos conteúdos que irá auxiliar os alunos a acessar materiais de apoio que os ajudem nas disciplinas do curso de Ciência da Computação, com ferramentas de produção de conteúdo para postagem e disponibilização, e uma interface amigável da plataforma, que traga uma boa experiência e excelente interaçao do usuário`.
 
 ### Problemas
 
