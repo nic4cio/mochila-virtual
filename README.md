@@ -1,7 +1,7 @@
 # PDS Grupo 3
 # Projeto
 
-Nosso sistema será voltado para o Instituto de Computação da UFAL, cujo não existe um local acessível dos conteúdos das disciplinas dos cursos, que seja atualizado frequentemente e que tenha uma qualidade e avaliação eficiente dos materiais disponibilizados. A Mochila Virtual do IC é uma plataforma de gestão e disponibilização de conteúdos digitais das disciplinas do IC, com curadoria dos mesmos e que tenha disponibilidade para integração com outras ferramentas que auxiliem o estudante a ter conteúdo de apoio de qualidade durante a sua trajetória no curso, que diferentemente do Google Drive, o nosso produto oferece um ambiente multimídia de conteúdos que serão disponibilizados através de uma curadoria, composta por curadores (em geral alunos que já pagaram as disciplinas ou monitores das mesmas) que tenham interesse e comprometimento em avaliar o conteúdo a ser disponibilizado, de forma que, antes de ficarem disponíveis para acesso, passarão por um processo rigoroso de avaliação e triagem, visando a disponibilização de conteúdos corretos, atualizados, relevantes e de qualidade.
+Nosso sistema será voltado para o Instituto de Computação da UFAL, cujo não existe um local acessível dos conteúdos das disciplinas dos cursos, que seja atualizado frequentemente e que tenha uma qualidade e avaliação eficiente dos materiais disponibilizados. A Mochila Virtual do IC é uma plataforma de gestão e disponibilização de conteúdos digitais das disciplinas do IC, com curadoria dos mesmos e que tenha disponibilidade para integração com outras ferramentas que auxiliem o estudante a ter conteúdo de apoio de qualidade durante a sua trajetória no curso, que diferentemente do Google Drive, o nosso produto oferece um ambiente multimídia de conteúdos que serão disponibilizados através de uma curadoria, de forma que, antes de ficarem disponíveis para acesso, passarão por um processo rigoroso de avaliação e triagem, visando a disponibilização de conteúdos corretos, atualizados, relevantes e de qualidade.
 
 ### Problemas
 
@@ -68,14 +68,15 @@ Acreditamos que esse `Marco 3` vai conseguir `resultado esperado`. Saberemos que
 
 #### Funcionalidades
 
-- [] Fazer os marcos semanais.
-- [] Definir o escopo do sistema.
-- [] Definir as funcionalidades.
-- [] Fazer o diagrama de Ishikawa.
-- [] Fazer o mapa de requisitos.
+- [x] Fazer os marcos semanais.
+- [x] Definir o escopo do sistema.
+- [x] Definir as funcionalidades.
+- [x] Fazer o diagrama de Ishikawa.
+- [x] Fazer o mapa de requisitos.
 - [x] Falar com o Willy sobre a forma de avaliar o curador.
 - [x] Fazer o diagrama de stakeholders.
 - [x] Saber se é possível fazer a leitura do histórico analítico.
+- [x] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -86,8 +87,11 @@ Acreditamos que esse `Marco 4` vai conseguir `resultado esperado`. Saberemos que
 #### Funcionalidades
 
 - [ ] Falar com o Paes sobre a forma de avaliar o curador.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Fechar o escopo do projeto com o Orientador oficial.
+- [ ] Fazer o FIGMA.
+- [ ] Criação de conta de todos.
+- [ ] Aprender a usar o Jira.
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -97,9 +101,10 @@ Acreditamos que esse `Marco 5` vai conseguir `resultado esperado`. Saberemos que
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Terminar o FIGMA.
+- [ ] Definir a STACK do projeto.
+- [ ] Baixar as configurações necessárias.
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -109,9 +114,9 @@ Acreditamos que esse `Marco 6` vai conseguir `resultado esperado`. Saberemos que
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Fazer Tela de Login.
+- [ ] Fazer tela de Cadastro.
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -121,9 +126,9 @@ Acreditamos que esse `Marco 7` vai conseguir `resultado esperado`. Saberemos que
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Fazer tela principal inicial.
+- [ ] Fazer tela principal com login.
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -133,9 +138,10 @@ Acreditamos que esse `Marco 8` vai conseguir `resultado esperado`. Saberemos que
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Fazer a tela da curadoria.
+- [ ] Fazer tela de meus históricos.
+- [ ] Fazer tela de avaliação.
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -145,9 +151,10 @@ Acreditamos que esse `Marco 9` vai conseguir `resultado esperado`. Saberemos que
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Finalizar todas as telas.
+- [ ] Refinamento do front
+- [ ] Inicio do back
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -157,9 +164,8 @@ Acreditamos que esse `Marco 10` vai conseguir `resultado esperado`. Saberemos qu
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Criação do envio de email
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -169,9 +175,8 @@ Acreditamos que esse `Marco 11` vai conseguir `resultado esperado`. Saberemos qu
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Back
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -181,9 +186,8 @@ Acreditamos que esse `Marco 12` vai conseguir `resultado esperado`. Saberemos qu
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Back
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -193,9 +197,8 @@ Acreditamos que esse `Marco 13` vai conseguir `resultado esperado`. Saberemos qu
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] Finalizar Back.
+- [ ] Atas da reuniões.
 
 [Release Notes ](release_notes_1.md)
 
@@ -205,9 +208,7 @@ Acreditamos que esse `Marco 14` vai conseguir `resultado esperado`. Saberemos qu
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] problemas a resolver.
 
 [Release Notes ](release_notes_1.md)
 
@@ -217,9 +218,7 @@ Acreditamos que esse `Marco 15` vai conseguir `resultado esperado`. Saberemos qu
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] problemas a resolver.
 
 [Release Notes ](release_notes_1.md)
 
@@ -229,9 +228,7 @@ Acreditamos que esse `Marco 16` vai conseguir `resultado esperado`. Saberemos qu
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] problemas a resolver.
 
 [Release Notes ](release_notes_1.md)
 
@@ -241,9 +238,7 @@ Acreditamos que esse `Marco 17` vai conseguir `resultado esperado`. Saberemos qu
 
 #### Funcionalidades
 
-- [x] Funcionalidade 1.
-- [x] Funcionalidade 2.
-- [x] Funcionalidade 3.
+- [ ] problemas a resolver.
 
 [Release Notes ](release_notes_1.md)
 
@@ -267,40 +262,52 @@ Acreditamos que esse `Marco 17` vai conseguir `resultado esperado`. Saberemos qu
 ## Componentes
 
 ### Aplicativo Web 
-[descrição breve]
+Aplicativo Web de Gestão e Curadoria de conteúdos digitais das disciplinas doos cursos no IC-UFAL.
 https://github.com/edgebr/templates-artefatos
 
 ### Aplicativo Mobile
-[descrição breve]
+Não terá
 https://github.com/edgebr/templates-artefatos
 
 
 ## Stakeholders
 
 Stakeholder 1 <br />
-*Key User - Cargo na Empresa X* <br />
-*E-mail* <br />
-(xx) xxxxx-xxxx
+*Alunos* <br />
 
 Stakeholder 2 <br />
-*Key User - Cargo na Empresa X* <br />
-*E-mail* <br />
-(xx) xxxxx-xxxx
+*Professores* <br />
+
+Stakeholder 3 <br />
+*Monitores* <br />
+
+Stakeholder 4 <br />
+*Secretaria* <br />
 
 ## Equipe
 
 Membro 1 <br />
-*Gerente de Projeto* <br />
+*Gerente de Projeto* Gabriel Nicácio <br />
 *E-mail* <br />
 https://github.com/edgebr
 
 Membro 2 <br />
-*Desenvolvedor Sênior* <br />
+*Desenvolvedor* Murilo Urquiza<br />
 *E-mail* <br />
 https://github.com/edgebr
 
 Membro 3 <br />
-*Analista de Qualidade Pleno* <br />
+*Desenvolvedor* Vinicius Holanda<br />
+*E-mail* <br />
+https://github.com/edgebr
+
+Membro 4 <br />
+*Desenvolvedor* Arthur Sampaio<br />
+*E-mail* <br />
+https://github.com/edgebr
+
+Membro 5 <br />
+*Desenvolvedor* Rayssa<br />
 *E-mail* <br />
 https://github.com/edgebr
 
