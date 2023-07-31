@@ -1,4 +1,7 @@
 # PDS Grupo 3
+
+https://drive.google.com/drive/folders/1ToxxI54TJrEVv7LABEoC8S9FQoNPplKR?usp=sharing
+
 # Projeto
 
 Nosso sistema será voltado para o Instituto de Computação da UFAL, cujo não existe um local acessível dos conteúdos das disciplinas dos cursos, que seja atualizado frequentemente e que tenha uma qualidade e avaliação eficiente dos materiais disponibilizados. A Mochila Virtual do IC é uma plataforma de gestão e disponibilização de conteúdos digitais das disciplinas do IC, com curadoria dos mesmos e que tenha disponibilidade para integração com outras ferramentas que auxiliem o estudante a ter conteúdo de apoio de qualidade durante a sua trajetória no curso, que diferentemente do Google Drive, o nosso produto oferece um ambiente multimídia de conteúdos que serão disponibilizados através de uma curadoria, de forma que, antes de ficarem disponíveis para acesso, passarão por um processo rigoroso de avaliação e triagem, visando a disponibilização de conteúdos corretos, atualizados, relevantes e de qualidade.
