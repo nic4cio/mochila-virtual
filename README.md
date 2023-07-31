@@ -289,28 +289,28 @@ Stakeholder 4 <br />
 
 ## Equipe
 
-Membro 1 <br />
-*Gerente de Projeto* Gabriel Nicácio <br />
+Gabriel Nicácio <br />
+*Gerente de Projeto*  <br />
 *E-mail* <br />
 https://github.com/edgebr
 
-Membro 2 <br />
-*Desenvolvedor* Murilo Urquiza<br />
+Murilo Urquiza <br />
+*Desenvolvedor* <br />
 *E-mail* <br />
 https://github.com/edgebr
 
-Membro 3 <br />
-*Desenvolvedor* Vinicius Holanda<br />
+Vinicius Holanda <br />
+*Desenvolvedor* <br />
 *E-mail* <br />
 https://github.com/edgebr
 
-Membro 4 <br />
-*Desenvolvedor* Arthur Sampaio<br />
+Arthur Sampaio <br />
+*Desenvolvedor* <br />
 *E-mail* <br />
 https://github.com/edgebr
 
-Membro 5 <br />
-*Desenvolvedor* Rayssa<br />
+Rayssa <br />
+*Desenvolvedor* <br />
 *E-mail* <br />
 https://github.com/edgebr
 
