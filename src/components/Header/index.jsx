@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import pdsLogo from '../../assets/pdslogo.svg';
 import SearchBar from '../SearchBar';
+import { Link } from 'react-router-dom';
 
 function Header () {
     return (
@@ -18,7 +19,7 @@ function Header () {
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Matérias</Nav.Link>
                             <Nav.Link href="#features">Seja um Curador</Nav.Link>
-                            <Nav.Link href="#pricing">Entrar</Nav.Link>
+                            <Nav.Link href="#pricing"><Link to="/login">Entrar</Link></Nav.Link>
                             <Nav.Link href="#pricing">Registre-se</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
