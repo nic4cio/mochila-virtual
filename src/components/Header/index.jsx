@@ -18,8 +18,8 @@ function Header () {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Matérias</Nav.Link>
-                            <Nav.Link href="#features">Seja um Curador</Nav.Link>
-                            <Nav.Link href="#pricing"><Link to="/login">Entrar</Link></Nav.Link>
+                            <Nav.Link href="#pricing">Seja um curador</Nav.Link>
+                            <Link to="/login"><Nav.Link href="#login" >Entrar</Nav.Link></Link>
                             <Nav.Link href="#pricing">Registre-se</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
