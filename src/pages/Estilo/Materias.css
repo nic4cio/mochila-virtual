@@ -18,7 +18,9 @@ footer {
 }
 
 main {
-    margin-left: 250px;
+    position: relative;
+    left: 20%;
+    max-width: 1250px;
 }
 
 .logo{

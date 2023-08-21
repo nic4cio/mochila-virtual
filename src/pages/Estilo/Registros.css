@@ -53,11 +53,11 @@ thead{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    width: 83vh;
+    height: 90vh;
+    width: 100vh;
     font-family: 'Poppins', sans-serif;
     background-image: url();
-    margin: 50px auto;
+    margin: 100px auto;
     border: solid 5px black;
     border-radius: 50px;
     box-shadow: 0px 0px 30px 10px teal;
@@ -72,11 +72,11 @@ thead{
     width: 63vh;
     font-family: 'Poppins', sans-serif;
     background-image: url();
-    margin: 50px auto;
+    margin: 100px auto;
 }
 
 .boxRegistros {
-    padding: 0px;
+    padding: 0;
     margin-bottom: 20px;
     text-align: center;
 }
