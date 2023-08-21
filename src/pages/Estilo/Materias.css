@@ -1,0 +1,164 @@
+body {
+    background-color: #343434;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 10px 0;
+    height: 100px;
+}
+
+footer {
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+main {
+    margin-left: 400px;
+}
+
+.logo{
+    width: 90px;
+    margin-left: 400px;
+    margin-top: 10px
+}
+
+.search-container {
+    float: right;
+    margin-right: 1070px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.search-input {
+    border: none;
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: #ADADAD;
+    outline: none;
+}
+
+.box,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.eletivas-ec,
+.box-computacao-visual,
+.box-sistemas-inteligentes,
+.box-sistemas-de-computacao,
+.box-sistemas-de-informacao {
+    border: none;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-color: #E9FD7A;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    line-height: 100px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.box {
+    background-color: #FF7474;
+}
+
+.box2 {
+    background-color: #8979FD;
+}
+
+.box3 {
+    background-color: #F27FEF;
+}
+
+.box4 {
+    background-color: #87E4FE;
+}
+
+.box5 {
+    background-color: #FCD878;
+}
+
+.box6 {
+    background-color: #90FCDF;
+}
+
+.box7 {
+    background-color: #E9FD7A;
+}
+
+.box-computacao-visual, .box8{
+    background-color: #7394FD;
+}
+.box-sistemas-inteligentes, .eletivas-ec{
+    background-color: #F8B076;
+
+}
+.box-sistemas-de-computacao{
+    background-color: #F27ED6;
+
+}
+.box-sistemas-de-informacao{
+    background-color: #F24430;
+
+} 
+
+.box:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover,
+.box5:hover,
+.box6:hover,
+.box7:hover,
+.box-computacao-visual:hover,
+.box-sistemas-inteligentes:hover,
+.box-sistemas-de-computacao:hover,
+.box-sistemas-de-informacao:hover {
+    background-color: #FFF;
+    color: black;
+    width: 300px;
+    cursor: pointer;
+}
+
+.indicador-periodo {
+    color: white;
+    margin-top: 20px;
+}
+
+.scroll-container {
+    width: 79%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: darkgray lightgray;
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 9px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 20px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background-color: #343434;
+    border-radius: 2px;
+}

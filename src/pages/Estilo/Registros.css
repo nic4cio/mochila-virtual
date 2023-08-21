@@ -1,0 +1,138 @@
+thead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 20px 100px;
+} 
+
+.logoRegistros {
+    display: flex;
+    align-items: center;
+}
+
+.logoRegistros img {
+    width: 80px;
+    height: 70px;
+    margin-right: 40px;
+}
+
+.logoRegistros form input {
+    padding: 10px 20px;
+    background-color: #ADADAD;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.menuRegistros {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menuRegistros span {
+    margin-right: 30px;
+}
+
+.menuRegistros a {
+    text-decoration: none;
+    color: #ffffff; 
+}
+
+.menuRegistros a span {
+    color: black;
+    background-color: #78D6CF;
+    padding: 13px;
+    border-radius: 28px;
+}
+
+.containerRegistros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 83vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: url();
+    margin: 50px auto;
+    border: solid 5px black;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px 10px teal;
+}
+
+.container-senhaRegistros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 63vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: url();
+    margin: 50px auto;
+}
+
+.boxRegistros {
+    padding: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.boxRegistros h3 {
+    font-size: 35px;
+    color: white;
+}
+
+.boxRegistros img {
+    width: 130px;
+    height: 130px;
+}
+
+.boxRegistros form input, 
+.boxRegistros form button {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxRegistros input[type="text"],
+.boxRegistros input[type="password"] {
+    padding: 25px 30px;
+    background-color: #D9D9D9;
+    border: solid #D9D9D9;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.boxRegistros a {
+    color: #0AF8A2;
+    text-align: left;
+    margin: 30px;
+}
+
+.boxRegistros span a {
+    margin: 30px 0;
+}
+
+.verdeRegistros {
+    color: #0AF8A2;
+}
+
+.boxRegistros button {
+    background-color: #35E3F7;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 15px 90px;
+    border: solid #35E3F7;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.laranjaRegistros {
+    color: #BF7A47;
+} 
