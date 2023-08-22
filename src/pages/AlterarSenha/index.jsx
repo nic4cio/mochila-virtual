@@ -13,9 +13,9 @@ function AlterarSenha() {
         <TituloImagem titulo="Alteração de senha"/>
         <div className="boxRegistros">
           <form>
-            <input type="password" placeholder="Senha" size="35"/>
-            <input type="password" placeholder="Confirmar senha" size="35"/>
-            <input type="password" placeholder="Nova senha" size="35"/>
+            <input type="password" placeholder="Senha" size="25"/>
+            <input type="password" placeholder="Confirmar senha" size="25"/>
+            <input type="password" placeholder="Nova senha" size="25"/>
             <button type="submit">Confirmar</button>
           </form>
         </div>

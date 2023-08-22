@@ -3,7 +3,7 @@ import MenuCabecalho from '../MenuCabecalho/index.jsx';
 
 function Cabecalho() {
     return (
-        <thead> 
+        <thead className='cabecalhoRegistro'> 
           <BuscarCabecalho />
           <MenuCabecalho />
         </thead>

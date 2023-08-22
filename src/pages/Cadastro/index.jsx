@@ -15,9 +15,9 @@ function Cadastrar() {
         <TituloImagem titulo="Cadastre-se agora!"/>
         <div className="boxRegistros">
           <form>
-            <input type="text" placeholder="Email" size="35"/>
-            <input type="password" placeholder="Senha" size="35"/>
-            <input type="password" placeholder="Confirmar senha" size="35"/>
+            <input type="text" placeholder="Email" size="25"/>
+            <input type="password" placeholder="Senha" size="25"/>
+            <input type="password" placeholder="Confirmar senha" size="25"/>
             <span className="verdeRegistros">Já possui uma conta? <Link to="/login">Clique aqui para fazer login!</Link></span>
             <button type="submit">Entrar</button>
           </form>

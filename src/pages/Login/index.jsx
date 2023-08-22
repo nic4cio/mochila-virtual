@@ -15,8 +15,8 @@ function App() {
         <TituloImagem titulo="Olá, estudante!"/>
         <div className="boxRegistros">
           <form>
-            <input type="text" placeholder="Email" size="35"/>
-            <input type="password" placeholder="Senha" size="35"/>
+            <input type="text" placeholder="Email" size="25"/>
+            <input type="password" placeholder="Senha" size="25"/>
             <Link to="/esqueceu-senha">Esqueceu a senha?</Link>
             <Link to="/cadastro">Cadastre-se agora!</Link>
             <button type="submit">Entrar</button>

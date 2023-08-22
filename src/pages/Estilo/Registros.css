@@ -1,9 +1,9 @@
-thead{
+.cabecalhoRegistro {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    margin: 20px 100px;
+    margin: 20px 200px;
 } 
 
 .logoRegistros {
@@ -12,28 +12,28 @@ thead{
 }
 
 .logoRegistros img {
-    width: 80px;
-    height: 70px;
+    width: 65px;
+    height: 60px;
     margin-right: 40px;
 }
 
 .logoRegistros form input {
-    padding: 10px 20px;
+    padding: 10px 20px 10px 30px;
     background-color: #ADADAD;
     border-style: solid;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .menuRegistros {
     display: flex;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
 .menuRegistros span {
-    margin-right: 30px;
+    margin-left: 30px;
 }
 
 .menuRegistros a {
@@ -46,6 +46,7 @@ thead{
     background-color: #78D6CF;
     padding: 13px;
     border-radius: 28px;
+    margin-left: 0px;
 }
 
 .containerRegistros {
@@ -53,11 +54,10 @@ thead{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    width: 83vh;
+    height: 65vh;
+    width: 65vh;
     font-family: 'Poppins', sans-serif;
-    background-image: url();
-    margin: 50px auto;
+    margin: 80px auto;
     border: solid 5px black;
     border-radius: 50px;
     box-shadow: 0px 0px 30px 10px teal;
@@ -68,11 +68,10 @@ thead{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    width: 63vh;
+    height: 65vh;
+    width: 65vh;
     font-family: 'Poppins', sans-serif;
-    background-image: url();
-    margin: 50px auto;
+    margin: 80px auto;
 }
 
 .boxRegistros {
@@ -99,7 +98,7 @@ thead{
 
 .boxRegistros input[type="text"],
 .boxRegistros input[type="password"] {
-    padding: 25px 30px;
+    padding: 15px 10px;
     background-color: #D9D9D9;
     border: solid #D9D9D9;
     border-radius: 20px;
@@ -127,12 +126,13 @@ thead{
     color: black;
     cursor: pointer;
     font-size: 20px;
-    padding: 15px 90px;
+    padding: 15px 50px;
     border: solid #35E3F7;
     border-radius: 20px;
-    margin: 20px auto;
+    margin: 20px auto 0px;
 }
 
 .laranjaRegistros {
     color: #BF7A47;
+    margin: 20px;
 } 

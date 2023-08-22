@@ -5,7 +5,7 @@ function BuscarCabecalho() {
         <div className="logoRegistros">
             <img alt="" src={logoImage}/>
             <form>
-              <input type="text" size="30" placeholder="Buscar materiais, disciplinas, ..."></input>
+              <input type="text" size="25" placeholder="Buscar materiais, disciplinas, ..."></input>
             </form>
         </div>
     );
