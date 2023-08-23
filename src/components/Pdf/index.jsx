@@ -37,12 +37,12 @@ export default function Test() {
   
   return (
     <>
-    <div style={{ height: '50%' }}>
+    <div >
       <Document 
         file={pdf}
         onLoadSuccess={onDocumentLoadSuccess}
       >
-        <Page pageNumber={pageNumber} width={300} height={100}/>
+        <Page pageNumber={pageNumber} width={1000}/>
       </Document>
       <div>
         <div className="pagec">

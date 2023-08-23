@@ -1,14 +1,43 @@
 .corpoConteudo {
-    background-color: antiquewhite;
+    background-color: #1F2A2F;
     display: flex;
     flex-direction: column;
     justify-content: top; 
     align-items: left;
-    height: 100vh;
+    min-height: 100vh;
     width: 130vh;
     margin: 0px auto;
+    padding: 30px 100px 0px;
+    color: white;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+.tituloH6Conteudo {
+    color: #79573C;
 }
 
 .pdfConteudo {
-    max-width: 50vh;
+    max-height: 70vh;
+    margin: 0px auto;
+    overflow: auto;
+    border: solid 1px white;
+    border-radius: 10px;
+}
+
+.abaxioPDFConteudo {
+    margin-top: 15px;
+}
+
+.linkConteudo a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0px 20px; 
+    background-color: #0D333F;
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.paddingLeftConteudo {
+    padding-left: 320px;
 }
