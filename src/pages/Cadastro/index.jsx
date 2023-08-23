@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function Cadastrar() {
   return (
-    <div>
+    <div className='imageRegistros'>
       <FontePoppins />
       <Cabecalho />
       <tbody className="container-senhaRegistros">

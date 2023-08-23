@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <div className='imageRegistros'>
       <FontePoppins />
       <Cabecalho />
       <tbody className="containerRegistros">

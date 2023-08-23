@@ -1,3 +1,8 @@
+.imageRegistros {
+    background-image: url('../../assets/teste2.jpeg');
+    min-height: 100vh;
+}
+
 .cabecalhoRegistro {
     display: flex;
     justify-content: space-between;
@@ -61,6 +66,7 @@
     border: solid 5px black;
     border-radius: 50px;
     box-shadow: 0px 0px 30px 10px teal;
+    background-color: #343434;
 }
 
 .container-senhaRegistros {
@@ -68,10 +74,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 65vh;
+    height: 75vh;
     width: 65vh;
     font-family: 'Poppins', sans-serif;
-    margin: 80px auto;
+    margin: 50px auto;
+    border: solid 5px black;
+    border-radius: 50px;
+    background-color: #343434;
+}
+
+.tamanhoContainerRegistros {
+    height: 55vh;
+    margin: 100px auto;
 }
 
 .boxRegistros {
@@ -103,7 +117,7 @@
     border: solid #D9D9D9;
     border-radius: 20px;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin: 0px auto 20px;
     text-align: center;
 }
 

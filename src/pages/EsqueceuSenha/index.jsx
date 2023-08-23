@@ -4,10 +4,10 @@ import '../Estilo/Registros.css';
 
 function EsqueceuSenha() {
   return (
-    <div>
+    <div className='imageRegistros'>
       <FontePoppins />
       <Cabecalho />
-      <tbody className="container-senhaRegistros">
+      <tbody className="container-senhaRegistros tamanhoContainerRegistros">
         <div className="boxRegistros">
           <h3>Digite seu email cadastrado</h3>
           <h5 className="laranjaRegistros">Você receberá um email para alterar sua senha</h5>

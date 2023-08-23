@@ -6,7 +6,7 @@ import FontePoppins from '../../components/FontePoppins';
 
 function AlterarSenha() {
   return (
-    <div>
+    <div className='imageRegistros'>
       <FontePoppins />
       <Cabecalho />
       <tbody className="container-senhaRegistros">
