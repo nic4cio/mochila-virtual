@@ -1,3 +1,8 @@
+.imageRegistros {
+    background-image: url('../../assets/teste2.jpeg');
+    min-height: 100vh;
+}
+
 .corpoConteudo {
     background-color: #1F2A2F;
     display: flex;
@@ -18,18 +23,17 @@
 }
 
 .pdfConteudo {
-    max-height: 70vh;
     margin: 0px auto;
-    overflow: auto;
-    border: solid 1px white;
+    border: solid 2px black;
     border-radius: 10px;
+    width: 100%;
 }
 
 .abaxioPDFConteudo {
     margin-top: 15px;
 }
 
-.linkConteudo a {
+.linkConteudo {
     text-decoration: none;
     color: #ffffff;
     margin: 0px 20px; 
@@ -41,3 +45,60 @@
 .paddingLeftConteudo {
     padding-left: 320px;
 }
+
+.corRedConteudo {
+    color: red;
+}
+
+
+.comentarioConteudo {
+    background-color: #2D87A4;
+    border: solid 2px #2D87A4;
+    border-radius: 30px;
+    color: white;
+    margin-left: 20px;
+    padding: 10px 10px;
+    font-size: 15px;
+}
+
+.textoConteudo {
+    color: #2D87A4;
+    margin: 0px 40px 0px 0px;
+}
+
+.formConteudo {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 50px;
+    font-size: 15px;
+}
+
+.comentarioCaixaConteudo {
+    background-color: #0D333F;
+    padding: 20px 10px;
+    border-radius: 8px;
+    display: inline;
+}
+
+.comentarioFeitoConteudo {
+    background-color: #E8E4E4;
+    color: black;
+    margin-top: 30px;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+
+.azulConteudo {
+    color: #0D333F;
+    font-weight: 600;
+}
+
+.marginContedo {
+    margin: 5px 15px;
+}
+
+.marginBottomConteudo {
+    margin-bottom: 20px;
+}
+

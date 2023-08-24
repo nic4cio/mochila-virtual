@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Document, Page,pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
-import pdf from '../Pdf/TCC.pdf';
+import pdf from '../Pdf/invariante.pdf';
   
 export default function Test() {
+
+  const url = "https://cors-anywhere.herokuapp.com/" + pdf;
       
   pdfjs.GlobalWorkerOptions.workerSrc = 
   `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -39,7 +41,7 @@ export default function Test() {
     <>
     <div >
       <Document 
-        file={pdf}
+        file={url}
         onLoadSuccess={onDocumentLoadSuccess}
       >
         <Page pageNumber={pageNumber} width={1000}/>
@@ -49,23 +51,12 @@ export default function Test() {
           Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
         </div>
         <div className="buttonc">
-        <button
-          type="button"
-          disabled={pageNumber <= 1}
-          onClick={previousPage}
-          className="Pre"
-            
-        >
-          Previous
-        </button>
-        <button
-          type="button"
-          disabled={pageNumber >= numPages}
-          onClick={nextPage}
-           
-        >
-          Next
-        </button>
+          <button type="button" disabled={pageNumber <= 1} onClick={previousPage} className="Pre">
+            Previous
+          </button>
+          <button type="button" disabled={pageNumber >= numPages} onClick={nextPage}>
+            Next
+          </button>
         </div>
       </div>
       </div>
