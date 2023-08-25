@@ -2,11 +2,13 @@ import Cabecalho from "../../components/Cabecalho";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as Icon from "react-bootstrap-icons";
 
-import Pdf from "../../components/Pdf/index";
 import FontePoppins from '../../components/FontePoppins';
 import "./style.css";
 
-import invariante from '../../components/Pdf/invariante.pdf';
+import invariante from '../../components/Pdf/Invariante.pdf';
+
+import Comentario from "../../components/Comentario";
+import AddComentario from '../../components/AddComentario';
 
 function ConteudoDisciplina() {
     return (
@@ -30,57 +32,10 @@ function ConteudoDisciplina() {
                     <span className="paddingLeftConteudo"></span>
                     <a className="linkConteudo" href="">Denunciar</a>
                 </div>
-                <div>
-                    <form className="comentarioCaixaConteudo">
-                        <input className="formConteudo" type="text" placeholder="Escreva seu comentário" size="35"/>
-                        <button className="comentarioConteudo">+ Adicionar comentário</button>
-                    </form>
-                </div>
-                <div className="comentarioFeitoConteudo">
-                    <div>
-                        <span className="azulConteudo">MuriloUrquiza:</span>
-                        <a className="linkConteudo" href="">Denunciar</a>
-                    </div>
-                    <div className="marginContedo">
-                        <span>Muito bom!</span> 
-                    </div>
-                    <div>
-                        <span>
-                            <Icon.ArrowUp style={{ margin: "2px"}} />6
-                            <Icon.ArrowDown style={{ margin: "2px"}} />3
-                        </span>
-                    </div>
-                </div>
-                <div className="comentarioFeitoConteudo">
-                    <div>
-                        <span className="azulConteudo">MuriloUrquiza:</span>
-                        <a className="linkConteudo" href="">Denunciar</a>
-                    </div>
-                    <div className="marginContedo">
-                        <span>Muito bom!</span> 
-                    </div>
-                    <div>
-                        <span>
-                            <Icon.ArrowUp style={{ margin: "2px"}} />6
-                            <Icon.ArrowDown style={{ margin: "2px"}} />3
-                        </span>
-                    </div>
-                </div>
-                <div className="comentarioFeitoConteudo">
-                    <div>
-                        <span className="azulConteudo">MuriloUrquiza:</span>
-                        <a className="linkConteudo" href="">Denunciar</a>
-                    </div>
-                    <div className="marginContedo">
-                        <span>Muito bom!</span> 
-                    </div>
-                    <div>
-                        <span>
-                            <Icon.ArrowUp style={{ margin: "2px"}} />6
-                            <Icon.ArrowDown style={{ margin: "2px"}} />3
-                        </span>
-                    </div>
-                </div>
+                
+                <AddComentario />
+                <Comentario comentario="Muito bom"/>
+                <Comentario comentario="Excelente conteúdo de como identificar laços!"/>
                 <div className="marginBottomConteudo"></div>
             </tbody>
         </div>

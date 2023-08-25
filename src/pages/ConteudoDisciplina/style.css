@@ -40,6 +40,7 @@
     background-color: #0D333F;
     padding: 5px 15px;
     border-radius: 8px;
+    border: solid 1px #0e1518;
 }
 
 .paddingLeftConteudo {
@@ -77,6 +78,7 @@
 .comentarioCaixaConteudo {
     background-color: #0D333F;
     padding: 20px 10px;
+    border: solid 1px #0e1518;
     border-radius: 8px;
     display: inline;
 }
@@ -84,9 +86,13 @@
 .comentarioFeitoConteudo {
     background-color: #E8E4E4;
     color: black;
-    margin-top: 30px;
     border-radius: 8px;
-    padding: 10px 10px;
+    padding: 15px 10px;
+    margin: 20px auto 0px;
+    margin-left: 5px;
+}
+
+.comentarioInternoConteudo {
 }
 
 .azulConteudo {
@@ -95,10 +101,15 @@
 }
 
 .marginContedo {
-    margin: 5px 15px;
+    margin: 8px 15px;
 }
 
 .marginBottomConteudo {
     margin-bottom: 20px;
+}
+
+.marginComentarioConteudo {
+    margin: 0px 0px 0px 100px;
+    float: right;
 }
 
