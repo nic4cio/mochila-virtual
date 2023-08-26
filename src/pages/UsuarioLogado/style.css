@@ -1,0 +1,67 @@
+.foto-usuario{
+    float: left;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.azul-turquesa{
+    color: #33E4FA;
+}
+
+.alaranjado{
+    color: #BF7A47;
+}
+
+.info-usuario{
+    margin-top: 130px;
+    margin-left: 50px;
+    font-size: 25px;
+    color: #FFF;
+    float: left;
+}
+
+.subtitulo-usuario{
+    color: #FFF;
+    float: left;
+}
+
+.mini-logo{
+    width: 23px;
+    float: left;
+
+}
+
+.mini-logo-triangulo{
+    width: 23px;
+    height: 20px;
+    float: left;
+}
+
+.box-mochila{
+    border: none;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-color: #74FF92;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    line-height: 100px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.box-mochila:hover{
+    background-color: #FFF;
+    color: black;
+    cursor: pointer;
+}
+
+.clear{
+    clear: both;
+}

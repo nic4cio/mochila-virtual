@@ -132,7 +132,6 @@ main {
 .box-sistemas-de-informacao:hover {
     background-color: #FFF;
     color: black;
-    width: 300px;
     cursor: pointer;
 }
 

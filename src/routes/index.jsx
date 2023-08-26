@@ -9,6 +9,7 @@ import MateriasCC from "../pages/MateriasCC"
 import MateriasEC from "../pages/MateriasEC"
 import Home from "../pages/Home"
 import ConteudoDisciplina from "../pages/ConteudoDisciplina";
+import UsuarioLogado from "../pages/UsuarioLogado";
 
 
 function Rotas() {
@@ -24,6 +25,7 @@ function Rotas() {
             <Route path='/materiasec' Component={MateriasEC}/>
             <Route path='/' Component={Home}></Route>
             <Route path='/conteudo-disciplina' Component={ConteudoDisciplina}></Route>
+            <Route path='/usuario-logado' Component={UsuarioLogado}></Route>
           </Routes>
         </BrowserRouter>
     );
