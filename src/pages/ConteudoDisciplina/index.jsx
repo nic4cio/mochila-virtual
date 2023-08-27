@@ -10,7 +10,19 @@ import invariante from '../../components/Pdf/Invariante.pdf';
 import Comentario from "../../components/Comentario";
 import AddComentario from '../../components/AddComentario';
 
+import React, { useState } from 'react';
+
 function ConteudoDisciplina() {
+    const [mostrarAlerta, setMostrarAlerta] = useState(false);
+
+    const Compartilhar = () => {
+
+        setMostrarAlerta(true);
+        setTimeout(() => {
+            setMostrarAlerta(false);
+        }, 4000); 
+    };
+
     return (
         <div className="imageRegistros">
             <FontePoppins />
@@ -26,12 +38,18 @@ function ConteudoDisciplina() {
                         <Icon.ArrowUp style={{ margin: "2px" , color: "green"}} />28
                         <Icon.ArrowDown style={{ margin: "2px", color: "red" }} />2
                     </span>
-                    <a className="linkConteudo" href="">Comentários</a>
-                    <a className="linkConteudo" href="">Compartilhar</a>
-                    <a className="linkConteudo" href="">Download</a>
-                    <span className="paddingLeftConteudo"></span>
-                    <a className="linkConteudo" href="">Denunciar</a>
+                    <button className="linkConteudo" href="">Comentários</button>
+                    <button onClick={Compartilhar} className="linkConteudo">Compartilhar</button>
+                    <button className="linkConteudo" href="">Download</button>
+                    <button className="linkConteudoDenunciar" href="">Denunciar</button>
                 </div>
+
+                {/*Vai ser mostrado no alerta */}
+                {mostrarAlerta && (
+                    <div className="alertaAreaTransferencia">
+                    Link copiado para a área de transferência
+                    </div>
+                )}
                 
                 <AddComentario />
                 <Comentario comentario="Muito bom"/>

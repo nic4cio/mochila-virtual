@@ -1,11 +1,32 @@
-.foto-usuario{
+
+ /* FIM  */
+.meu-input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.foto-usuario-button{
+    background-color: #343434;
     float: left;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 305px;
     margin-left: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
+    outline: none;
+    border: none;
+}
+
+.foto-usuario-button:hover{
+    background-color: #87E4FE;
+}
+
+.foto-usuario{
+    border-radius: 50%;
+    width: 300px;
+    margin-left: -3px;
 }
 
 .azul-turquesa{
@@ -64,4 +85,31 @@
 
 .clear{
     clear: both;
+}
+
+/* MODAL */
+
+.gray-popup {
+    background-color: #D9D9D9;
+    width: 800px;
+    height: 400px;
+}
+
+.white-title {
+    color: white; /* Cor do título em branco */
+    background-color: #202A2F; /* Cor de fundo do título */
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.custom-input {
+    background-color: white !important; /* Fundo branco nos inputs */
+    color: black; /* Texto preto nos inputs */
+    border-radius: 10px; /* Arredondamento dos cantos dos inputs */
+    border: 1px solid #ccc; /* Borda cinza nos inputs */
+    font-size: 14px; /* Tamanho da fonte nos inputs */
+    width: 200px; /* Largura dos inputs */
+    border: 1px solid green;
+    float: left;
 }

@@ -4,10 +4,27 @@ import Cabecalho from "../../components/Cabecalho";
 import foto from "../../assets/macaquinho-modelo.png"
 import estrela from "../../assets/estrela.png"
 import logo from "../../assets/pdslogo.svg"
+import Swal from 'sweetalert2'
 
 import "./style.css"
 
 const UsuarioLogado = () => {
+
+    const ModalEditarPerfil = () => {
+            
+      Swal.fire({
+        title: '<div class="white-title">asd</div>',
+        html: `
+          <input id="nome" class="swal2-input custom-input" placeholder="Nome" />
+          <input id="email" class="swal2-input custom-input" placeholder="E-mail" />
+          <input id="senha" class="swal2-input custom-input" type="password" placeholder="Senha" />
+        `,
+        background: '#D9D9D9', // Cor de fundo cinza claro
+        customClass: {
+          popup: 'gray-popup' // Classe personalizada para estilização
+        }
+      });
+    }
     
     return (
       <div>
@@ -15,9 +32,10 @@ const UsuarioLogado = () => {
         <FontePoppins/>
 
         <div>
-
           <main>
-            <img src={foto} alt="Foto usuário" className='foto-usuario'/>
+            <button onClick={ModalEditarPerfil} className='foto-usuario-button'>
+              <img src={foto} alt="Foto usuário" className='foto-usuario'/>
+            </button>
             <p className='info-usuario'>
               Vinícius Maia de Holanda<br />
               Conta: <span className='alaranjado'>Estudante</span>
