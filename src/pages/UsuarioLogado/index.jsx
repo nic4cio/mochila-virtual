@@ -1,30 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
 import FontePoppins from '../../components/FontePoppins';
 import Cabecalho from "../../components/Cabecalho";
-import foto from "../../assets/macaquinho-modelo.png"
-import estrela from "../../assets/estrela.png"
-import logo from "../../assets/pdslogo.svg"
-import Swal from 'sweetalert2'
-
-import "./style.css"
+import foto from "../../assets/homem-generico.png";
+import estrela from "../../assets/estrela.png";
+import logo from "../../assets/pdslogo.svg";
+import "./style.css";
 
 const UsuarioLogado = () => {
 
-    const ModalEditarPerfil = () => {
-            
-      Swal.fire({
-        title: '<div class="white-title">asd</div>',
-        html: `
-          <input id="nome" class="swal2-input custom-input" placeholder="Nome" />
-          <input id="email" class="swal2-input custom-input" placeholder="E-mail" />
-          <input id="senha" class="swal2-input custom-input" type="password" placeholder="Senha" />
-        `,
-        background: '#D9D9D9', // Cor de fundo cinza claro
-        customClass: {
-          popup: 'gray-popup' // Classe personalizada para estilização
-        }
-      });
-    }
+  // Abrir e fechar modal
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
     
     return (
       <div>
@@ -33,7 +26,7 @@ const UsuarioLogado = () => {
 
         <div>
           <main>
-            <button onClick={ModalEditarPerfil} className='foto-usuario-button'>
+            <button onClick={openModal} className='foto-usuario-button'>
               <img src={foto} alt="Foto usuário" className='foto-usuario'/>
             </button>
             <p className='info-usuario'>
@@ -70,6 +63,28 @@ const UsuarioLogado = () => {
                   </div>
 
             </div>
+
+            {/* MODAL */}
+            {isModalOpen && (
+              <div className="modal-overlay">
+                <div className="modal-content">
+                  <div className="top" >Editar perfil</div>
+
+                  <img src={foto} alt="Foto usuário" className='foto-usuario-modal'/>
+                  
+                  <div className='inputs-posicao'>
+                    <input type="text" placeholder="  Nome" className="input-modal"/>
+                    <input type="email" placeholder="  E-mail" className="input-modal"/>
+                    <input type="password" placeholder="  Senha" className="input-modal"/>
+
+                    <div><button onClick={closeModal} class="btn-cancelar">Cancelar</button></div>
+                    <div><button onClick={closeModal} class="btn-salvar">Salvar</button></div>
+                  </div>
+                  
+                </div>
+              </div>
+            )}
+            {/* FIM MODAL */}
           </main>
           
         </div>
