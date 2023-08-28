@@ -15,12 +15,14 @@ import * as Icon from "react-bootstrap-icons";
 import FontePoppins from "../../components/FontePoppins";
 import Cabecalho from "../../components/Cabecalho";
 
+import { Link } from 'react-router-dom';
+
 function Disciplinas() {
   const materiais = "23 Materiais";
   const current = new Date().toLocaleString();
 
   return (
-    <div className="App">
+    <div className="App imageRegistros">
       <FontePoppins/>
       <Cabecalho/>
       <Container className="titleCard">
@@ -68,7 +70,7 @@ function Disciplinas() {
           <Col></Col>
         </Row>
         <Stack>
-          <div className="contentArea">
+          <Link to='/conteudo-disciplina' className="contentArea">
             <Container>
               <Row>
                 <Col style={{ display: "flex", justifyContent: "start" }}>
@@ -100,8 +102,8 @@ function Disciplinas() {
                 </Col>
               </Row>
             </Container>
-          </div>
-          <div className="contentArea">
+          </Link>
+          <Link to='/conteudo-disciplina' className="contentArea">
             <Container>
               <Row>
                 <Col style={{ display: "flex", justifyContent: "start" }}>
@@ -133,7 +135,7 @@ function Disciplinas() {
                 </Col>
               </Row>
             </Container>
-          </div>
+          </Link>
         </Stack>
       </Container>
     </div>

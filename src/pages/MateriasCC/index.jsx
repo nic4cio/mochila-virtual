@@ -3,9 +3,11 @@ import Logo2 from "../../assets/pdslogo.svg"
 import FontePoppins from '../../components/FontePoppins';
 import Cabecalho from "../../components/Cabecalho";
 
+import { Link } from 'react-router-dom';
+
 const MateriasCC = () => {
   return (
-    <div>
+    <div className="imageRegistros">
         <FontePoppins/>
         <Cabecalho/>
         
@@ -50,7 +52,7 @@ const MateriasCC = () => {
                 <div className="scroll-container">
                     <button className="box4">PROGRAMAÇÃO 2</button>
                     <button className="box4">PROGRAMAÇÃO 3</button>
-                    <button className="box4">PAA</button>
+                    <Link to="/disciplinas"><button className="box4">PAA</button></Link>
                     <button className="box4">TEORIA DA COMP</button>
                 </div>
             </div>

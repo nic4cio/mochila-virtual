@@ -2,12 +2,13 @@ import Header from "../../components/Header"
 import Body from "../../components/Body"
 import FontePoppins from '../../components/FontePoppins';
 
+import Cabecalho from '../../components/Cabecalho';
 
 function Home() {
   return (
-    <div>
+    <div className="imageRegistros">
         <FontePoppins/>
-        <Header/>
+        <Cabecalho/>
         <Body/>
     </div>
   );

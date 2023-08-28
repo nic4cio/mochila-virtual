@@ -5,7 +5,7 @@ import Cabecalho from "../../components/Cabecalho";
 
 const MateriasECjsx = () => {
   return (
-    <div>
+    <div className="imageRegistros">
         <FontePoppins/>
         <Cabecalho/>
 
