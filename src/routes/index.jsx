@@ -16,6 +16,7 @@ function Rotas() {
     return (
         <BrowserRouter>
           <Routes>
+            <Route path='/' Component={Home}></Route>
             <Route path='/login' Component={Login} />
             <Route path='/cadastro' Component={Cadastrar} />
             <Route path='/esqueceu-senha' Component={EsqueceuSenha} />

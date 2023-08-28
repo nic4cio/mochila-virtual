@@ -1,4 +1,5 @@
 import logoImage from '../../assets/pdslogo.svg';
+import { Link } from 'react-router-dom';
 
 function BuscarCabecalho() {
     return (
