@@ -23,7 +23,7 @@ function Rotas() {
             <Route path='/disciplinas' Component={Disciplinas}/>
             <Route path='/materiascc' Component={MateriasCC}/>
             <Route path='/materiasec' Component={MateriasEC}/>
-            <Route path='/' Component={Home}></Route>
+            <Route path='/home' Component={Home}></Route>
             <Route path='/conteudo-disciplina' Component={ConteudoDisciplina}></Route>
             <Route path='/usuario-logado' Component={UsuarioLogado}></Route>
           </Routes>

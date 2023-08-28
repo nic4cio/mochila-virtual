@@ -18,8 +18,8 @@ function Header () {
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Matérias</Nav.Link>
                             <Nav.Link href="#features">Seja um Curador</Nav.Link>
-                            <Nav.Link href="#pricing">Entrar</Nav.Link>
-                            <Nav.Link href="#pricing">Registre-se</Nav.Link>
+                            <Nav.Link href="/login">Entrar</Nav.Link>
+                            <Nav.Link href="/cadastro">Registre-se</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

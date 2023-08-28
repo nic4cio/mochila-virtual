@@ -13,6 +13,7 @@ import {
 } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 import FontePoppins from "../../components/FontePoppins";
+import Cabecalho from "../../components/Cabecalho";
 
 function Disciplinas() {
   const materiais = "23 Materiais";
@@ -21,17 +22,7 @@ function Disciplinas() {
   return (
     <div className="App">
       <FontePoppins/>
-      <Navbar expand="lg" bg="#343434">
-        <img src={Logo} className="App-logo" alt="logo" />
-        <Form.Control
-          style={{
-            width: "17em",
-            backgroundColor: "#adadad",
-            fontWeight: "bold",
-          }}
-          placeholder="Buscar materiais, disciplinas, ..."
-        />
-      </Navbar>
+      <Cabecalho/>
       <Container className="titleCard">
         <h1 style={{ color: "#FFFFFF", padding: "8px" }}>
           Projeto e Análise de Algoritmos
