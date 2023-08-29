@@ -134,6 +134,15 @@ function Body () {
                         fontWeight: 'bold',
                         fontSize: '66px', 
                         marginTop: '200px'}}>Seja um curador</h1>
+                    <span style={{
+                        color: 'white',
+                        fontWeight: 'bolder', 
+                        width: '40rem',
+                        fontWeight: 'bold',
+                        fontSize: '23px', 
+                        marginTop: '200px',
+                        marginLeft:'15px'}}>E <span style={{color:'#BF7A47'}}>ganhe</span> + horas flexíveis</span>
+                        
 
                     <p style={{
                         color: 'white', 
@@ -141,6 +150,7 @@ function Body () {
                         fontSize: '20px', 
                         marginTop: '20px', 
                         marginBottom: '60px'}}>Antes se serem publicados os conteúdos passarão por uma curadoria, ou seja, será feita uma análise de sua qualidade e relevância. Por isso, para ser um curador e avaliar esses conteúdos, você tem que ser apto:</p>
+                
                 </Col>
 
                 <Col>
