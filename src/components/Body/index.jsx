@@ -25,14 +25,14 @@ function Body () {
                         fontWeight: 'bold', 
                         width: '40rem', 
                         marginTop: '80px', 
-                        fontSize: '50px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                        fontSize: '50px'}}>Bem-vindo(a) a sua Mochila Virtual</h1>
 
                     <p style={{
                         color: 'white', 
                         width: '35rem',
                         fontSize: '20px', 
                         marginTop: '20px', 
-                        marginBottom: '60px'}}>Curabitur feugiat, elit id condimentum luctus, orci massa mollis eros, non congue erat neque sit amet odio.</p>
+                        marginBottom: '60px'}}>Essa é uma plataforma de gestão e disponibilização de conteúdos digitais das disciplinas do IC, com o intuito de auxiliar o estudante a ter um local de apoio com materiais de qualidade durante sua trajetória no curso.</p>
                 </Col>
                 <Col>
                     <img style={{
@@ -79,14 +79,15 @@ function Body () {
                         color: 'white',
                         fontWeight: 'bold', 
                         width: '30rem', 
-                        marginTop: '200px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                        marginTop: '200px'}}>Os próprios usuários publicam os conteúdos</h1>
 
                     <p style={{
                         color: 'white', 
                         width: '35rem',
                         fontSize: '20px', 
                         marginTop: '20px', 
-                        marginBottom: '60px'}}>Curabitur feugiat, elit id condimentum luctus, orci massa mollis eros, non congue erat neque sit amet odio.</p>
+                        marginBottom: '60px'}}>Você pode publicar um novo material e interagir sobre os já publicados, ajudando seus colegas!</p>
+                        
                 </Col>
             </Row> 
 
@@ -99,7 +100,7 @@ function Body () {
                         color: '#FFF', 
                         border: '1px', 
                         borderRadius:'40px', 
-                        marginTop: '100px'}}> <h2>Curadoria</h2></Button>
+                        marginTop: '100px'}}> <h2>1. Cadastre-se</h2></Button>
                 </Col>
                 <Col>
                     <Button style={{
@@ -109,7 +110,7 @@ function Body () {
                         color: '#FFF', 
                         border: '1px', 
                         borderRadius:'40px', 
-                        marginTop: '100px'}}> <h2>Disciplinas</h2></Button>
+                        marginTop: '100px'}}> <h2>2. Personalize sua Mochila</h2></Button>
                 </Col>
                 <Col>
                     <Button style={{
@@ -119,7 +120,7 @@ function Body () {
                         color: '#FFF', 
                         border: '1px', 
                         borderRadius:'40px', 
-                        marginTop: '100px'}}> <h2>Comunidade</h2></Button>
+                        marginTop: '100px'}}> <h2>3. Publique um conteúdo</h2></Button>
                 </Col>
             </Row>
 
@@ -139,9 +140,7 @@ function Body () {
                         width: '35rem',
                         fontSize: '20px', 
                         marginTop: '20px', 
-                        marginBottom: '60px'}}>Curabitur feugiat, elit id condimentum luctus, orci massa mollis eros,
-                                               non congue erat neque sit amet odio. Curabitur feugiat, elit id condimentum
-                                               luctus, orci massa mollis eros, non congue erat neque sit amet odio. </p>
+                        marginBottom: '60px'}}>Antes se serem publicados os conteúdos passarão por uma curadoria, ou seja, será feita uma análise de sua qualidade e relevância. Por isso, para ser um curador e avaliar esses conteúdos, você tem que ser apto:</p>
                 </Col>
 
                 <Col>
@@ -162,7 +161,7 @@ function Body () {
                         background: '#42524C', 
                         color: '#FFF', 
                         border: '1px', 
-                        borderRadius:'200px'}}> <h2>Ajude estudantes</h2></Button>
+                        borderRadius:'200px'}}> <h3>Nota igual ou maior a 8 na disciplina</h3></Button>
                 </Col>
                 
                 <Col>
@@ -172,7 +171,7 @@ function Body () {
                         background: '#42524C', 
                         color: '#FFF', 
                         border: '1px', 
-                        borderRadius:'200px'}}> <h2>Receba badges exclusivas</h2></Button>
+                        borderRadius:'200px'}}> <h3>Estar matriculado</h3></Button>
                 </Col>
 
                 <Col>
@@ -182,7 +181,7 @@ function Body () {
                         background: '#42524C', 
                         color: '#FFF', 
                         border: '1px', 
-                        borderRadius:'200px'}}> <h2>Reconhecimento</h2></Button>
+                        borderRadius:'200px'}}> <h3>Coeficiente acumulado maior ou igual a 7</h3></Button>
                 </Col>
             </Row>
 
