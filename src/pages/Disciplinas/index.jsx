@@ -1,4 +1,3 @@
-import Logo from "../../assets/pdslogo.svg"
 import "../Estilo/Disciplinas.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -8,14 +7,15 @@ import {
   Container,
   Col,
   Row,
-  Navbar,
   FormLabel,
+  Image,
 } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 import FontePoppins from "../../components/FontePoppins";
 import Cabecalho from "../../components/Cabecalho";
+import foto from "../../assets/homem-generico.png";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Disciplinas() {
   const materiais = "23 Materiais";
@@ -23,12 +23,10 @@ function Disciplinas() {
 
   return (
     <div className="App imageRegistros">
-      <FontePoppins/>
-      <Cabecalho/>
+      <FontePoppins />
+      <Cabecalho />
       <Container className="titleCard">
-        <h1 style={{ color: "#FFFFFF", padding: "8px" }}>
-          Projeto e Análise de Algoritmos
-        </h1>
+        <h1>Projeto e Análise de Algoritmos</h1>
       </Container>
       <Container className="body">
         <Row>
@@ -43,20 +41,6 @@ function Disciplinas() {
                 <h3 style={{ color: "#FF8283" }}>5/5</h3>
               </div>
             </div>
-            <Stack direction="horizontal" gap={1} className="shareContent">
-              <Button variant="light">
-                <Icon.Dropbox color="green" />
-              </Button>
-              <Button variant="light">
-                <Icon.Youtube color="green" />
-              </Button>
-              <Button variant="light">
-                <Icon.Upload color="green" />
-              </Button>
-              <Button variant="light">
-                <Icon.Share color="green" />
-              </Button>
-            </Stack>
             <Stack className="filterArea">
               <Form.Check label="Teste" style={{ color: "white" }} />
             </Stack>
@@ -67,10 +51,23 @@ function Disciplinas() {
               <Form.Check label="Teste" style={{ color: "white" }} />
             </Stack>
           </Col>
-          <Col></Col>
         </Row>
-        <Stack>
-          <Link to='/conteudo-disciplina' className="contentArea">
+        <Stack className="mainArea">
+          <Stack direction="horizontal" gap={1} className="shareContent">
+            <Button variant="light">
+              <Icon.Dropbox color="green" />
+            </Button>
+            <Button variant="light">
+              <Icon.Youtube color="green" />
+            </Button>
+            <Button variant="light">
+              <Icon.Upload color="green" />
+            </Button>
+            <Button variant="light">
+              <Icon.Share color="green" />
+            </Button>
+          </Stack>
+          <div className="contentArea">
             <Container>
               <Row>
                 <Col style={{ display: "flex", justifyContent: "start" }}>
@@ -84,7 +81,9 @@ function Disciplinas() {
                 </Col>
               </Row>
               <Stack>
-                <h2>Como identificar variante de laço</h2>
+                <Link to="/conteudo-disciplina">
+                  <h2>Como identificar variante de laço</h2>
+                </Link>
                 <h4>{current}</h4>
               </Stack>
               <Row>
@@ -102,8 +101,8 @@ function Disciplinas() {
                 </Col>
               </Row>
             </Container>
-          </Link>
-          <Link to='/conteudo-disciplina' className="contentArea">
+          </div>
+          <div className="contentArea">
             <Container>
               <Row>
                 <Col style={{ display: "flex", justifyContent: "start" }}>
@@ -117,7 +116,9 @@ function Disciplinas() {
                 </Col>
               </Row>
               <Stack>
-                <h2>Como identificar variante de laço</h2>
+                <Link to="/conteudo-disciplina">
+                  <h2>Como identificar variante de laço</h2>
+                </Link>
                 <h4>{current}</h4>
               </Stack>
               <Row>
@@ -135,7 +136,7 @@ function Disciplinas() {
                 </Col>
               </Row>
             </Container>
-          </Link>
+          </div>
         </Stack>
       </Container>
     </div>
