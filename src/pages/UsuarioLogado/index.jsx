@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import FontePoppins from '../../components/FontePoppins';
-import Cabecalho from "../../components/Cabecalho";
+import CabecalhoLogado from "../../components/CabecalhoLogado";
 import foto from "../../assets/homem-generico.png";
 import estrela from "../../assets/estrela.png";
 import logo from "../../assets/pdslogo.svg";
@@ -21,7 +21,7 @@ const UsuarioLogado = () => {
     
     return (
       <div>
-        <Cabecalho/>
+        <CabecalhoLogado/>
         <FontePoppins/>
 
         <div>
