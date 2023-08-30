@@ -10,7 +10,7 @@ function Cadastrar() {
   return (
     <div className='imageRegistros'>
       <FontePoppins />
-      <Cabecalho />
+      <Cabecalho home="" materias="" curador="" entrar="" registrar="menuaSpanRegistros"/>
       <tbody className="container-senhaRegistros">
         <TituloImagem titulo="Cadastre-se agora!"/>
         <div className="boxRegistros">

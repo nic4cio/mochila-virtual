@@ -25,7 +25,7 @@ function Disciplinas() {
   return (
     <div className="App imageRegistros">
       <FontePoppins/>
-      <Cabecalho/>
+      <Cabecalho home="" materias="" curador="" entrar="" registrar=""/>
       <Container className="titleCard">
         <h1 style={{ color: "black", padding: "180px 8px 8px 8px", fontWeight:'600'}}>
           Projeto e Análise de Algoritmos

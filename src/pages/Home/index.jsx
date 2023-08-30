@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="imageRegistros">
         <FontePoppins/>
-        <Cabecalho/>
+        <Cabecalho home="menuaSpanRegistros" materias="" curador="" entrar="" registrar="" />
         <Body/>
     </div>
   );

@@ -26,7 +26,7 @@ function ConteudoDisciplina() {
     return (
         <div className="imageRegistros">
             <FontePoppins />
-            <Cabecalho />
+            <Cabecalho home="" materias="" curador="" entrar="" registrar=""/>
             <tbody className="corpoConteudo">
                 <h6 >Por: <span className="tituloH6Conteudo">ViniciusMaia</span></h6>
                 <h3 >Como identificar invariante de laço</h3>

@@ -7,7 +7,7 @@ const MateriasECjsx = () => {
   return (
     <div className="imageRegistros">
         <FontePoppins/>
-        <Cabecalho/>
+        <Cabecalho home="" materias="menuaSpanRegistros" curador="" entrar="" registrar=""/>
 
         <main>
             <div id="periodo-1">

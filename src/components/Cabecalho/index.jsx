@@ -1,11 +1,11 @@
 import BuscarCabecalho from '../BuscarCabecalho/index.jsx';
 import MenuCabecalho from '../MenuCabecalho/index.jsx';
 
-function Cabecalho() {
+function Cabecalho(props) {
     return (
         <thead className='cabecalhoRegistro'> 
           <BuscarCabecalho />
-          <MenuCabecalho />
+          <MenuCabecalho home={props.home} materias={props.materias} curador={props.curador} entrar={props.entrar} registrar={props.registrar}/>
         </thead>
     );
 }

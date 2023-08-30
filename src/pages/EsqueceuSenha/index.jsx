@@ -6,7 +6,7 @@ function EsqueceuSenha() {
   return (
     <div className='imageRegistros'>
       <FontePoppins />
-      <Cabecalho />
+      <Cabecalho home="" materias="" curador="" entrar="" registrar=""/>
       <tbody className="container-senhaRegistros tamanhoContainerRegistros">
         <div className="boxRegistros">
           <h3>Digite seu email cadastrado</h3>

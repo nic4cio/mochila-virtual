@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 
-function MenuCabecalho() {
+function MenuCabecalho(props) {
     return(
         <div className="menuRegistros">
-            <span><a href=".">Matérias</a></span>
-            <span><a href=".">Seja um Curador</a></span>
-            <span><Link to="/login">Entrar</Link></span>
-            <span><Link to="/cadastro"><span>Registre-se</span></Link></span>
+            <span><Link to="/"><span className={props.home}>Home</span></Link></span>
+            <span><Link to="/materiascc"><span className={props.materias}>Matérias</span></Link></span>
+            <span><a href="."><span className={props.curador}>Seja um Curador</span></a></span>
+            <span><Link to="/login"><span className={props.entrar}>Entrar</span></Link></span>
+            <span><Link to="/cadastro"><span className={props.registrar}>Registre-se</span></Link></span>
         </div>
     );
 }

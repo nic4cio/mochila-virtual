@@ -46,11 +46,11 @@
     color: #ffffff; 
 }
 
-.menuRegistros a span {
+.menuaSpanRegistros {
     color: black;
     background-color: #78D6CF;
     padding: 13px;
-    border-radius: 28px;
+    border-radius: 25px;
     margin-left: 0px;
 }
 

@@ -10,7 +10,7 @@ function App() {
   return (
     <div className='imageRegistros'>
       <FontePoppins />
-      <Cabecalho />
+      <Cabecalho home="" materias="" curador="" entrar="menuaSpanRegistros" registrar=""/>
       <tbody className="containerRegistros">
         <TituloImagem titulo="Olá, estudante!"/>
         <div className="boxRegistros">
