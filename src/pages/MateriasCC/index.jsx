@@ -4,6 +4,7 @@ import FontePoppins from '../../components/FontePoppins';
 import Cabecalho from "../../components/Cabecalho";
 
 import { Link } from 'react-router-dom';
+import Disciplinas from "../Disciplinas/index.jsx" 
 
 const MateriasCC = () => {
   return (
@@ -16,11 +17,11 @@ const MateriasCC = () => {
                 <div className="indicador-periodo">1°Período</div>
 
                 <div className="scroll-container">
-                    <button className="box">PROGRAMAÇÃO 1</button>
-                    <button className="box">LÓGICA PARA COMP</button>
-                    <button className="box">COMP SOC E ÉTICA</button>
-                    <button className="box">MATEMÁTICA DISCRETA</button>
-                    <button className="box">CÁLCULO DIF E INT</button>
+                    <Link to="/materias/programacao1"><button className="box">PROGRAMAÇÃO 1</button></Link>
+                    <Link to="/materias/logica-computacao"><button className="box">LÓGICA PARA COMP</button></Link>
+                    <Link to="/materias/cse"><button className="box">COMP SOC E ÉTICA</button></Link>
+                    <Link to="/materias/matematoca-discreta"><button className="box">MATEMÁTICA DISCRETA</button></Link>
+                    <Link to="/materias/cdi"><button className="box">CÁLCULO DIF E INT</button></Link>
                 </div>
             </div>
 
@@ -28,10 +29,10 @@ const MateriasCC = () => {
                 <div className="indicador-periodo">2°Período</div>
 
                 <div className="scroll-container">
-                    <button className="box2">ESTRUTURA DE DADOS</button>
-                    <button className="box2">BANCO DE DADOS</button>
-                    <button className="box2">ORG E ARQ DE COMP</button> 
-                    <button className="box2">GEOMETRIA ANALÍTICA</button>
+                    <Link to="/materias/estrutura-dados"><button className="box2">ESTRUTURA DE DADOS</button></Link>
+                    <Link to="/materias/banco-dados"><button className="box2">BANCO DE DADOS</button></Link>
+                    <Link to="/materias/oac"><button className="box2">ORG E ARQ DE COMP</button></Link>
+                    <Link to="/materias/geometria-analitica"><button className="box2">GEOMETRIA ANALÍTICA</button></Link>
                 </div>
             </div>
             
@@ -52,7 +53,7 @@ const MateriasCC = () => {
                 <div className="scroll-container">
                     <button className="box4">PROGRAMAÇÃO 2</button>
                     <button className="box4">PROGRAMAÇÃO 3</button>
-                    <Link to="/disciplinas"><button className="box4">PAA</button></Link>
+                    <Link to={Disciplinas}><button className="box4">PAA</button></Link>
                     <button className="box4">TEORIA DA COMP</button>
                 </div>
             </div>

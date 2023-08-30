@@ -13,10 +13,57 @@
   align-items: center;
 }
 
-.titleCard {
+.titleCardbox {
+  background-color: #FF7474;
+  border-radius: 10px;
+}
+
+.titleCardbox2 {
+  background-color: #8979FD;
+  border-radius: 10px;
+}
+
+.titleCardbox3 {
+  background-color: #F27FEF;
+  border-radius: 10px;
+}
+
+.titleCardbox4 {
   background-color: #87E4FE;
   border-radius: 10px;
 }
+
+.titleCardbox5 {
+  background-color: #FCD878;
+  border-radius: 10px;
+}
+
+.titleCardbox6 {
+  background-color: #90FCDF;
+  border-radius: 10px;
+}
+
+.titleCardbox7 {
+  background-color: #E9FD7A;
+  border-radius: 10px;
+}
+
+.titleCardbox-computacao-visual, .titleCardbox8{
+  background-color: #7394FD;
+  border-radius: 10px;
+}
+.titleCardbox-sistemas-inteligentes, .titleCardeletivas-ec{
+  background-color: #F8B076;
+  border-radius: 10px;
+}
+.titleCardbox-sistemas-de-computacao{
+  background-color: #F27ED6;
+  border-radius: 10px;
+}
+.titleCardbox-sistemas-de-informacao{
+  background-color: #F24430;
+  border-radius: 10px;
+} 
 
 .descriptionArea {
   background-color: #161F23;
@@ -24,7 +71,7 @@
   border-radius: 10px;
   padding: 20px;
   margin-block: 5px;
-  min-width: 250px;
+  min-width: 280px;
 }
 
 .contentArea {

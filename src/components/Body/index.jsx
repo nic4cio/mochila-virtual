@@ -64,8 +64,8 @@ function Body () {
                         border: '1px', 
                         borderRadius:'40px'}}> <h2>Engenharia da Computação</h2></Button></Link>  
                 </Col>
-            </Row> 
-
+            </Row>
+        
             {/* Home 2 */}
             <Row>                
                 <Col>
@@ -123,7 +123,7 @@ function Body () {
                         marginTop: '100px'}}> <h2>3. Publique um conteúdo</h2></Button>
                 </Col>
             </Row>
-
+            
             {/* Home 3 */}
             <Row>
                 <Col>

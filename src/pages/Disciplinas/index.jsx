@@ -41,10 +41,10 @@ function Disciplinas() {
               <h6 style={{ color: "#FFFFFF", marginLeft:"15px" }}>Ryan Pinheiro</h6>
               <hr style={{color:'white'}}/>
               <h4 style={{ color: "#FFFFFF" }}>Curadores:</h4>
-              <h6 style={{ color: "#FF8283", marginLeft:"15px" }}>@GabrielNicacio</h6>
-              <h6 style={{ color: "#FF8283", marginLeft:"15px" }}>@MuriloUrquiza</h6>
-              <h6 style={{ color: "#FF8283", marginLeft:"15px" }}>@ViniciusMaia</h6>
-              <h6 style={{ color: "#FF8283", marginLeft:"15px" }}>@ArthurSampaio</h6>
+              <h6 style={{ color: "#BF7A47", marginLeft:"15px" }}>@GabrielNicacio</h6>
+              <h6 style={{ color: "#BF7A47", marginLeft:"15px" }}>@MuriloUrquiza</h6>
+              <h6 style={{ color: "#BF7A47", marginLeft:"15px" }}>@ViniciusMaia</h6>
+              <h6 style={{ color: "#BF7A47", marginLeft:"15px" }}>@ArthurSampaio</h6>
               <hr style={{color:'white'}}/>
               <h4 style={{ color: "#FFFFFF" }}>Buscar assunto:</h4>
               <Stack className="filterArea">

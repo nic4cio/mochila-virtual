@@ -65,7 +65,7 @@ const MateriasECjsx = () => {
                     <button className="box4">ENG DE SOFTWARE</button>
                     <button className="box4">CÁLCULO 4</button>
                     <button className="box4">VARIÁVEIS COMPLEXAS</button>
-                    <button className="box4">ORG E ARQ DE COMPUTADORES</button>
+                    <button className="box4">OAC</button>
                     <button className="box4">FÍSICA EXPERIMENTAL 3</button>
                 </div>
             </div>
