@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import Routes from './routes/index.jsx'
-import './App.css'
+import ImagemFundo from './ImagemFundo.css'
 
 function App() {
   return (
