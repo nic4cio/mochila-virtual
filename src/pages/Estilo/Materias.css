@@ -158,6 +158,6 @@ main {
 }
 
 .scroll-container::-webkit-scrollbar-track {
-    background-color: #343434;
+    background-color: #34343400;
     border-radius: 2px;
 }
