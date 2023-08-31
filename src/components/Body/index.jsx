@@ -16,7 +16,7 @@ function Body () {
       };
 
     return (
-        <Container>
+        <Container style={{marginLeft: 'auto'}}>
             {/* Home 1 */}
             <Row>                
                 <Col>
