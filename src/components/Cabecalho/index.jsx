@@ -5,7 +5,7 @@ function Cabecalho(props) {
     return (
         <thead className='cabecalhoRegistro'> 
           <BuscarCabecalho />
-          <MenuCabecalho home={props.home} materias={props.materias} curador={props.curador} entrar={props.entrar} registrar={props.registrar}/>
+          <MenuCabecalho home={props.home} curador={props.curador} entrar={props.entrar} registrar={props.registrar}/>
         </thead>
     );
 }

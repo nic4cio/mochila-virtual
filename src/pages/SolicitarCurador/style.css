@@ -1,0 +1,83 @@
+#um{
+    border: 1px solid red;
+    float:left;
+
+}
+
+#dois{
+    margin-left: 120px;
+    border: 1px solid blue;
+    float:right;
+
+}
+
+#tres{
+    float:left;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.marrom{
+    color: rgb(191, 122, 71);
+}
+
+.text-area{
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #ADADAD;
+}
+
+.enviar{
+    color: #FFF;
+    font: poppins;
+    background-color: #35E3F7;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+
+.enviar:hover{
+    color: #35E3F7;
+    background-color: #FFF;
+}
+
+/* Botão old */
+.historico-analitico{
+    color: #FFF;
+    background-color: #DE6B6B;
+    border-radius: 15px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+
+.titulo-curadoria{
+    font-size: 25px;
+    color: #FFF;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.titulo-dados{
+    font-size: 25px;
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitulo-dados{
+    font-size: 20px;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.foto-usuario{
+    border-radius: 50%;
+    width: 300px;
+    margin-left: -3px;
+}

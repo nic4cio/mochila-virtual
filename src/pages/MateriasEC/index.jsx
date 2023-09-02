@@ -3,7 +3,10 @@ import Logo from "../../assets/pdslogo.svg"
 import FontePoppins from '../../components/FontePoppins';
 import Cabecalho from "../../components/Cabecalho";
 
-const MateriasECjsx = () => {
+const MateriasEC = () => {
+
+    window.scrollTo(0, 0); //Reinicia o scroll
+
   return (
     <div className="imageRegistros">
         <FontePoppins/>
@@ -167,4 +170,4 @@ const MateriasECjsx = () => {
   )
 }
 
-export default MateriasECjsx
+export default MateriasEC

@@ -7,7 +7,11 @@ import { Link } from 'react-router-dom';
 import Disciplinas from "../Disciplinas/index.jsx" 
 
 const MateriasCC = () => {
+
+    window.scrollTo(0, 0); //Reinicia o scroll
+
   return (
+    
     <div className="imageRegistros">
         <FontePoppins/>
         <Cabecalho home="" materias="menuaSpanRegistros" curador="" entrar="" registrar=""/>

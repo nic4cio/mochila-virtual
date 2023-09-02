@@ -10,6 +10,9 @@ import MateriasEC from "../pages/MateriasEC"
 import Home from "../pages/Home"
 import ConteudoDisciplina from "../pages/ConteudoDisciplina";
 import UsuarioLogado from "../pages/UsuarioLogado";
+import SolicitarCurador from "../pages/SolicitarCurador";
+
+
 
 import Cdi from "../pagesCC/cdi";
 import Cse from "../pagesCC/cse";
@@ -37,6 +40,7 @@ function Rotas() {
             <Route path='/home' Component={Home}></Route>
             <Route path='/conteudo-disciplina' Component={ConteudoDisciplina}></Route>
             <Route path='/usuario-logado' Component={UsuarioLogado}></Route>
+            <Route path='/solicitar-curador' Component={SolicitarCurador}></Route>
 
             <Route path='/materias/cdi' Component={Cdi}></Route>
             <Route path='/materias/cse' Component={Cse}></Route>
@@ -48,6 +52,7 @@ function Rotas() {
             <Route path='/materias/banco-dados' Component={BancoDados}></Route>
             <Route path='/materias/oac' Component={Oac}></Route>
             <Route path='/materias/geometria-analitica' Component={GeometriaAnalitica}></Route>
+
           </Routes>
         </BrowserRouter>
     );

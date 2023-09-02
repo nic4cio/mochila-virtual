@@ -113,7 +113,6 @@ function Disciplinas(props) {
           <Col></Col>
         </Row>
         <Stack>
-          <Container>
             <Stack direction="horizontal" gap={1} className="shareContent">
               <Button variant="light" >
                 <Icon.Dropbox color="green" />
@@ -128,7 +127,6 @@ function Disciplinas(props) {
                 <Icon.Share color="green" />
               </Button>
             </Stack>
-          </Container>
           <Link to='/conteudo-disciplina' className="contentArea">
             <Container>
               <Row>

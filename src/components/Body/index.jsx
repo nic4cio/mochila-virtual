@@ -16,7 +16,7 @@ function Body () {
       };
 
     return (
-        <Container>
+        <Container style={{marginLeft: 'auto'}}>
             {/* Home 1 */}
             <Row>                
                 <Col>
@@ -131,12 +131,10 @@ function Body () {
                         color: 'white',
                         fontWeight: 'bolder', 
                         width: '40rem',
-                        fontWeight: 'bold',
                         fontSize: '66px', 
                         marginTop: '200px'}}>Seja um curador</h1>
                     <span style={{
                         color: 'white',
-                        fontWeight: 'bolder', 
                         width: '40rem',
                         fontWeight: 'bold',
                         fontSize: '23px', 
