@@ -17,6 +17,14 @@
     margin-top: 5%;
 }
 
+#arquivo {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
 .marrom{
     color: rgb(191, 122, 71);
 }
@@ -47,6 +55,7 @@
 .historico-analitico{
     color: #FFF;
     background-color: #DE6B6B;
+    padding: 5px;
     border-radius: 15px;
     font-size: 20px;
     outline: none;
