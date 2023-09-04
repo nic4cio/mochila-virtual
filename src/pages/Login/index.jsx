@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { loginUser } from '../../services/api.js'
-import '../Estilo/Registros.css';
+import { useState } from "react";
+import { loginUser } from "../../services/api.js";
+import "../Estilo/Registros.css";
 
-import Cabecalho from '../../components/Cabecalho';
-import TituloImagem from '../../components/TituloImagem';
-import FontePoppins from '../../components/FontePoppins';
+import Cabecalho from "../../components/Cabecalho";
+import TituloImagem from "../../components/TituloImagem";
+import FontePoppins from "../../components/FontePoppins";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function App() {
 
@@ -26,28 +26,33 @@ function App() {
   };
 
   return (
-    <div className='imageRegistros'>
+    <div className="imageRegistros">
       <FontePoppins />
-      <Cabecalho home="" materias="" curador="" entrar="menuaSpanRegistros" registrar=""/>
+      <Cabecalho
+        home=""
+        materias=""
+        curador=""
+        entrar="menuaSpanRegistros"
+        registrar=""
+      />
       <tbody className="containerRegistros">
-        <TituloImagem titulo="Olá, estudante!"/>
+        <TituloImagem titulo="Olá, estudante!" />
         <div className="boxRegistros">
           <form onSubmit={handleLogin}>
-
-            <input 
-             type="email"
-             placeholder="Email"
-             value={email}
-             size="25"
-             onChange={(e) => setEmail(e.target.value)}
+            <input
+              type="text"
+              placeholder="Email"
+              value={email}
+              size="25"
+              onChange={(e) => setEmail(e.target.value)}
             />
 
-            <input 
-             type="password" 
-             placeholder="Senha" 
-             value={password}
-             size="25"
-             onChange={(e) => setPassword(e.target.value)}
+            <input
+              type="password"
+              placeholder="Senha"
+              value={password}
+              size="25"
+              onChange={(e) => setPassword(e.target.value)}
             />
 
             <Link to="/esqueceu-senha">Esqueceu a senha?</Link>
