@@ -12,6 +12,7 @@ function App() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -20,6 +21,7 @@ function App() {
       console.log(response.data);
     } catch (error) {
       console.error(error.response.data.message);
+      setErrorMessage(error.response.data.message);
     }
   };
 
@@ -52,6 +54,7 @@ function App() {
             <Link to="/cadastro">Cadastre-se agora!</Link>
             <button type="submit">Entrar</button>
           </form>
+          {errorMessage && <p className="alert alert-danger error-message" >{errorMessage}</p>}
         </div>
       </tbody>
     </div>
