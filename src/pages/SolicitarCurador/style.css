@@ -1,12 +1,10 @@
 #um{
-    border: 1px solid red;
     float:left;
 
 }
 
 #dois{
     margin-left: 120px;
-    border: 1px solid blue;
     float:right;
 
 }
@@ -15,6 +13,31 @@
     float:left;
     margin-left: 25%;
     margin-top: 5%;
+}
+
+.branco{
+    color: #FFF;
+}
+
+.arquivo-selecionado{
+    padding-top: 10px;
+    color: rgb(191, 122, 71);
+}
+
+.alertaEnviar{
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    color: black;
+    width: 300px;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: green;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
 }
 
 #arquivo {
@@ -42,6 +65,7 @@
     padding: 5px;
     border-radius: 15px;
     font-size: 20px;
+    font-weight: bold;
     outline: none;
     border: none;
 }
