@@ -1,9 +1,9 @@
 import CadaDisciplina from "../../../components/CadaDisciplina/index.jsx"
 
-function ProbEst() {
+function MetodPesquisa() {
 
-    let cor = "titleCardbox3";
-    let materia = "Probabilidade e Estatística";
+    let cor = "titleCardbox7";
+    let materia = "Metodologia de Pesquisa";
     let publicacoes = "10";
     let professor = "N sei";
     //let curadores = "";
@@ -30,4 +30,4 @@ function ProbEst() {
     );
 }
 
-export default ProbEst;
+export default MetodPesquisa;

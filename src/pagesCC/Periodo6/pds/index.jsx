@@ -1,9 +1,9 @@
 import CadaDisciplina from "../../../components/CadaDisciplina/index.jsx"
 
-function ProbEst() {
+function Pds() {
 
-    let cor = "titleCardbox3";
-    let materia = "Probabilidade e Estatística";
+    let cor = "titleCardbox6";
+    let materia = "Projeto e Desenvolvimento de Sistemas";
     let publicacoes = "10";
     let professor = "N sei";
     //let curadores = "";
@@ -30,4 +30,4 @@ function ProbEst() {
     );
 }
 
-export default ProbEst;
+export default Pds;
