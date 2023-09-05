@@ -5,6 +5,7 @@ import TituloImagem from '../../components/TituloImagem';
 import FontePoppins from '../../components/FontePoppins';
 
 function AlterarSenha() {
+  window.scrollTo(0, 0); //Reinicia o scroll
   return (
     <div className='imageRegistros'>
       <FontePoppins />

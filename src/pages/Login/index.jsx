@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 
 function App() {
 
+  window.scrollTo(0, 0); //Reinicia o scroll
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');

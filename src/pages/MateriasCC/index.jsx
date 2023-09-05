@@ -1,10 +1,8 @@
 import "../Estilo/Materias.css"
-import Logo2 from "../../assets/pdslogo.svg"
 import FontePoppins from '../../components/FontePoppins';
 import Cabecalho from "../../components/Cabecalho";
 
 import { Link } from 'react-router-dom';
-import Disciplinas from "../Disciplinas/index.jsx" 
 
 const MateriasCC = () => {
 

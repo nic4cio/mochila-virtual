@@ -3,6 +3,7 @@ import FontePoppins from '../../components/FontePoppins';
 import '../Estilo/Registros.css';
 
 function EsqueceuSenha() {
+  window.scrollTo(0, 0); //Reinicia o scroll
   return (
     <div className='imageRegistros'>
       <FontePoppins />

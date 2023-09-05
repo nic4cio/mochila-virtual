@@ -10,9 +10,10 @@ import invariante from '../../components/Pdf/Invariante.pdf';
 import Comentario from "../../components/Comentario";
 import AddComentario from '../../components/AddComentario';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function ConteudoDisciplina() {
+    window.scrollTo(0, 0); //Reinicia o scroll
     const [mostrarAlerta, setMostrarAlerta] = useState(false);
 
     const Compartilhar = () => {

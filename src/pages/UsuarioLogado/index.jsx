@@ -8,6 +8,8 @@ import "./style.css";
 
 const UsuarioLogado = () => {
 
+  window.scrollTo(0, 0); //Reinicia o scroll
+
   // Abrir e fechar modal
   const [isModalOpen, setModalOpen] = useState(false);
 

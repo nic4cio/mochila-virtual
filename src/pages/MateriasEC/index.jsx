@@ -1,5 +1,4 @@
 import "../Estilo/Materias.css"
-import Logo from "../../assets/pdslogo.svg"
 import FontePoppins from '../../components/FontePoppins';
 import Cabecalho from "../../components/Cabecalho";
 

@@ -25,6 +25,8 @@ function SistDistribuidos() {
         "Equações Diferenciais"
     ];
 
+    window.scrollTo(0, 0); //Reinicia o scroll
+
     return(
         <CadaDisciplina materia={materia} professor={professor} publicacoes={publicacoes} cor={cor} assuntos={assuntos}/>
     );

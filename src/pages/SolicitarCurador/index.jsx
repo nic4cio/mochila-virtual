@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import "./style.css";
 
 const SolicitarCurador = () => {
+  window.scrollTo(0, 0); //Reinicia o scroll
 
   // const [mostrarAlerta, setMostrarAlerta] = useState(false);
 
