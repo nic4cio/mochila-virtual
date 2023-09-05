@@ -7,13 +7,26 @@ import estrelabranca from '../../assets/estrela-branca.png';
 import Button from "react-bootstrap/Button"
 import { Link } from 'react-router-dom';
 // import Card from "react-bootstrap/Card"
-// import { Translate } from "react-bootstrap-icons";
+// import { Translate } from "react-bootstrap-icons"
+
+import "../../pages/Home/style.css"
+
+import Swal from 'sweetalert2';
 
 function Body () {
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       };
+
+    const alerta = () => {
+        Swal.fire({
+            title: 'Tentativa Inválida',
+            text: 'Você precisa estar logado.',
+            icon: 'info', // Ícone personalizado (warning, success, error, etc.)
+            confirmButtonText: 'OK',
+        });
+    };
 
     return (
         <Container style={{marginLeft: 'auto'}}>
@@ -93,34 +106,34 @@ function Body () {
 
             <Row>                
                 <Col>
-                    <Button style={{
+                    <Link to='/cadastro'><Button style={{
                         width: '20rem', 
                         height: '20rem', 
                         background: '#171F23', 
                         color: '#FFF', 
                         border: '1px', 
                         borderRadius:'40px', 
-                        marginTop: '100px'}}> <h2>1. Cadastre-se</h2></Button>
+                        marginTop: '100px'}}> <h2>1. Cadastre-se</h2></Button></Link>
                 </Col>
                 <Col>
-                    <Button style={{
+                    <Link to='/login'><Button style={{
                         width: '20rem', 
                         height: '20rem', 
                         background: '#171F23', 
                         color: '#FFF', 
                         border: '1px', 
                         borderRadius:'40px', 
-                        marginTop: '100px'}}> <h2>2. Personalize sua Mochila</h2></Button>
+                        marginTop: '100px'}}> <h2 onClick={alerta}>2. Personalize sua Mochila</h2></Button></Link>
                 </Col>
                 <Col>
-                    <Button style={{
+                    <Link to='/login'><Button style={{
                         width: '20rem', 
                         height: '20rem', 
                         background: '#171F23', 
                         color: '#FFF', 
                         border: '1px', 
                         borderRadius:'40px', 
-                        marginTop: '100px'}}> <h2>3. Publique um conteúdo</h2></Button>
+                        marginTop: '100px'}}> <h2 onClick={alerta}>3. Publique um conteúdo</h2></Button></Link>
                 </Col>
             </Row>
             
@@ -169,7 +182,8 @@ function Body () {
                         background: '#42524C', 
                         color: '#FFF', 
                         border: '1px', 
-                        borderRadius:'200px'}}> <h3>Nota igual ou maior a 8 na disciplina</h3></Button>
+                        borderRadius:'200px',
+                        cursor: 'default'}}> <h3>Nota igual ou maior a 8 na disciplina</h3></Button>
                 </Col>
                 
                 <Col>
@@ -179,7 +193,8 @@ function Body () {
                         background: '#42524C', 
                         color: '#FFF', 
                         border: '1px', 
-                        borderRadius:'200px'}}> <h3>Estar matriculado</h3></Button>
+                        borderRadius:'200px',
+                        cursor: 'default'}}> <h3>Estar matriculado</h3></Button>
                 </Col>
 
                 <Col>
@@ -189,12 +204,13 @@ function Body () {
                         background: '#42524C', 
                         color: '#FFF', 
                         border: '1px', 
-                        borderRadius:'200px'}}> <h3>Coeficiente acumulado maior ou igual a 7</h3></Button>
+                        borderRadius:'200px',
+                        cursor: 'default'}}> <h3>Coeficiente acumulado maior ou igual a 7</h3></Button>
                 </Col>
             </Row>
 
             <Row>
-                <Link to="/cadastro"><Button style={{
+                <Link to="/login"><Button style={{
                                     width: '40rem', 
                                     height: '7rem', 
                                     background: '#78D6CF', 
@@ -202,7 +218,7 @@ function Body () {
                                     border: '1px',
                                     borderRadius: '20px',
                                     margin: '40px 0 0 280px'
-                                    }}> <h2>Aplique agora!</h2></Button></Link>  
+                                    }}> <h2 onClick={alerta}>Aplique agora!</h2></Button></Link>  
             </Row> 
 
             <Row>
@@ -213,6 +229,7 @@ function Body () {
                             cursor: 'pointer',
                             }} src={pdsLogo} alt="#" />
             </Row>
+
         </Container>
     )
 }

@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
 
+import Swal from 'sweetalert2';
+
 function MenuCabecalho(props) {
 
     const alerta = () => {
-        alert("Você deve estar logado antes!")
+        Swal.fire({
+            title: 'Tentativa Inválida',
+            text: 'Você precisa estar logado.',
+            icon: 'info', // Ícone personalizado (warning, success, error, etc.)
+            confirmButtonText: 'OK',
+        });
     };
 
     return(

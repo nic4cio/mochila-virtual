@@ -18,8 +18,19 @@ import Cabecalho from "../../components/Cabecalho";
 
 import { Link } from 'react-router-dom';
 
+import Swal from 'sweetalert2';
+
 function Disciplinas(props) {
   const current = new Date().toLocaleString();
+
+  const alerta = () => {
+    Swal.fire({
+        title: 'Tentativa Inválida',
+        text: 'Você precisa estar logado.',
+        icon: 'info', // Ícone personalizado (warning, success, error, etc.)
+        confirmButtonText: 'OK',
+    });
+};
 
   return (
     <div className="App imageRegistros">
@@ -114,16 +125,16 @@ function Disciplinas(props) {
         </Row>
         <Stack>
             <Stack direction="horizontal" gap={1} className="shareContent">
-              <Button variant="light" >
+              <Button variant="light" onClick={alerta}>
                 <Icon.Dropbox color="green" />
               </Button>
-              <Button variant="light">
+              <Button variant="light" onClick={alerta}>
                 <Icon.Youtube color="green" />
               </Button>
-              <Button variant="light">
+              <Button variant="light" onClick={alerta}>
                 <Icon.Upload color="green" />
               </Button>
-              <Button variant="light">
+              <Button variant="light" onClick={alerta}>
                 <Icon.Share color="green" />
               </Button>
             </Stack>
