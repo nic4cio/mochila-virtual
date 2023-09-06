@@ -23,11 +23,25 @@ import Swal from 'sweetalert2';
 function Disciplinas(props) {
   const current = new Date().toLocaleString();
 
+  let listas = [
+    "AB 1",
+    "AB 2",
+    "Reavaliação",
+    "Final"
+  ];
+
+  let curadores = [
+    "@GabrielNicacio",
+    "@MuriloUrquiza",
+    "@ViniciusMaia",
+    "@ArthurSampaio"
+  ];
+
   const alerta = () => {
     Swal.fire({
         title: 'Tentativa Inválida',
         text: 'Você precisa estar logado.',
-        icon: 'info', // Ícone personalizado (warning, success, error, etc.)
+        icon: 'info', 
         confirmButtonText: 'OK',
     });
 };
@@ -35,90 +49,50 @@ function Disciplinas(props) {
   return (
     <div className="App imageRegistros">
       <FontePoppins/>
-      <Cabecalho home="" materias="" curador="" entrar="" registrar=""/>
+      <Cabecalho/>
       <Container className={props.cor}>
-        <h1 style={{ color: "black", padding: "180px 8px 8px 8px", fontWeight:'600'}}>
-          {props.materia}
-        </h1>
+        <h1 className="tituloDisciplina">{props.materia}</h1>
       </Container>
       <Container className="body">
         <Row>
           <Col>
             <div className="descriptionArea">
-              <h4 style={{ color: "#FFFFFF" }}>{props.publicacoes} Publicações</h4>
-              <hr style={{color:'white'}}/>
-              <h4 style={{ color: "#FFFFFF", marginBottom:"15px" }}>Professor:</h4>
-              <h6 style={{ color: "#FFFFFF", marginLeft:"15px" }}>{props.professor}</h6>
-              <hr style={{color:'white'}}/>
-              <h4 style={{ color: "#FFFFFF" }}>Curadores:</h4>
-              <h6 style={{ color: "#BF7A47", marginLeft:"15px" }}>@GabrielNicacio</h6>
-              <h6 style={{ color: "#BF7A47", marginLeft:"15px" }}>@MuriloUrquiza</h6>
-              <h6 style={{ color: "#BF7A47", marginLeft:"15px" }}>@ViniciusMaia</h6>
-              <h6 style={{ color: "#BF7A47", marginLeft:"15px" }}>@ArthurSampaio</h6>
-              <hr style={{color:'white'}}/>
-              <h4 style={{ color: "#FFFFFF" }}>Buscar assunto:</h4>
+              <h4>{props.publicacoes} Publicações</h4>
+              <hr/>
+
+              <h4 style={{ marginBottom:"15px" }}>Professor:</h4>
+              <h6 style={{ marginLeft:"15px" }}>{props.professor}</h6>
+              <hr/>
+
+              <h4>Curadores:</h4>
+              {
+                curadores.map((curador) => (
+                  <h6 className="curadorDisciplinas">{curador}</h6>
+                ))
+              }
+              <hr/>
+
+              <h4>Buscar assunto:</h4>
+              {
+                props.assuntos.map((assunto) => (
+                  <Stack className="filterArea">
+                    <Form.Check label={assunto} />
+                  </Stack>
+                ))
+              }
               <Stack className="filterArea">
-                <Form.Check label={props.assuntos[0]} style={{ color: "white" }} />
+                <Form.Check label="Outros"/>
               </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[1]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[2]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[3]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[4]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[5]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[6]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[7]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[8]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[9]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[10]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[11]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[12]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[13]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label={props.assuntos[14]} style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label="Outros" style={{ color: "white" }} />
-              </Stack>
-              <hr style={{color:'white'}}/>
-              <h4 style={{ color: "#FFFFFF" }}>Buscar listas:</h4>
-              <Stack className="filterArea">
-                <Form.Check label="AB 1" style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label="AB 2" style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label="Reavaliação" style={{ color: "white" }} />
-              </Stack>
-              <Stack className="filterArea">
-                <Form.Check label="Final" style={{ color: "white" }} />
-              </Stack>
+              <hr/>
+
+              <h4>Buscar listas:</h4>
+              {
+                listas.map((lista) => (
+                  <Stack className="filterArea">
+                    <Form.Check label={lista} />
+                  </Stack>
+                ))
+              }
             </div>
           </Col>
           <Col></Col>
@@ -146,8 +120,7 @@ function Disciplinas(props) {
                   <FormLabel>MuriloUrquiza</FormLabel>
                 </Col>
                 <Col style={{ display: "flex", justifyContent: "end" }}>
-                  <Icon.ArrowUp style={{ margin: "2px" }} />
-                  28
+                  <Icon.ArrowUp style={{ margin: "2px" }} />28
                   <Icon.ArrowDown style={{ margin: "2px" }} />2
                 </Col>
               </Row>
@@ -160,12 +133,7 @@ function Disciplinas(props) {
                   <FormLabel>Verificado</FormLabel>
                   <img src={Verificado} style={{marginLeft:"8px", height:'22px'}}/>
                 </Col>
-                <Col
-                  style={{
-                    display: "flex",
-                    justifyContent: "end",
-                  }}
-                >
+                <Col style={{display: "flex", justifyContent: "end",}}>
                   <div className="backConteudoDisciplina">Corretude</div>
                 </Col>
               </Row>
@@ -179,8 +147,7 @@ function Disciplinas(props) {
                   <FormLabel>ViniciusMaia</FormLabel>
                 </Col>
                 <Col style={{ display: "flex", justifyContent: "end" }}>
-                  <Icon.ArrowUp style={{ margin: "2px" }} />
-                  28
+                  <Icon.ArrowUp style={{ margin: "2px" }} />28
                   <Icon.ArrowDown style={{ margin: "2px" }} />2
                 </Col>
               </Row>
@@ -193,12 +160,7 @@ function Disciplinas(props) {
                   <FormLabel>Verificado</FormLabel>
                   <img src={Verificado} style={{marginLeft:"8px", height:'22px'}}/>
                 </Col>
-                <Col
-                  style={{
-                    display: "flex",
-                    justifyContent: "end"
-                  }}
-                >
+                <Col style={{display: "flex", justifyContent: "end"}}>
                   <div className="backConteudoDisciplina">Complexidade</div>
                 </Col>
               </Row>

@@ -118,3 +118,15 @@
   padding: 6px;
   border-radius: 15px;
 }
+
+.tituloDisciplina {
+  color: black;
+  padding: 180px 8px 8px 8px;
+  font-weight: 600;
+}
+
+.curadorDisciplinas {
+  color: #BF7A47;
+  margin-left: 15px;
+}
+
