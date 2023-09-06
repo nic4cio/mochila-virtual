@@ -1,43 +1,38 @@
-#um{
-    float:left;
-
-}
-
-#dois{
-    margin-left: 120px;
-    float:right;
-
-}
-
-#tres{
+#conteudo-geral{
     float:left;
     margin-left: 25%;
     margin-top: 5%;
 }
 
-.branco{
+#conteudo-esquerda{
+    float:left;
+
+}
+
+#conteudo-direita{
+    margin-left: 120px;
+    float:right;
+
+}
+
+select{
+    background-color: #ADADAD;
+    font-weight: bold;
     color: #FFF;
+    border-radius: 15px;
+    max-width: 70px;
+    min-width: 70px;
+    font-size: 12px;
+    height: 22px;
+    margin-right: 10px;
+    border: none;
+    text-align: center;
+    outline: none;
 }
 
 .arquivo-selecionado{
     padding-top: 10px;
     color: rgb(191, 122, 71);
-}
-
-.alertaEnviar{
-    position: fixed;
-    top: 50px;
-    left: 50%;
-    color: black;
-    width: 300px;
-    text-align: center;
-    transform: translateX(-50%);
-    background-color: green;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
 }
 
 #arquivo {
@@ -64,7 +59,7 @@
     background-color: #35E3F7;
     padding: 5px;
     border-radius: 15px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     outline: none;
     border: none;
@@ -75,13 +70,13 @@
     background-color: #FFF;
 }
 
-/* Botão old */
-.historico-analitico{
+.custom-button{
     color: #FFF;
     background-color: #DE6B6B;
+    font-weight: bold;
     padding: 5px;
     border-radius: 15px;
-    font-size: 20px;
+    font-size: 18px;
     outline: none;
     border: none;
 }
@@ -113,4 +108,8 @@
     border-radius: 50%;
     width: 300px;
     margin-left: -3px;
+}
+
+.branco{
+    color: #FFF;
 }
