@@ -1,0 +1,137 @@
+#conteudo-geral{
+    float:left;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+#conteudo-esquerda{
+    float:left;
+
+}
+
+#conteudo-direita{
+    margin-left: 120px;
+    float:right;
+
+}
+
+select{
+    background-color: #ADADAD;
+    font-weight: bold;
+    color: #FFF;
+    border-radius: 15px;
+    max-width: 70px;
+    min-width: 70px;
+    font-size: 12px;
+    height: 22px;
+    margin-right: 10px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+.arquivo-selecionado{
+    padding-top: 10px;
+    color: rgb(191, 122, 71);
+}
+
+#arquivo {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.marrom{
+    color: rgb(191, 122, 71);
+}
+
+.azul{
+    color: #35E3F7;
+}
+
+.titulo-input{
+    border-radius: 15px;
+    height: 35px;
+    background-color: #ADADAD;
+    border: none;
+    outline: none;
+}
+
+.text-area{
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #ADADAD;
+    border: none;
+    outline: none;
+}
+
+.enviar{
+    color: #FFF;
+    font: poppins;
+    background-color: #35E3F7;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.enviar:hover{
+    color: #35E3F7;
+    background-color: #FFF;
+}
+
+.custom-button{
+    color: #FFF;
+    background-color: #DE6B6B;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+.titulo-curadoria{
+    font-size: 25px;
+    color: #FFF;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.titulo-dados{
+    font-size: 25px;
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitulo-dados{
+    font-size: 20px;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.foto-usuario{
+    border-radius: 50%;
+    width: 300px;
+    margin-left: -3px;
+}
+
+.paragrofo-explicando{
+    width: 400px;
+    margin-left: -40px;
+    margin-top: -15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.branco{
+    color: #FFF;
+}

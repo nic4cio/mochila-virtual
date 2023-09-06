@@ -11,6 +11,7 @@ import Home from "../pages/Home"
 import ConteudoDisciplina from "../pages/ConteudoDisciplina";
 import UsuarioLogado from "../pages/UsuarioLogado";
 import SolicitarCurador from "../pages/SolicitarCurador";
+import SubmeterConteudo from "../pages/SubmeterConteudo";
 
 // periodo 1
 import Cdi from "../pagesCC/Periodo1/cdi";
@@ -90,6 +91,7 @@ function Rotas() {
             <Route path='/conteudo-disciplina' Component={ConteudoDisciplina}></Route>
             <Route path='/usuario-logado' Component={UsuarioLogado}></Route>
             <Route path='/solicitar-curador' Component={SolicitarCurador}></Route>
+            <Route path='/submeter-conteudo' Component={SubmeterConteudo}></Route>
 
             <Route path='/materias/cdi' Component={Cdi}></Route>
             <Route path='/materias/cse' Component={Cse}></Route>
