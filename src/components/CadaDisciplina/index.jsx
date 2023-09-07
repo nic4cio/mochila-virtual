@@ -20,6 +20,8 @@ import { Link } from 'react-router-dom';
 
 import Swal from 'sweetalert2';
 
+import BlocoCadaDisciplina from "../BlocoCadaDisciplina";
+
 function Disciplinas(props) {
   const current = new Date().toLocaleString();
 
@@ -113,31 +115,7 @@ function Disciplinas(props) {
               </Button>
             </Stack>
           <Link to='/conteudo-disciplina' className="contentArea">
-            <Container>
-              <Row>
-                <Col style={{ display: "flex", justifyContent: "start" }}>
-                  <Icon.Person style={{ margin: "5px" }} />
-                  <FormLabel>MuriloUrquiza</FormLabel>
-                </Col>
-                <Col style={{ display: "flex", justifyContent: "end" }}>
-                  <Icon.ArrowUp style={{ margin: "2px" }} />28
-                  <Icon.ArrowDown style={{ margin: "2px" }} />2
-                </Col>
-              </Row>
-              <Stack>
-                <h2>Como identificar variante de laço</h2>
-                <h6>{current}</h6>
-              </Stack>
-              <Row style={{marginTop:"40px"}}>
-                <Col>
-                  <FormLabel>Verificado</FormLabel>
-                  <img src={Verificado} style={{marginLeft:"8px", height:'22px'}}/>
-                </Col>
-                <Col style={{display: "flex", justifyContent: "end",}}>
-                  <div className="backConteudoDisciplina">Corretude</div>
-                </Col>
-              </Row>
-            </Container>
+            <BlocoCadaDisciplina />
           </Link>
           <Link to='/conteudo-disciplina' className="contentArea">
             <Container>

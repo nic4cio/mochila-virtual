@@ -4,12 +4,25 @@ import CabecalhoLogado from "../../components/CabecalhoLogado";
 import styled from 'styled-components';
 import "./style.css";
 
+import BlocoCadaDisciplina from '../../components/BlocoCadaDisciplina';
+import Invariante from '../../components/Pdf/Invariante.pdf';
+
+import Swal from 'sweetalert2';
+
+const bancoDados = [
+];
+
 const SubmeterConteudo = () => {
   window.scrollTo(0, 0); // Reinicia o scroll
 
   const lidarComAlertaEnviar = () => {
-    alert("Seu conteúdo foi enviado e em breve poderá ser aprovador por um curador.");
-  };
+    Swal.fire({
+        title: 'Conteúdo Enviado!',
+        text: 'Quando um curador aprovar ele será publicado.',
+        icon: 'success', // Ícone personalizado (warning, success, error, etc.)
+        confirmButtonText: 'OK',
+    });
+};
 
   const InputArquivo = styled.input`
     display: none;
@@ -243,6 +256,30 @@ const SubmeterConteudo = () => {
     }
   };
 
+  const [title, setTitle] = useState(''); 
+  const [banco, setBanco] = useState(bancoDados);
+
+  const tituloHandler = (event) => {
+    setTitle(event.target.value);
+  }
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const conteudoData = {
+      titulo: title,
+      pdf: arquivoSelecionado,
+    };
+
+    setBanco(prevBanco => {
+      return [conteudoData, ...prevBanco];
+    });
+
+    console.log(conteudoData);
+    setTitle('');
+    setArquivoSelecionado(null);
+  }
+
   return (
     <div>
       <CabecalhoLogado />
@@ -270,7 +307,7 @@ const SubmeterConteudo = () => {
         <span className='test'>>>></span>
 
         <div id="conteudo-direita">
-          <form action="">
+          <form onSubmit={submitHandler}>
             <div className="titulo-dados">Olá, <span className="marrom">Vinícius</span>. Preencha abaixo!</div><hr style={{color:"black"}}/>
             <div className="subtitulo-dados">1. Em qual matéria você deseja enviar o conteúdo?</div>
 
@@ -328,15 +365,19 @@ const SubmeterConteudo = () => {
             </div>
 
             <div className="subtitulo-dados">3. Título:</div>
-            <input type="text" className='titulo-input'/>
+            <input type="text" className='titulo-input' value={title} onChange={tituloHandler}/>
 
             <div className="subtitulo-dados">4. Escreva uma breve descrição:</div>
             <textarea className="text-area" name="comentario" rows="4" cols="25"></textarea><br />
 
-            <button className="enviar" onClick={lidarComAlertaEnviar}>Enviar</button>
+            <button type='submit' className="enviar" onClick={lidarComAlertaEnviar}>Enviar</button>
           </form>
         </div>
       </div>
+      {
+        banco.map((titulo) => (
+          <BlocoCadaDisciplina titulo={titulo.titulo} pdf={titulo.pdf}/>
+      ))}
     </div>
   );
 };

@@ -12,7 +12,7 @@ import AddComentario from '../../components/AddComentario';
 
 import { useState } from 'react';
 
-function ConteudoDisciplina() {
+function ConteudoDisciplina(props) {
     window.scrollTo(0, 0); //Reinicia o scroll
     const [mostrarAlerta, setMostrarAlerta] = useState(false);
 
@@ -32,7 +32,7 @@ function ConteudoDisciplina() {
                 <h6 >Por: <span className="tituloH6Conteudo">ViniciusMaia</span></h6>
                 <h3 >Como identificar invariante de laço</h3>
                 <div> 
-                    <iframe src={invariante} height={ 600 } className="pdfConteudo"></iframe>
+                    <iframe src={props.pdf} height={ 600 } className="pdfConteudo"></iframe>
                 </div>
                 <div className="abaxioPDFConteudo">
                     <span>
