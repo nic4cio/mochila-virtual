@@ -6,13 +6,17 @@
 
 #conteudo-esquerda{
     float:left;
-
+    height: 650px;
+    padding-right: 55px;
 }
 
 #conteudo-direita{
-    margin-left: 120px;
+    margin-left: 75px;
     float:right;
-
+    padding: 30px;
+    border: 6px solid black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.918);
 }
 
 select{
@@ -68,20 +72,20 @@ select{
 }
 
 .enviar{
-    color: #FFF;
-    font: poppins;
-    background-color: #35E3F7;
-    padding: 5px;
+    color: #35E3F7;
+    background-color: black;
+    padding: 10px 20px;
     border-radius: 15px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: none;
     outline: none;
     border: none;
 }
 
 .enviar:hover{
     color: #35E3F7;
-    background-color: #FFF;
+    background-color: #474646;
+    padding: 15px 25px;
 }
 
 .custom-button{
@@ -96,25 +100,25 @@ select{
 }
 
 .titulo-curadoria{
-    font-size: 25px;
+    font-size: 55px;
     color: #FFF;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: -220px;
     margin-bottom: 30px;
 }
 
 .titulo-dados{
     font-size: 25px;
-    color: #FFF;
+    color: black;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .subtitulo-dados{
     font-size: 20px;
-    color: #FFF;
+    color: black;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -125,13 +129,20 @@ select{
 }
 
 .paragrofo-explicando{
-    width: 400px;
-    margin-left: -40px;
+    width: 500px;
+    margin-left: -220px;
     margin-top: -15px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
+    text-align: justify;
 }
 
 .branco{
     color: #FFF;
+}
+
+.test {
+    display: inline-block;
+    margin-top: 200px;
+    font-size: 100px;
 }

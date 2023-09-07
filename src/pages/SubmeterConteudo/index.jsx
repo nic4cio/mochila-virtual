@@ -250,26 +250,29 @@ const SubmeterConteudo = () => {
 
       <div id="conteudo-geral">
         <div id="conteudo-esquerda">
-          <div className="titulo-curadoria">Submeter Conteudo</div>
-          <p className="paragrofo-explicando"><span className='azul'>Envie contéudos para serem aprovados por um curador.</span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium libero dictum enim consequat, non commodo metus malesuada.
-          Phasellus non ornare tortor. Phasellus mattis pulvinar pharetra. Suspendisse malesuada quis est in venenatis. Pellentesque aliquam dignissim dictum. 
-          Morbi vel blandit mauris.
+          <div className="titulo-curadoria">Submeter Conteúdo</div>
+          <p className="paragrofo-explicando"><span className='azul'>Esolha a matéria e o conteúdo, anexe seu PDF, coloque um título </span>
+          e, por fim, envie contéudos para serem aprovados por nosso grupo de curadores.
             </p>
 
             <br />
 
-            <p className="paragrofo-explicando"><span className='marrom'>Para serem aprovados, esses conteúdos... </span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium libero dictum enim consequat, non commodo metus malesuada.
-          Phasellus non ornare tortor. Phasellus mattis pulvinar pharetra. Suspendisse malesuada quis est in venenatis. Pellentesque aliquam dignissim dictum. 
-          Morbi vel blandit mauris.
+            <p className="paragrofo-explicando">Para serem publicados, esses conteúdos precisam ser aprovados:
+            <span className='marrom'> qualitativamente, eficientemente e eticamente. </span> Além de que, após postados, continuarão a ser avaliados pelos usuários por meio de curtidas e comentários.
+            </p>
+
+            <br />
+
+            <p className="paragrofo-explicando">Lembre-se que você também pode ser curador e ajudar a avaliar os conteúdos, clique em Seja um Curador e veja os pré-requisitos.
             </p>
         </div>
 
+        <span className='test'>>>></span>
+
         <div id="conteudo-direita">
           <form action="">
-            <div className="titulo-dados">Olá, <span className="marrom">Vinícius</span>. Preencha abaixo:</div>
-            <div className="subtitulo-dados">Em qual matéria você deseja enviar o conteúdo?</div>
+            <div className="titulo-dados">Olá, <span className="marrom">Vinícius</span>. Preencha abaixo!</div><hr style={{color:"black"}}/>
+            <div className="subtitulo-dados">1. Em qual matéria você deseja enviar o conteúdo?</div>
 
             <select value={cursoSelecionado} onChange={lidarComMudancaDeCurso}>
               {Object.keys(dadosCursos).map((curso) => (
@@ -289,7 +292,7 @@ const SubmeterConteudo = () => {
             {periodoSelecionado !== "Período" && (
               <div>
                 <br />
-                <div className="subject-container">
+                <div className="subject-contain">
                   {dadosCursos[cursoSelecionado].disciplinas[periodoSelecionado].map((disciplina) => (
                     <OpcaoDisciplina
                       key={disciplina}
@@ -309,7 +312,7 @@ const SubmeterConteudo = () => {
             )}
 
             <div>
-              <label htmlFor="arquivo" className='subtitulo-dados'>Anexe seu conteúdo:</label><br />
+              <label htmlFor="arquivo" className='subtitulo-dados'>2. Anexe seu conteúdo:</label><br />
               <button type="button" className="custom-button" onClick={lidarComCliqueNoBotao}>
                 Selecionar arquivo
               </button>
@@ -324,10 +327,10 @@ const SubmeterConteudo = () => {
               {arquivoSelecionado && <div className='arquivo-selecionado'><span className='branco'>Arquivo selecionado:</span> {arquivoSelecionado.name}</div>}
             </div>
 
-            <div className="subtitulo-dados">Título</div>
+            <div className="subtitulo-dados">3. Título:</div>
             <input type="text" className='titulo-input'/>
 
-            <div className="subtitulo-dados">Escreva uma breve descrição</div>
+            <div className="subtitulo-dados">4. Escreva uma breve descrição:</div>
             <textarea className="text-area" name="comentario" rows="4" cols="25"></textarea><br />
 
             <button className="enviar" onClick={lidarComAlertaEnviar}>Enviar</button>
