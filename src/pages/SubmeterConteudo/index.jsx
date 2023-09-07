@@ -9,11 +9,19 @@ import Invariante from '../../components/Pdf/Invariante.pdf';
 
 import Swal from 'sweetalert2';
 
+import { dadosCursos, corPorCursoPeriodo, OpcaoDisciplina, InputArquivo } from './dadosCursos';
+
 const bancoDados = [
 ];
 
 const SubmeterConteudo = () => {
   window.scrollTo(0, 0); // Reinicia o scroll
+
+  const [arquivoSelecionado, setArquivoSelecionado] = useState(null);
+  const [cursoSelecionado, setCursoSelecionado] = useState("Curso");
+  const [periodoSelecionado, setPeriodoSelecionado] = useState("Período");
+  const [disciplinasSelecionadas, setDisciplinasSelecionadas] = useState([]);
+  const referenciaInputArquivo = useRef(null);
 
   const lidarComAlertaEnviar = () => {
     Swal.fire({
@@ -22,125 +30,7 @@ const SubmeterConteudo = () => {
         icon: 'success', // Ícone personalizado (warning, success, error, etc.)
         confirmButtonText: 'OK',
     });
-};
-
-  const InputArquivo = styled.input`
-    display: none;
-  `;
-
-  const OpcaoDisciplina = styled.option`
-    background-color: #343434;
-    width: 60px;
-    height: 40px;
-    padding-top: 8px;
-    margin-right: 5px;
-    font-weight: bold;
-    border-radius: 13px;
-    text-align: center;
-    float: left;
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === '1º Período' &&
-      `
-        background-color: #FF7474;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === '2º Período' &&
-      `
-        background-color: #8979FD;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === '3º Período' &&
-      `
-        background-color: #F27FEF;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === '4º Período' &&
-      `
-        background-color: #87E4FE;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === '5º Período' &&
-      `
-        background-color: #FCD878;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === '6º Período' &&
-      `
-        background-color: #90FCDF;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === '7º Período' &&
-      `
-        background-color: #E9FD7A;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === 'Computação Visual' &&
-      `
-        background-color: #7394FD;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === 'Sistemas Inteligentes' &&
-      `
-        background-color: #F8B076;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === 'Sistemas de Computação' &&
-      `
-        background-color: #F27ED6;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.periodo === 'Sistemas de Informação' &&
-      `
-        background-color: #F24430;
-        color: white;
-      `}
-
-    ${(props) =>
-      props.curso === 'CC' &&
-      props.selecionado &&
-      `
-        background-color: #FFF;
-        color: black;
-      `}
-  `;
-
-  const [arquivoSelecionado, setArquivoSelecionado] = useState(null);
-  const [cursoSelecionado, setCursoSelecionado] = useState("Curso");
-  const [periodoSelecionado, setPeriodoSelecionado] = useState("Período");
-  const [disciplinasSelecionadas, setDisciplinasSelecionadas] = useState([]);
-  const referenciaInputArquivo = useRef(null);
+  };
 
   const lidarComMudancaDeArquivo = (e) => {
     const arquivo = e.target.files[0];
@@ -161,82 +51,6 @@ const SubmeterConteudo = () => {
   const lidarComMudancaDePeriodo = (e) => {
     setPeriodoSelecionado(e.target.value);
     setDisciplinasSelecionadas([]);
-  };
-
-  const dadosCursos = {
-    "Curso": {
-      periodos: ["Período"],
-      disciplinas: [],
-    },
-    "CC": {
-      periodos: ["Período", "1º Período", "2º Período", "3º Período", "4º Período", "5º Período", "6º Período", "7º Período", "Computação Visual", "Sistemas Inteligentes", "Sistemas de Computação", "Sistemas de Informação"],
-      disciplinas: {
-        "1º Período": [
-          "P1",
-          "LÓG",
-          "CSÉ",
-          "MD",
-          "CDI"
-        ],
-        "2º Período": [
-          "ED",
-          "BD",
-          "OAC",
-          "GA"
-        ],
-        "3º Período": [
-          "REDC",
-          "TG",
-          "PROB",
-          "ÁLG"
-        ],
-        "4º Período": [
-          "P2",
-          "P3",
-          "PAA",
-          "TCOMP"
-        ],
-        "5º Período": [
-          "SO",
-          "COMPI",
-          "IA",
-          "CG"
-        ],
-        "6º Período": ["PDS"],
-        "7º Período": [
-          "MET",
-          "ND"
-        ],
-        "Computação Visual": [
-          "C3",
-          "AM",
-          "REAP",
-          "PDI",
-          "VISC"
-        ],
-        "Sistemas Inteligentes": [
-          "C3",
-          "AMÁQ",
-          "RNAP",
-          "CEVO",
-          "CD"
-        ],
-        "Sistemas de Computação": [
-          "C3",
-          "SDG",
-          "FPGA",
-          "SE",
-          "MICR"
-        ],
-        "Sistemas de Informação": [
-          "CLP",
-          "SDI",
-          "IHM",
-          "Gp",
-          "SEG"
-        ]
-      },
-    },
   };
 
   const lidarComCliqueNaDisciplina = (curso, periodo, disciplina) => {
