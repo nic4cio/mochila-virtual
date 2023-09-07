@@ -1,4 +1,4 @@
-#conteudo-geral{
+#conteudo-geral-submeter{
     float:left;
     margin-left: 28%;
     margin-top: 5%;
@@ -98,7 +98,7 @@ select{
     border: none;
 }
 
-.titulo-curadoria{
+.titulo-submeter{
     font-size: 40px;
     color: #FFF;
     font-weight: bold;
@@ -119,12 +119,6 @@ select{
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 10px;
-}
-
-.foto-usuario{
-    border-radius: 50%;
-    width: 300px;
-    margin-left: -3px;
 }
 
 .paragrofo-explicando{

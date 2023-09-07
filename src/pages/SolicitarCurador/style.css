@@ -1,4 +1,4 @@
-#conteudo-geral-c{
+#conteudo-geral{
     float:left;
     margin-left: 20%;
     margin-top: 5%;
@@ -6,7 +6,6 @@
 
 #conteudo-esquerda{
     float:left;
-
 }
 
 #conteudo-direita{
@@ -81,7 +80,7 @@ select{
     border: none;
 }
 
-.titulo-curadoria-c{
+.titulo-curadoria{
     font-size: 40px;
     color: #FFF;
     font-weight: bold;
@@ -104,10 +103,10 @@ select{
     margin-bottom: 10px;
 }
 
-.foto-usuario{
+.foto-usuario-solicitar{
     border-radius: 50%;
     width: 300px;
-    margin-left: -3px;
+    margin-left: 60px;
 }
 
 .branco{

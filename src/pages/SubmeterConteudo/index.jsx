@@ -285,9 +285,9 @@ const SubmeterConteudo = () => {
       <CabecalhoLogado />
       <FontePoppins />
 
-      <div id="conteudo-geral">
+      <div id="conteudo-geral-submeter">
         <div id="conteudo-esquerda">
-          <div className="titulo-curadoria">Submeter Conteúdo</div>
+          <div className="titulo-submeter">Submeter Conteúdo</div>
           <p className="paragrofo-explicando"><span className='azul'>Esolha a matéria e o conteúdo, anexe seu PDF, coloque um título </span>
           e, por fim, envie contéudos para serem aprovados por nosso grupo de curadores.
             </p>
@@ -308,7 +308,7 @@ const SubmeterConteudo = () => {
 
         <div id="conteudo-direita-sub">
           <form onSubmit={submitHandler}>
-            <div className="titulo-dados">Olá, <span className="marrom">Vinícius</span>. Preencha abaixo!</div><hr style={{color:"black"}}/>
+            <div className="titulo-dados">Olá, <span className="marrom">Vinícius</span>. Preencha abaixo!</div><hr style={{color:"#FFF"}}/>
             <div className="subtitulo-dados">1. Em qual matéria você deseja enviar o conteúdo?</div>
 
             <select value={cursoSelecionado} onChange={lidarComMudancaDeCurso}>
