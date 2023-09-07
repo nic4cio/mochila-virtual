@@ -1,6 +1,6 @@
-#conteudo-geral{
+#conteudo-geral-c{
     float:left;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-top: 5%;
 }
 
@@ -11,8 +11,8 @@
 
 #conteudo-direita{
     margin-left: 120px;
+    margin-top: 20px;
     float:right;
-
 }
 
 select{
@@ -81,8 +81,8 @@ select{
     border: none;
 }
 
-.titulo-curadoria{
-    font-size: 25px;
+.titulo-curadoria-c{
+    font-size: 40px;
     color: #FFF;
     font-weight: bold;
     margin-left: 20px;

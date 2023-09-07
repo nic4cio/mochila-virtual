@@ -249,9 +249,9 @@ const SolicitarCurador = () => {
       <CabecalhoLogado />
       <FontePoppins />
 
-      <div id="conteudo-geral">
+      <div id="conteudo-geral-c">
         <div id="conteudo-esquerda">
-          <div className="titulo-curadoria">Solicitar ser curador</div>
+          <div className="titulo-curadoria-c">Solicitar ser curador</div>
           <img src={foto} alt="Foto usuário" className='foto-usuario' />
         </div>
 

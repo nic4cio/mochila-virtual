@@ -304,9 +304,9 @@ const SubmeterConteudo = () => {
             </p>
         </div>
 
-        <span className='test'>>>></span>
+        <span className='test'>&gt;</span>  {/*&gt; == ">"*/}
 
-        <div id="conteudo-direita">
+        <div id="conteudo-direita-sub">
           <form onSubmit={submitHandler}>
             <div className="titulo-dados">Olá, <span className="marrom">Vinícius</span>. Preencha abaixo!</div><hr style={{color:"black"}}/>
             <div className="subtitulo-dados">1. Em qual matéria você deseja enviar o conteúdo?</div>
