@@ -1,4 +1,5 @@
 import Logo from "../../assets/pdslogo.svg";
+import React, { useState, useRef } from 'react';
 import Verificado from "../../assets/Verificado.svg"
 import "../../pages/Estilo/Disciplinas.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,6 +22,11 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 import BlocoCadaDisciplina from "../BlocoCadaDisciplina";
+
+import { InputArquivo } from '../../pages/SubmeterConteudo/dadosCursos';
+
+const bancoDados = [
+];
 
 function Disciplinas(props) {
   const current = new Date().toLocaleString();
@@ -47,6 +53,77 @@ function Disciplinas(props) {
         confirmButtonText: 'OK',
     });
 };
+
+const lidarComAlertaEnviar = () => {
+  Swal.fire({
+      title: 'Conteúdo Enviado!',
+      text: 'Quando um curador aprovar ele será publicado.',
+      icon: 'success', // Ícone personalizado (warning, success, error, etc.)
+      confirmButtonText: 'OK',
+  });
+
+  mostrarFormulario();
+};
+
+const mostrarFormulario = () => {
+  const elemento = document.getElementById('esconderFormulario');
+  if (elemento.style.display === 'block') {
+    elemento.style.display = 'none'; 
+  } else {
+    elemento.style.display = 'block'; 
+  }
+};
+
+const [arquivoSelecionado, setArquivoSelecionado] = useState(null);
+const referenciaInputArquivo = useRef(null);
+
+const lidarComMudancaDeArquivo = (e) => {
+  const arquivo = e.target.files[0];
+  console.log("Arquivo selecionado:", arquivo);
+  setArquivoSelecionado(arquivo);
+};
+
+const lidarComCliqueNoBotao = () => {
+  referenciaInputArquivo.current.click();
+};
+
+const [title, setTitle] = useState(''); 
+const [assunto, setAssunto] = useState(''); 
+const [descricao, setDescricao] = useState(''); 
+const [banco, setBanco] = useState(bancoDados);
+
+  const tituloHandler = (event) => {
+    setTitle(event.target.value);
+  }
+
+  const assuntoHandler = (event) => {
+    setAssunto(event.target.value);
+  }
+
+  const descricaoHandler = (event) => {
+    setDescricao(event.target.value);
+  }
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const conteudoData = {
+      titulo: title,
+      assunto: assunto,
+      pdf: arquivoSelecionado,
+      descricao: descricao,
+    };
+
+    setBanco(prevBanco => {
+      return [conteudoData, ...prevBanco];
+    });
+
+    console.log(conteudoData);
+    setTitle('');
+    setAssunto('');
+    setDescricao('');
+    setArquivoSelecionado(null);
+  }
 
   return (
     <div className="App imageRegistros">
@@ -101,22 +178,71 @@ function Disciplinas(props) {
         </Row>
         <Stack>
             <Stack direction="horizontal" gap={1} className="shareContent">
-              <Button variant="light" onClick={alerta}>
-                <Icon.Dropbox color="green" />
-              </Button>
-              <Button variant="light" onClick={alerta}>
-                <Icon.Youtube color="green" />
-              </Button>
-              <Button variant="light" onClick={alerta}>
+              <Button variant="light" onClick={mostrarFormulario}>
+              <label style={{marginRight: '10px'}}>PDF</label>
                 <Icon.Upload color="green" />
               </Button>
               <Button variant="light" onClick={alerta}>
+                <label style={{marginRight: '10px'}}>Link</label>
                 <Icon.Share color="green" />
               </Button>
             </Stack>
-          <Link to='/conteudo-disciplina' className="contentArea">
-            <BlocoCadaDisciplina />
-          </Link>
+            <Stack direction="horizontal" id="esconderFormulario">
+                <div className="titulo-dados marrom">
+                  Submeter Conteúdo!
+                </div><hr/>
+                <form onSubmit={submitHandler}>
+                  <div className="subtitulo-dados">1. Título:</div>
+                  <input type="text" className='titulo-input' value={title} onChange={tituloHandler}/>
+                  <div className="subtitulo-dados">2. Assunto:</div>
+                  <select id="seuSelect" value={assunto} onChange={assuntoHandler}>
+                    <option value="">Escolha sua opção</option>
+                    <option value={props.assuntos[0]}>{props.assuntos[0]}</option>
+                    <option value={props.assuntos[1]}>{props.assuntos[1]}</option>
+                    <option value={props.assuntos[2]}>{props.assuntos[2]}</option>
+                    <option value={props.assuntos[3]}>{props.assuntos[3]}</option>
+                    <option value={props.assuntos[4]}>{props.assuntos[4]}</option>
+                    <option value={props.assuntos[5]}>{props.assuntos[5]}</option>
+                    <option value={props.assuntos[6]}>{props.assuntos[6]}</option>
+                    <option value={props.assuntos[7]}>{props.assuntos[7]}</option>
+                    <option value={props.assuntos[8]}>{props.assuntos[8]}</option>
+                    <option value={props.assuntos[9]}>{props.assuntos[9]}</option>
+                    <option value={props.assuntos[10]}>{props.assuntos[10]}</option>
+                    <option value={props.assuntos[11]}>{props.assuntos[11]}</option>
+                    <option value={props.assuntos[12]}>{props.assuntos[12]}</option>
+                    <option value={props.assuntos[13]}>{props.assuntos[13]}</option>
+                    <option value={props.assuntos[14]}>{props.assuntos[14]}</option>
+                    <option value="Outros">Outros</option>
+                  </select>
+                  <div>
+                    <label htmlFor="arquivo" className='subtitulo-dados'>3. Anexe seu PDF:</label><br />
+                    <button type="button" className="custom-button" onClick={lidarComCliqueNoBotao}>
+                      Selecionar arquivo
+                    </button>
+                    <InputArquivo
+                      type="file"
+                      id="arquivo"
+                      name="arquivo"
+                      accept=".pdf"
+                      onChange={lidarComMudancaDeArquivo}
+                      ref={referenciaInputArquivo}
+                    />
+                    {arquivoSelecionado && <div className='arquivo-selecionado'><span className='branco'>Arquivo selecionado:</span> {arquivoSelecionado.name}</div>}
+                  </div>
+
+                  <div className="subtitulo-dados">4. Escreva uma breve descrição:</div>
+                  <textarea className="text-area" value={descricao} onChange={descricaoHandler} name="comentario" rows="4" cols="25"></textarea><br />
+
+                  <button type='submit' className="enviar" onClick={lidarComAlertaEnviar}>Enviar</button>
+
+                </form>
+            </Stack>
+            {
+              banco.map((titulo) => (
+                <Link to='/conteudo-disciplina' className="contentArea">
+                  <BlocoCadaDisciplina titulo={titulo.titulo} pdf={titulo.pdf} assunto={titulo.assunto} descricao={titulo.descricao}/>
+                </Link>
+            ))}
           <Link to='/conteudo-disciplina' className="contentArea">
             <Container>
               <Row>

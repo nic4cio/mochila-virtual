@@ -14,12 +14,14 @@ import ConteudoDisciplina from "../../pages/ConteudoDisciplina";
 
 function BlocoCadaDisciplina(props) {
     const current = new Date().toLocaleString();
+
+    const user = "MuriloUrquiza";
     return (
         <Container >
               <Row >
                 <Col style={{ display: "flex", justifyContent: "start" }}>
                   <Icon.Person style={{ margin: "5px" }} />
-                  <FormLabel>MuriloUrquiza</FormLabel>
+                  <FormLabel>{user}</FormLabel>
                 </Col>
                 <Col style={{ display: "flex", justifyContent: "end" }}>
                   <Icon.ArrowUp style={{ margin: "2px" }} />28
@@ -36,9 +38,9 @@ function BlocoCadaDisciplina(props) {
                   <img src={Verificado} style={{marginLeft:"8px", height:'22px'}}/>
                 </Col>
                 <Col style={{display: "flex", justifyContent: "end",}}>
-                  <div className="backConteudoDisciplina">Corretude</div>
+                  <div className="backConteudoDisciplina">{props.assunto}</div>
                 </Col>
-                <ConteudoDisciplina pdf={props.pdf ? URL.createObjectURL(props.pdf) : ''}/>
+                {/*<ConteudoDisciplina pdf={props.pdf ? URL.createObjectURL(props.pdf) : ''}/> */}
               </Row>
         </Container>
     );

@@ -34,6 +34,14 @@ select{
     outline: none;
 }
 
+#seuSelect{
+    max-width: none;
+    color: black;
+    font-size: 14px;
+    height: 35px;
+    font-weight: none;
+}
+
 .arquivo-selecionado{
     padding-top: 10px;
     color: rgb(191, 122, 71);
@@ -108,7 +116,6 @@ select{
 
 .titulo-dados{
     font-size: 25px;
-    color: #FFF;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -140,4 +147,13 @@ select{
     font-size: 100px;
     margin-left: 80px;
     margin-right: 80px;
+}
+
+#esconderFormulario {
+    display: none;
+    border: 5px solid black;
+    margin: 0px auto;
+    background: #162125;
+    padding: 20px 30px;
+    border-radius: 20px;
 }
