@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
-
 import '../Estilo/Registros.css';
 
 import Cabecalho from '../../components/Cabecalho';
@@ -8,9 +6,10 @@ import TituloImagem from '../../components/TituloImagem';
 import FontePoppins from '../../components/FontePoppins';
 
 import { Link } from 'react-router-dom';
+import { registerUser } from '../../services/api';
 
 function Cadastrar() {
-  window.scrollTo(0, 0); //Reinicia o scroll
+  window.scrollTo(0, 0); // Reinicia o scroll
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -19,14 +18,13 @@ function Cadastrar() {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3333/auth/signup', {
-        email,
-        password,
-      });
+      const response = await registerUser({ email, password });
 
-      // if Registration successful, redirect to login page
+      // If Registration successful, redirect to login page
       console.log('Registration successful:', response.data);
-      // You can add a redirect logic here using React Router
+
+      // Redirect to the login page using window.location
+      window.location = '/login';
 
     } catch (error) {
       setErrorMessage('Error registering user'); // Handle error message display
