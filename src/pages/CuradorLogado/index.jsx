@@ -33,13 +33,14 @@ const UsuarioLogado = () => {
             </button>
             <p className='info-usuario'>
               Vinícius Maia de Holanda<br />
-              Conta: <span className='alaranjado'>Estudante</span>
-              <div className='azul-turquesa'>Ciência da Computação</div>
+              Conta: <span className='alaranjado'>Curador</span>
+              <div className='verde-engenharia'>Engenharia da Computação</div>
             </p>
 
             <div className='clear'></div>
 
             <div id="periodo-1">
+
                   <img src={estrela} alt="Foto usuário" className='mini-logo'/>
                   <div className="subtitulo-usuario">Matérias Favoritas</div>
 
@@ -54,7 +55,7 @@ const UsuarioLogado = () => {
                   </div>
 
                   <img src={mochila} alt="Foto usuário" className='mini-logo-triangulo'/>
-                  <div className="subtitulo-usuario">Sua Mochila</div>
+                  <div className="subtitulo-usuario">Sua Mochila & Curadoria</div>
 
                   <div className='clear'></div>
 
@@ -62,6 +63,9 @@ const UsuarioLogado = () => {
                       <button className="box-mochila">CONTEÚDOS SALVOS</button>
                       <button className="box-mochila">CONTEÚDOS APROVADOS</button>
                       <button className="box-mochila">SUBMETER CONTEÚDOS</button>
+                      <br />
+                      <button className="box-mochila-curador">APROVAR CONTEÚDOS</button>
+                      <button className="box-mochila-curador">APROVAR CURADORES</button>
                   </div>
 
             </div>
