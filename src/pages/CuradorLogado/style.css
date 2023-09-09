@@ -1,0 +1,197 @@
+/* PRINCIPAL */
+.foto-usuario-button{
+    background-color: #343434;
+    float: left;
+    border-radius: 50%;
+    width: 305.5px;
+    height: 305.5px;
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    outline: none;
+    border: none;
+}
+
+.foto-usuario-button:hover{
+    background-color: #87E4FE;
+}
+
+.foto-usuario{
+    border-radius: 50%;
+    width: 300px;
+    margin-left: -3px;
+}
+
+.azul-turquesa{
+    color: #33E4FA;
+}
+
+.verde-engenharia{
+    color: #9CE7C8;
+}
+
+.alaranjado{
+    color: #BF7A47;
+}
+
+.info-usuario{
+    margin-top: 130px;
+    margin-left: 50px;
+    font-size: 25px;
+    color: #FFF;
+    float: left;
+}
+
+.subtitulo-usuario{
+    color: #FFF;
+    float: left;
+}
+
+.mini-logo{
+    width: 23px;
+    float: left;
+
+}
+
+.mini-logo-triangulo{
+    width: 23px;
+    height: 20px;
+    float: left;
+}
+
+.box-mochila{
+    border: none;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-color: #74FF92;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    line-height: 100px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.box-mochila-curador{
+    border: none;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-color: #33E4FA;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    line-height: 100px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.box-mochila:hover, .box-mochila-curador:hover{
+    background-color: #FFF;
+    color: black;
+    cursor: pointer;
+}
+
+.clear{
+    clear: both;
+}
+
+/* MODAL */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+  
+.modal-content {
+    background-color: #D9D9D9;
+    width: 800px;
+    border-radius: 13px;
+    height: 400px;
+    padding: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top{
+    color: #fff;
+    background-color: #202A2F;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.modal-content button {
+    margin-top: 10px;
+}
+
+
+.foto-usuario-modal{
+    border-radius: 50%;
+    width: 300px;
+}
+
+.btn-cancelar{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    color: black;
+    background-color: #FF7474;
+    border: none;
+    border-color: #dc3545;
+    position: relative;
+    left: 400px;
+    top: 10px
+}
+
+.btn-cancelar:hover {
+    color: #fff;
+}
+
+.btn-salvar {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    color: black;
+    background-color: #33E4FA;
+    border: none;
+    position: relative;
+    left: 510px;
+    bottom: 30px
+}
+
+.btn-salvar:hover {
+    color: #fff;
+}
+
+.foto-usuario-modal {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.input-modal {
+    width: 300px;
+    height: 35px;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 400px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+}
+
+.inputs-posicao{
+    position: relative;
+    bottom: 260px;
+}
