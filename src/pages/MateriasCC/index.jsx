@@ -22,7 +22,7 @@ const MateriasCC = () => {
                     <Link to="/materias/programacao1"><button className="box">PROGRAMAÇÃO 1</button></Link>
                     <Link to="/materias/logica-computacao"><button className="box">LÓGICA PARA COMP</button></Link>
                     <Link to="/materias/cse"><button className="box">COMP SOC E ÉTICA</button></Link>
-                    <Link to="/materias/matematoca-discreta"><button className="box">MATEMÁTICA DISCRETA</button></Link>
+                    <Link to="/materias/matematica-discreta"><button className="box">MATEMÁTICA DISCRETA</button></Link>
                     <Link to="/materias/cdi"><button className="box">CÁLCULO DIF E INT</button></Link>
                 </div>
             </div>
