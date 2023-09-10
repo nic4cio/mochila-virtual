@@ -120,38 +120,38 @@ function Rotas() {
             <Route path='/materias/visao-computacional' element={<VisaoComputacional />} />
 
             <Route path='/materias/algebra-linear' element={<AlgebraLinear/>} />
-            <Route path='/materias/grafos' element={Grafos}></Route>
-            <Route path='/materias/probabilidade-estatistica' element={ProbEst}></Route>
-            <Route path='/materias/redes-computadores' element={RedesComp}></Route>
+            <Route path='/materias/grafos' element={<Grafos/>} />
+            <Route path='/materias/probabilidade-estatistica' element={<ProbEst/>} />
+            <Route path='/materias/redes-computadores' element={<RedesComp/>} />
 
-            <Route path='/materias/programacao2' element={P2}></Route>
-            <Route path='/materias/programacao3' element={P3}></Route>
-            <Route path='/materias/paa' element={Paa}></Route>
-            <Route path='/materias/teoria-computacao' element={TeoriaComp}></Route>
+            <Route path='/materias/programacao2' element={<P2/>} />
+            <Route path='/materias/programacao3' element={<P3/>} />
+            <Route path='/materias/paa' element={<Paa/>} />
+            <Route path='/materias/teoria-computacao' element={<TeoriaComp/>} />
 
-            <Route path='/materias/computacao-grafica' element={Cg}></Route>
-            <Route path='/materias/compiladores' element={Compiladores}></Route>
-            <Route path='/materias/inteligencia-artificial' element={Ia}></Route>
-            <Route path='/materias/sistemas-operacionais' element={SistOperacionais}></Route>
+            <Route path='/materias/computacao-grafica' element={<Cg/>} />
+            <Route path='/materias/compiladores' element={<Compiladores/>} />
+            <Route path='/materias/inteligencia-artificial' element={<Ia/>} />
+            <Route path='/materias/sistemas-operacionais' element={<SistOperacionais/>} />
 
-            <Route path='/materias/projetao' element={Pds}></Route>
+            <Route path='/materias/projetao' element={<Pds/>} />
 
-            <Route path='/materias/metodologia-pesquisa' element={Metodologia}></Route>
-            <Route path='/materias/nocoes-direito' element={Direito}></Route>
+            <Route path='/materias/metodologia-pesquisa' element={<Metodologia/>} />
+            <Route path='/materias/nocoes-direito' element={<Direito/>} />
 
-            <Route path='/materias/fgpa' element={Fgpa}></Route>
-            <Route path='/materias/microcontroladores' element={MicroApli}></Route>
-            <Route path='/materias/sistemas-digitais' element={SistemasDigitais}></Route>
-            <Route path='/materias/sistemas-embarcados' element={SistemasEmbarcados}></Route>
+            <Route path='/materias/fgpa' element={<Fgpa/>} />
+            <Route path='/materias/microcontroladores' element={<MicroApli/>} />
+            <Route path='/materias/sistemas-digitais' element={<SistemasDigitais/>} />
+            <Route path='/materias/sistemas-embarcados' element={<SistemasEmbarcados/>} />
 
-            <Route path='/materias/clp' element={Clp}></Route>
-            <Route path='/materias/gerencia-projeto' element={GerenciaProj}></Route>
-            <Route path='/materias/ihm' element={Ihm}></Route>
-            <Route path='/materias/seguranca' element={Seguranca}></Route>
-            <Route path='/materias/sistemas-distribuidos' element={SistDistribuidos}></Route>
+            <Route path='/materias/clp' element={<Clp/>} />
+            <Route path='/materias/gerencia-projeto' element={<GerenciaProj/>} />
+            <Route path='/materias/ihm' element={<Ihm/>} />
+            <Route path='/materias/seguranca' element={<Seguranca/>} />
+            <Route path='/materias/sistemas-distribuidos' element={<SistDistribuidos/>} />
 
-            <Route path='/materias/ciencia-dados' element={CienciaDados}></Route>
-            <Route path='/materias/computacao-evolucionaria' element={CompEvol}></Route>
+            <Route path='/materias/ciencia-dados' element={<CienciaDados/>} />
+            <Route path='/materias/computacao-evolucionaria' element={<CompEvol/>} />
 
           </Routes>
 
