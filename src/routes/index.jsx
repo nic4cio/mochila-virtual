@@ -1,5 +1,6 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
+
 import Login from '../pages/Login';
 import Cadastrar from "../pages/Cadastro";
 import EsqueceuSenha from "../pages/EsqueceuSenha";
@@ -76,77 +77,84 @@ import SistDistribuidos from "../pagesCC/SistInformacao/sistDistribuidos";
 import CienciaDados from "../pagesCC/SistInteligentes/cienciaDados";
 import CompEvol from "../pagesCC/SistInteligentes/compEvol";
 
+import ProtectedRoute from "./ProtectedRoute";
+
 function Rotas() {
     return (
         <BrowserRouter>
+
           <Routes>
-            <Route path='/' Component={Home}></Route>
-            <Route path='/login' Component={Login} />
-            <Route path='/cadastro' Component={Cadastrar} />
-            <Route path='/esqueceu-senha' Component={EsqueceuSenha} />
-            <Route path='/alterar-senha' Component={AlterarSenha} />
-            <Route path='/disciplinas' Component={Disciplinas}/>
-            <Route path='/materiascc' Component={MateriasCC}/>
-            <Route path='/materiasec' Component={MateriasEC}/>
-            <Route path='/home' Component={Home}></Route>
-            <Route path='/conteudo-disciplina' Component={ConteudoDisciplina}></Route>
-            <Route path='/usuario-logado' Component={UsuarioLogado}></Route>
-            <Route path='/curador-logado' Component={CuradorLogado}></Route>
-            <Route path='/solicitar-curador' Component={SolicitarCurador}></Route>
-            <Route path='/submeter-conteudo' Component={SubmeterConteudo}></Route>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/cadastro' element={<Cadastrar />} />
+            <Route path='/esqueceu-senha' element={<EsqueceuSenha />} />
+            <Route path='/alterar-senha' element={<AlterarSenha />} />
+            <Route path='/disciplinas' element={<Disciplinas />} />
+            <Route path='/materiascc' element={<MateriasCC />} />
+            <Route path='/materiasec' element={<MateriasEC />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/conteudo-disciplina' element={<ConteudoDisciplina/> } />
+            <Route
+              path='/usuario-logado'
+              element={<ProtectedRoute element={<UsuarioLogado />} />}
+            />
+            <Route path='/curador-logado' element={<CuradorLogado/> } />
+            <Route path='/solicitar-curador' element={<SolicitarCurador/> } />
+            <Route path='/submeter-conteudo' element={<SubmeterConteudo/> } />
 
-            <Route path='/materias/cdi' Component={Cdi}></Route>
-            <Route path='/materias/cse' Component={Cse}></Route>
-            <Route path='/materias/logica-computacao' Component={LogicaComputacao}></Route>
-            <Route path='/materias/matematoca-discreta' Component={MatDiscreta}></Route>
-            <Route path='/materias/programacao1' Component={P1}></Route>
+            <Route path='/materias/cdi' element={<Cdi/>} />
+            <Route path='/materias/cse' element={<Cse/>} />
+            <Route path='/materias/logica-computacao' element={<LogicaComputacao />} />
+            <Route path='/materias/matematica-discreta' element={<MatDiscreta/>} />
+            <Route path='/materias/programacao1' element={<P1/>} />
 
-            <Route path='/materias/estrutura-dados' Component={EstruturaDados}></Route>
-            <Route path='/materias/banco-dados' Component={BancoDados}></Route>
-            <Route path='/materias/oac' Component={Oac}></Route>
-            <Route path='/materias/geometria-analitica' Component={GeometriaAnalitica}></Route>
+            <Route path='/materias/estrutura-dados' element={<EstruturaDados/> } />
+            <Route path='/materias/banco-dados' element={<BancoDados/> } />
+            <Route path='/materias/oac' element={<Oac/> } />
+            <Route path='/materias/geometria-analitica' element={<GeometriaAnalitica/>} />
 
-            <Route path='/materias/aprendizagem-maquina' Component={AprendMaquina}></Route>
-            <Route path='/materias/c3' Component={Calculo3}></Route>
-            <Route path='/materias/pdi' Component={Pdi}></Route>
-            <Route path='/materias/redes-neurais' Component={RedesNeurais}></Route>
-            <Route path='/materias/visao-computacional' Component={VisaoComputacional}></Route>
+            <Route path='/materias/aprendizagem-maquina' element={<AprendMaquina/>} />
+            <Route path='/materias/c3' element={<Calculo3 />} />
+            <Route path='/materias/pdi' element={<Pdi/>} />
+            <Route path='/materias/redes-neurais' element={<RedesNeurais/>} />
+            <Route path='/materias/visao-computacional' element={<VisaoComputacional />} />
 
-            <Route path='/materias/algebra-linear' Component={AlgebraLinear}></Route>
-            <Route path='/materias/grafos' Component={Grafos}></Route>
-            <Route path='/materias/probabilidade-estatistica' Component={ProbEst}></Route>
-            <Route path='/materias/redes-computadores' Component={RedesComp}></Route>
+            <Route path='/materias/algebra-linear' element={<AlgebraLinear/>} />
+            <Route path='/materias/grafos' element={Grafos}></Route>
+            <Route path='/materias/probabilidade-estatistica' element={ProbEst}></Route>
+            <Route path='/materias/redes-computadores' element={RedesComp}></Route>
 
-            <Route path='/materias/programacao2' Component={P2}></Route>
-            <Route path='/materias/programacao3' Component={P3}></Route>
-            <Route path='/materias/paa' Component={Paa}></Route>
-            <Route path='/materias/teoria-computacao' Component={TeoriaComp}></Route>
+            <Route path='/materias/programacao2' element={P2}></Route>
+            <Route path='/materias/programacao3' element={P3}></Route>
+            <Route path='/materias/paa' element={Paa}></Route>
+            <Route path='/materias/teoria-computacao' element={TeoriaComp}></Route>
 
-            <Route path='/materias/computacao-grafica' Component={Cg}></Route>
-            <Route path='/materias/compiladores' Component={Compiladores}></Route>
-            <Route path='/materias/inteligencia-artificial' Component={Ia}></Route>
-            <Route path='/materias/sistemas-operacionais' Component={SistOperacionais}></Route>
+            <Route path='/materias/computacao-grafica' element={Cg}></Route>
+            <Route path='/materias/compiladores' element={Compiladores}></Route>
+            <Route path='/materias/inteligencia-artificial' element={Ia}></Route>
+            <Route path='/materias/sistemas-operacionais' element={SistOperacionais}></Route>
 
-            <Route path='/materias/projetao' Component={Pds}></Route>
+            <Route path='/materias/projetao' element={Pds}></Route>
 
-            <Route path='/materias/metodologia-pesquisa' Component={Metodologia}></Route>
-            <Route path='/materias/nocoes-direito' Component={Direito}></Route>
+            <Route path='/materias/metodologia-pesquisa' element={Metodologia}></Route>
+            <Route path='/materias/nocoes-direito' element={Direito}></Route>
 
-            <Route path='/materias/fgpa' Component={Fgpa}></Route>
-            <Route path='/materias/microcontroladores' Component={MicroApli}></Route>
-            <Route path='/materias/sistemas-digitais' Component={SistemasDigitais}></Route>
-            <Route path='/materias/sistemas-embarcados' Component={SistemasEmbarcados}></Route>
+            <Route path='/materias/fgpa' element={Fgpa}></Route>
+            <Route path='/materias/microcontroladores' element={MicroApli}></Route>
+            <Route path='/materias/sistemas-digitais' element={SistemasDigitais}></Route>
+            <Route path='/materias/sistemas-embarcados' element={SistemasEmbarcados}></Route>
 
-            <Route path='/materias/clp' Component={Clp}></Route>
-            <Route path='/materias/gerencia-projeto' Component={GerenciaProj}></Route>
-            <Route path='/materias/ihm' Component={Ihm}></Route>
-            <Route path='/materias/seguranca' Component={Seguranca}></Route>
-            <Route path='/materias/sistemas-distribuidos' Component={SistDistribuidos}></Route>
+            <Route path='/materias/clp' element={Clp}></Route>
+            <Route path='/materias/gerencia-projeto' element={GerenciaProj}></Route>
+            <Route path='/materias/ihm' element={Ihm}></Route>
+            <Route path='/materias/seguranca' element={Seguranca}></Route>
+            <Route path='/materias/sistemas-distribuidos' element={SistDistribuidos}></Route>
 
-            <Route path='/materias/ciencia-dados' Component={CienciaDados}></Route>
-            <Route path='/materias/computacao-evolucionaria' Component={CompEvol}></Route>
+            <Route path='/materias/ciencia-dados' element={CienciaDados}></Route>
+            <Route path='/materias/computacao-evolucionaria' element={CompEvol}></Route>
 
           </Routes>
+
         </BrowserRouter>
     );
 }
