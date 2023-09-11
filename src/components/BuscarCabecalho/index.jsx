@@ -1,4 +1,4 @@
-import logoImage from '../../assets/pdslogo.svg';
+import logoImage from '../../assets/mochila-azul-verde.png';
 import { Link } from 'react-router-dom';
 
 function BuscarCabecalho() {
