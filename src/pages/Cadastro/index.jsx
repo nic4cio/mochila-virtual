@@ -8,17 +8,31 @@ import FontePoppins from '../../components/FontePoppins';
 import { Link } from 'react-router-dom';
 import { registerUser } from '../../services/api';
 
+import Swal from 'sweetalert2';
+
 function Cadastrar() {
   window.scrollTo(0, 0); // Reinicia o scroll
   const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    if(password != confirmPassword){
+      Swal.fire({
+        title: 'Campo Inválido',
+        text: 'Senha ≠ Confirmar Senha.',
+        icon: 'error', // Ícone personalizado (warning, success, error, etc.)
+        confirmButtonText: 'OK',
+      });
+      return;
+    }
+
     try {
-      const response = await registerUser({ email, password });
+      const response = await registerUser({ email, name, password, confirmPassword });
 
       // If Registration successful, redirect to login page
       console.log('Registration successful:', response.data);
@@ -48,6 +62,13 @@ function Cadastrar() {
              onChange={(e) => setEmail(e.target.value)}
             />
             <input 
+             type="text"
+             placeholder="Nome de Usuario"
+             size="25"
+             value={name}
+             onChange={(e) => setName(e.target.value)}
+            />
+            <input 
              type="password"
              placeholder="Senha"
              size="25"
@@ -56,8 +77,10 @@ function Cadastrar() {
             />
             <input 
              type="password"
-             placeholder="Confirmar senha"
+             placeholder="Confirmar Senha"
              size="25"
+             value={confirmPassword}
+             onChange={(e) => setConfirmPassword(e.target.value)}
             />
             <span className="verdeRegistros">Já possui uma conta? <Link to="/login">Clique aqui para fazer login!</Link></span>
             <button type="submit">Entrar</button>
