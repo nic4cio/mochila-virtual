@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
 function Cadastrar() {
   window.scrollTo(0, 0); // Reinicia o scroll
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -32,7 +32,7 @@ function Cadastrar() {
     }
 
     try {
-      const response = await registerUser({ email, name, password, confirmPassword });
+      const response = await registerUser({ email, firstName, password, confirmPassword });
 
       // If Registration successful, redirect to login page
       console.log('Registration successful:', response.data);
@@ -65,8 +65,8 @@ function Cadastrar() {
              type="text"
              placeholder="Nome de Usuario"
              size="25"
-             value={name}
-             onChange={(e) => setName(e.target.value)}
+             value={firstName}
+             onChange={(e) => setFirstName(e.target.value)}
             />
             <input 
              type="password"
