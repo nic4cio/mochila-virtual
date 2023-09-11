@@ -10,14 +10,14 @@ import * as Icon from "react-bootstrap-icons";
 
 import Verificado from "../../assets/Verificado.svg"
 
-import ConteudoDisciplina from "../../pages/ConteudoDisciplina";
+import ConteudoDisciplinaTeste from "../../pages/ConteudoDisciplinaTeste";
 
 function BlocoCadaDisciplina(props) {
     const current = new Date().toLocaleString();
 
     const user = "MuriloUrquiza";
     return (
-        <Container >
+        <Container style={{maxWidth: '800px'}}>
               <Row >
                 <Col style={{ display: "flex", justifyContent: "start" }}>
                   <Icon.Person style={{ margin: "5px" }} />
@@ -40,8 +40,10 @@ function BlocoCadaDisciplina(props) {
                 <Col style={{display: "flex", justifyContent: "end",}}>
                   <div className="backConteudoDisciplina">{props.assunto}</div>
                 </Col>
-                {/*<ConteudoDisciplina pdf={props.pdf ? URL.createObjectURL(props.pdf) : ''}/> */}
+                 
               </Row>
+              <hr></hr>
+              <ConteudoDisciplinaTeste style={{maxWidth: '800px'}} pdf={props.pdf} descricao={props.descricao}/>
         </Container>
     );
 }
