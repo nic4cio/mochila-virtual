@@ -224,7 +224,7 @@ function Body () {
             <Row>
                 <img onClick={scrollToTop} style={{
                             width: '6rem', 
-                            height: '6rem',
+                            height: '4rem',
                             margin: '20px 0 0 570px',
                             cursor: 'pointer',
                             }} src={pdsLogo} alt="#" />
