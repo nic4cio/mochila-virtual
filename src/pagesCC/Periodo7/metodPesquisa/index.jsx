@@ -8,21 +8,21 @@ function MetodPesquisa() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Formulação do Problema de Pesquisa",
+        "Revisão da Literatura",
+        "Definição de Objetivos e Hipóteses",
+        "Seleção de Método de Pesquisa",
+        "Coleta de Dados",
+        "Amostragem",
+        "Procedimentos de Coleta de Dados",
+        "Análise de Dados",
+        "Validade e Confiabilidade",
+        "Interpretação dos Resultados",
+        "Discussão",
+        "Conclusões",
+        "Limitações do Estudo",
+        "Ética na Pesquisa",
+        "Divulgação e Publicação"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

@@ -8,21 +8,21 @@ function Ihm() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Fundamentos da Segurança de Sistemas",
+        "Políticas de Segurança",
+        "Criptografia",
+        "Autenticação e Autorização",
+        "Firewalls e IDS/IPS",
+        "Vulnerabilidades e Exploits",
+        "Gestão de Identidade e Acesso",
+        "Segurança de Redes",
+        "Segurança em Sistemas Operacionais",
+        "Segurança em Aplicações Web",
+        "Segurança em Dispositivos Móveis",
+        "Gestão de Incidentes de Segurança",
+        "Conformidade e Regulamentações",
+        "Segurança em Nuvem",
+        "Tendências em Segurança"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

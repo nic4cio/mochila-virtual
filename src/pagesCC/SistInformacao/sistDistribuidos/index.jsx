@@ -8,21 +8,21 @@ function SistDistribuidos() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Introdução a Sistemas Distribuídos",
+        "Comunicação em Redes",
+        "Coordenação e Consistência",
+        "Modelos de Concorrência",
+        "Tolerância a Falhas",
+        "Segurança em Sistemas Distribuídos",
+        "Algoritmos de Consenso",
+        "Distribuição de Dados",
+        "Middleware e Plataformas Distribuídas",
+        "Virtualização de Recursos",
+        "Arquiteturas de Sistemas Distribuídos",
+        "Cloud Computing",
+        "IoT (Internet das Coisas)",
+        "Aplicações de Sistemas Distribuídos",
+        "Tendências em Sistemas Distribuídos"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

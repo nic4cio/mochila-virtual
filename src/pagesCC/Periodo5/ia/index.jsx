@@ -8,21 +8,21 @@ function Ia() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Aprendizado de Máquina (Machine Learning)",
+        "Redes Neurais Artificiais",
+        "Processamento de Linguagem Natural (PLN)",
+        "Visão Computacional",
+        "Robótica Inteligente",
+        "Agentes Inteligentes",
+        "Aprendizado Profundo (Deep Learning)",
+        "Algoritmos de IA",
+        "Ética em IA",
+        "IA e Medicina",
+        "IA e Automóveis Autônomos",
+        "IA na Indústria",
+        "IA na Educação",
+        "IA na Finança",
+        "Futuro da IA"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

@@ -8,21 +8,21 @@ function sistemasEmbarcados() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Introdução a Sistemas Embarcados",
+        "Microcontroladores",
+        "Arquitetura de Computadores Embarcados",
+        "Programação de Baixo Nível",
+        "Sistemas Operacionais Embarcados",
+        "Periféricos e Interfaces",
+        "Comunicação sem Fio",
+        "Economia de Energia",
+        "Desenvolvimento de Firmware",
+        "Segurança em Sistemas Embarcados",
+        "Depuração e Testes",
+        "Design de Sistemas Embarcados",
+        "Sistemas Embarcados em Tempo Real",
+        "Sistemas Embarcados em Automóveis",
+        "Tendências em Sistemas Embarcados"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

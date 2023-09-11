@@ -8,21 +8,21 @@ function Cse() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Privacidade de Dados",
+        "Ética na Inteligência Artificial (IA)",
+        "Vigilância Digital",
+        "Cibersegurança e Hacking Ético",
+        "Responsabilidade em TI",
+        "Desigualdades Digitais",
+        "Neutralidade da Rede",
+        "Ética em Big Data",
+        "Propriedade Intelectual e Direitos Autorais",
+        "Ética em Pesquisa em Computação",
+        "Inteligência Artificial e Emprego",
+        "Ética em Jogos e Entretenimento Digital",
+        "Ética em Redes Sociais",
+        "Acesso Universal à Tecnologia",
+        "Ética no Desenvolvimento de Software"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

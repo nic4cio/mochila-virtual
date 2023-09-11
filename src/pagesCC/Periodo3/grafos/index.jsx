@@ -8,21 +8,21 @@ function Grafos() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Grafos e Subgrafos",
+        "Grafos Dirigidos",
+        "Grafos Não-dirigidos",
+        "Grafos Ponderados",
+        "Grafos Conexos e Desconexos",
+        "Árvores e Florestas",
+        "Grafos Bipartidos",
+        "Caminhos e Ciclos",
+        "Grafos Eulerianos e Hamiltonianos",
+        "Matriz de Adjacência e Lista de Adjacência",
+        "Algoritmos de Busca",
+        "Algoritmos de Caminho Mínimo",
+        "Algoritmos de Fluxo Máximo",
+        "Grafos Planos",
+        "Aplicações em Redes Sociais"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

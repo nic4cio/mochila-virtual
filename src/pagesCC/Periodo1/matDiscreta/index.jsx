@@ -8,21 +8,21 @@ function MatDiscreta() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Teoria dos Conjuntos",
+        "Relações",
+        "Funções",
+        "Álgebra Booleana",
+        "Teoria dos Números",
+        "Relações",
+        "Congruência Linear",
+        "Métodos de provas",
+        "Teorema Chinês do Resto",
+        "Teorema de Fermat",
+        "Introdução a Criptografia",
+        "Teoria dos Conjuntos Finitos",
+        "Álgebra de Boole e Circuitos Lógicos",
+        "Teoria dos Números Criptográficos",
+        "Probabilidade Discreta"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

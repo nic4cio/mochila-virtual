@@ -8,21 +8,21 @@ function Fgpa() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Introdução aos FPGAs",
+        "Linguagens de Descrição de Hardware (HDLs)",
+        "Arquitetura de FPGA",
+        "Síntese Lógica",
+        "Implementação e Roteamento",
+        "Circuitos Lógicos Programáveis",
+        "IP Cores (Intellectual Property Cores)",
+        "Design Reconfigurável",
+        "Processadores Embutidos em FPGAs",
+        "Interfaceamento com Periféricos",
+        "Sistemas Embarcados com FPGAs",
+        "FPGA em Aplicações de Comunicação",
+        "FPGA em Processamento de Sinal",
+        "FPGA em Computação de Alto Desempenho (HPC)",
+        "Tendências em FPGA"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

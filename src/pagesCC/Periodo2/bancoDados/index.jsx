@@ -8,21 +8,21 @@ function BancoDados() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Modelo de Dados",
+        "SQL (Structured Query Language)",
+        "Sistemas de Gerenciamento de Banco de Dados (DBMS)",
+        "Normalização",
+        "Chave Primária e Chave Estrangeira",
+        "Índices",
+        "Transações",
+        "NoSQL Databases",
+        "Replicação de Dados",
+        "Sharding",
+        "Banco de Dados em Memória",
+        "Backup e Recuperação",
+        "Segurança de Banco de Dados",
+        "Modelagem de Dados",
+        "Big Data"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

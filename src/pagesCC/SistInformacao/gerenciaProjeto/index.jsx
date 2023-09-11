@@ -8,21 +8,21 @@ function GerenciaProjeto() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Introdução à Gerência de Projetos",
+        "Ciclo de Vida de Projetos",
+        "Estruturação do Projeto",
+        "Planejamento do Projeto",
+        "Avaliação de Riscos",
+        "Gerenciamento de Recursos",
+        "Monitoramento e Controle",
+        "Comunicação e Relatórios",
+        "Gestão de Qualidade",
+        "Gestão de Mudanças",
+        "Liderança e Equipe de Projeto",
+        "Ferramentas de Gerenciamento de Projetos",
+        "Ética em Gerência de Projetos",
+        "Projetos Globais e Virtuais",
+        "Casos de Estudo e Práticas Melhores"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

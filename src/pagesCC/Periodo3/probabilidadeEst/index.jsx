@@ -8,21 +8,21 @@ function ProbEst() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Probabilidade",
+        "Variáveis Aleatórias",
+        "Distribuição de Probabilidade",
+        "Distribuições de Probabilidade Comuns",
+        "Teorema do Limite Central",
+        "Amostragem e Estimação",
+        "Intervalos de Confiança",
+        "Testes de Hipóteses",
+        "Correlação e Regressão",
+        "Estatísticas Descritivas",
+        "Amostragem Aleatória Simples",
+        "Experimentos Aleatórios",
+        "Análise de Séries Temporais",
+        "Estatística Bayesiana",
+        "Aplicações em Ciência e Indústria"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

@@ -8,21 +8,21 @@ function SistemasDigitais() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Álgebra de Boole",
+        "Portas Lógicas",
+        "Sistemas de Numeração",
+        "Circuitos Combinacionais",
+        "Multiplexadores e Demultiplexadores",
+        "Decodificadores e Codificadores",
+        "Flip-Flops e Registradores",
+        "Contadores e Temporizadores",
+        "Sistemas de Lógica Programável",
+        "Memória Digital",
+        "Sistemas de Clock e Sincronização",
+        "Projeto de Circuitos Digitais",
+        "Arquitetura de Processadores",
+        "Microcontroladores",
+        "Sistemas Digitais em FPGA"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

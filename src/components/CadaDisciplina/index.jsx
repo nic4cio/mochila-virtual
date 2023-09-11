@@ -1,5 +1,5 @@
 import Logo from "../../assets/pdslogo.svg";
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import Verificado from "../../assets/Verificado.svg"
 import "../../pages/Estilo/Disciplinas.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,7 +24,6 @@ import Swal from 'sweetalert2';
 import BlocoCadaDisciplina from "../BlocoCadaDisciplina";
 
 import { InputArquivo } from '../../pages/SubmeterConteudo/dadosCursos';
-import { createContent, getContent } from "../../services/api";
 
 const bancoDados = [
 ];
@@ -105,23 +104,15 @@ const [banco, setBanco] = useState(bancoDados);
     setDescricao(event.target.value);
   }
 
-  const submitHandler = async (event) => {
+  const submitHandler = (event) => {
     event.preventDefault();
 
     const conteudoData = {
       titulo: title,
       assunto: assunto,
-      pdf: arquivoSelecionado ? URL.createObjectURL(arquivoSelecionado) : '',
+      pdf: arquivoSelecionado,
       descricao: descricao,
-      materia: props.materia,
     };
-
-    try{
-      await createContent(conteudoData);
-    }catch (error){
-      console.error(error.response.data.message);
-      setErrorMessage(error.response.data.message);
-    }
 
     setBanco(prevBanco => {
       return [conteudoData, ...prevBanco];
@@ -133,15 +124,6 @@ const [banco, setBanco] = useState(bancoDados);
     setDescricao('');
     setArquivoSelecionado(null);
   }
-
-  // useEffect (() => {
-  //   const getData = async () => {
-  //     const response = await getContent(props.materia);
-  //   }
-
-  //   console.log(getData.response);
-  //   getData();
-  // })
 
   return (
     <div className="App imageRegistros">
@@ -252,8 +234,8 @@ const [banco, setBanco] = useState(bancoDados);
                   <textarea className="text-area" value={descricao} onChange={descricaoHandler} name="comentario" rows="4" cols="25"></textarea><br />
 
                   <button type='submit' className="enviar" onClick={lidarComAlertaEnviar}>Enviar</button>
+
                 </form>
-                
             </Stack>
             {
               banco.map((titulo) => (

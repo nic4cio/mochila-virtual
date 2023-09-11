@@ -8,21 +8,21 @@ function NocoesDireito() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Regras e Leis",
+        "Justiça",
+        "Igualdade perante a Lei",
+        "Presunção de Inocência",
+        "Devido Processo Legal",
+        "Direitos Humanos",
+        "Responsabilidade Civil e Criminal",
+        "Contratos",
+        "Propriedade",
+        "Jurisprudência",
+        "Órgãos Jurídicos",
+        "Advogados e Juízes",
+        "Princípio do Contraditório",
+        "Prescrição",
+        "Legislação e Poder Legislativo"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

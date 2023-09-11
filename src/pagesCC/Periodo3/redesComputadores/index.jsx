@@ -8,21 +8,21 @@ function RedesComp() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Topologias de Rede",
+        "Protocolos de Rede",
+        "Modelo OSI",
+        "Arquiteturas de Rede",
+        "Endereçamento IP",
+        "Roteamento",
+        "Switches e Roteadores",
+        "Protocolos de Roteamento",
+        "Redes Sem Fio",
+        "Segurança de Rede",
+        "Virtualização de Rede",
+        "Redes de Área Local (LAN)",
+        "Redes de Área Ampla (WAN)",
+        "Redes de Data Center",
+        "Monitoramento e Gerenciamento de Rede"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

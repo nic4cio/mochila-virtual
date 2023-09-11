@@ -8,21 +8,21 @@ function Paa() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Análise de Complexidade",
+        "Algoritmos de Ordenação",
+        "Algoritmos de Busca",
+        "Algoritmos de Grafos",
+        "Algoritmos de Programação Dinâmica",
+        "Algoritmos de Fluxo Máximo",
+        "Algoritmos de Geometria Computacional",
+        "Algoritmos Greedy",
+        "Algoritmos de Correspondência",
+        "Algoritmos de Compressão de Dados",
+        "Algoritmos de Aproximação",
+        "Algoritmos em Cadeias de Caracteres",
+        "Algoritmos Distribuídos",
+        "Algoritmos Paralelos",
+        "Problemas NP-Completos e Teoria da Complexidade"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

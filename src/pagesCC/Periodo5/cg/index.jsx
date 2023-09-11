@@ -8,21 +8,21 @@ function Cg() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Rasterização e Vetorização",
+        "Modelagem 3D",
+        "Renderização",
+        "Texturização",
+        "Animação",
+        "Realidade Virtual (VR) e Realidade Aumentada (AR)",
+        "Gráficos de Jogos",
+        "Simulação",
+        "Visualização de Dados",
+        "Edição de Imagens",
+        "Técnicas de Pintura Digital",
+        "Computação Gráfica em Medicina",
+        "Computação Gráfica em Design Industrial",
+        "Computação Gráfica em Animação por Computador (CGI)",
+        "Tendências em Computação Gráfica"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

@@ -8,21 +8,21 @@ function SistOperacional() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Funções Básicas do SO",
+        "Multi tarefa",
+        "Multi Processamento",
+        "Interface com o Usuário",
+        "Gerenciamento de Arquivos",
+        "Segurança e Controle de Acesso",
+        "Sistemas de Arquivos",
+        "Gestão de Memória",
+        "Sistemas de Arquivos Distribuídos",
+        "Rede e Comunicação",
+        "Inicialização do Sistema",
+        "Desempenho e Otimização",
+        "Manutenção e Atualizações",
+        "Sistemas Operacionais Móveis",
+        "Virtualização"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

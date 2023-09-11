@@ -8,21 +8,21 @@ function AlgebraLinear() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Vetores",
+        "Espaços Vetoriais",
+        "Operações Vetoriais",
+        "Independência Linear",
+        "Base e Dimensão",
+        "Transformações Lineares",
+        "Matrizes",
+        "Espaço Nulo e Espaço Coluna",
+        "Sistemas de Equações Lineares",
+        "Determinantes",
+        "Autovalores e Autovetores",
+        "Diagonalização",
+        "Espaços Ortogonais",
+        "Decomposição QR",
+        "Álgebra Linear Numérica"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

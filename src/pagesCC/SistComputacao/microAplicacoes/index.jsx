@@ -8,21 +8,21 @@ function MicroAplicacoes() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Introdução a Microcontroladores",
+        "Arquitetura de Microcontroladores",
+        "Programação de Microcontroladores",
+        "Periféricos de Microcontroladores",
+        "Comunicação Serial",
+        "Interrupções e Temporização",
+        "Memória de Programa e Dados",
+        "Conversão Analógico-Digital (ADC)",
+        "PWM (Modulação por largura de pulso)",
+        "Interface com Sensores",
+        "Sistemas de Controle Embarcados",
+        "Microcontroladores em Eletrônica de Consumo",
+        "Aplicações Automotivas",
+        "Microcontroladores em Dispositivos Médicos",
+        "Desenvolvimento de Projetos com Microcontroladores"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

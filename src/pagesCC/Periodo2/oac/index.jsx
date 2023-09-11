@@ -8,21 +8,21 @@ function Oac() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Arquitetura de Software",
+        "Padrões de Projeto (Design Patterns)",
+        "Arquitetura em Camadas",
+        "Model-View-Controller (MVC)",
+        "Microsserviços",
+        "Arquitetura Orientada a Serviços (SOA)",
+        "Arquitetura de Pipeline",
+        "Padrões de Comunicação",
+        "Injeção de Dependência (DI)",
+        "Arquitetura Monolítica",
+        "Arquitetura de Software Escalável",
+        "Refatoração de Software",
+        "Padrões de Arquitetura de Segurança",
+        "Arquitetura Orientada a Eventos (EDA)",
+        "Arquitetura de Software Distribuído"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

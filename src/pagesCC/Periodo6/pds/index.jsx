@@ -8,21 +8,21 @@ function Pds() {
     let professor = "N sei";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Requisitos de Software",
+        "Arquitetura de Software",
+        "Modelagem de Dados",
+        "Linguagem de Programação",
+        "Design de Interface de Usuário (UI/UX)",
+        "Desenvolvimento de Código",
+        "Teste de Software",
+        "Controle de Versão e Gerenciamento de Código",
+        "Ciclo de Desenvolvimento de Software",
+        "Documentação de Software",
+        "Segurança de Software",
+        "Testes de Aceitação do Usuário (UAT)",
+        "Implantação e Integração",
+        "Manutenção de Software",
+        "Gerenciamento de Projeto de Software"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll
