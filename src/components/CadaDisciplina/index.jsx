@@ -1,5 +1,5 @@
 import Logo from "../../assets/pdslogo.svg";
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Verificado from "../../assets/Verificado.svg"
 import "../../pages/Estilo/Disciplinas.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,11 +26,29 @@ import BlocoCadaDisciplina from "../BlocoCadaDisciplina";
 import { InputArquivo } from '../../pages/SubmeterConteudo/dadosCursos';
 import { createContent } from "../../services/api";
 
-const bancoDados = [
-];
+import { getContent } from "../../services/api";
+
+
+
 
 function Disciplinas(props) {
   const current = new Date().toLocaleString();
+
+  const [banco, setBanco] = useState([]);
+
+  useEffect(() => {
+    // Define an async function for fetching content
+    const fetchData = async () => {
+      try {
+        const response = await getContent(); // Assuming getContent() retrieves content from the '/conteudos' endpoint
+        setBanco(response.data); // Assuming the data is an array of content items
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData(); // Call the async function to fetch data when the component mounts
+  }, []); // The empty dependency array ensures that this effect runs only once when the component mounts.
 
   let listas = [
     "AB 1",
@@ -92,7 +110,6 @@ const lidarComCliqueNoBotao = () => {
 const [title, setTitle] = useState(''); 
 const [assunto, setAssunto] = useState(''); 
 const [descricao, setDescricao] = useState(''); 
-const [banco, setBanco] = useState(bancoDados);
 
   const tituloHandler = (event) => {
     setTitle(event.target.value);
@@ -248,9 +265,9 @@ const [banco, setBanco] = useState(bancoDados);
                 </form>
             </Stack>
             {
-              banco.map((titulo) => (
-                <Link to='/conteudo-disciplina' className="contentArea">
-                  <BlocoCadaDisciplina titulo={titulo.titulo} pdf={titulo.pdf} assunto={titulo.assunto} descricao={titulo.descricao}/>
+              banco.map((conteudoData, index) => (
+                <Link to={`/conteudo-disciplina/${index}`} className="contentArea" key={index}>
+                  <BlocoCadaDisciplina titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
                 </Link>
             ))}
           <Link to='/conteudo-disciplina' className="contentArea">
