@@ -24,6 +24,7 @@ import Swal from 'sweetalert2';
 import BlocoCadaDisciplina from "../BlocoCadaDisciplina";
 
 import { InputArquivo } from '../../pages/SubmeterConteudo/dadosCursos';
+import { createContent } from "../../services/api";
 
 const bancoDados = [
 ];
@@ -74,6 +75,7 @@ const mostrarFormulario = () => {
   }
 };
 
+const [errorMessage, setErrorMessage] = useState('');
 const [arquivoSelecionado, setArquivoSelecionado] = useState(null);
 const referenciaInputArquivo = useRef(null);
 
@@ -104,15 +106,23 @@ const [banco, setBanco] = useState(bancoDados);
     setDescricao(event.target.value);
   }
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
 
     const conteudoData = {
       titulo: title,
       assunto: assunto,
-      pdf: arquivoSelecionado,
+      pdf: arquivoSelecionado ? URL.createObjectURL(arquivoSelecionado) : '',
       descricao: descricao,
+      materia: props.materia,
     };
+
+    try {
+      await createContent(conteudoData);
+    }catch (error) {
+      console.error(error.response.data.message);
+      setErrorMessage(error.response.data.message)
+    }
 
     setBanco(prevBanco => {
       return [conteudoData, ...prevBanco];
