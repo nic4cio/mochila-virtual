@@ -11,6 +11,7 @@ import { registerUser } from '../../services/api';
 import Swal from 'sweetalert2';
 
 function Cadastrar() {
+
   window.scrollTo(0, 0); // Reinicia o scroll
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -37,9 +38,21 @@ function Cadastrar() {
       // If Registration successful, redirect to login page
       console.log('Registration successful:', response.data);
 
-      // Redirect to the login page using window.location
-      window.location = '/login';
-
+      //If registration successful, display success alert and redirect
+      Swal.fire({
+        title: 'Sucesso!',
+        text: 'Usuário cadastrado com sucesso!',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        timer: 3000,
+        timerProgressBar: true,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Redirect to the login page using window.location
+          window.location.href = '/login';
+        }
+      });
+      
     } catch (error) {
       setErrorMessage('Error registering user'); // Handle error message display
       console.error('Error registering user:', error);
