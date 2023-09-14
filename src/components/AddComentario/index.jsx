@@ -24,17 +24,18 @@ function AddComentario() {
           return [comentarioData, ...preBanco];
         });
 
+        setComentario('');
       }
 
     return(
         <div>
             <form onSubmit={adicionarComponente} className="comentarioCaixaConteudo">
-                <input   className="formConteudo" type="text" onClick={componentesHandler} placeholder="Escreva seu comentário" size="35"/>
+                <input type="text" className="formConteudo" value={comentario} onChange={componentesHandler} placeholder="Escreva seu comentário" size="35"/>
                 <button type='submit' className="comentarioConteudo">+ Adicionar comentário</button>
             </form>
-            {banco.map((componente) => (
-                <Comentario comentario={componente.comentario}/>)
-            )}
+            {banco.map((componente, index) => (
+                <Comentario key={index} comentario={componente.comentario} />
+            ))}
         </div>
     );
 }

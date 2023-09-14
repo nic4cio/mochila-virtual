@@ -23,7 +23,7 @@ const UsuarioLogado = () => {
     
     return (
       <div>
-        <CabecalhoLogado/>
+        <CabecalhoLogado home="" curador="" disciplinas="" suaMochila="menuaSpanRegistros"/>
         <FontePoppins/>
 
         <div>

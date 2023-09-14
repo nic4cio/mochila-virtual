@@ -16,9 +16,10 @@ function BlocoCadaDisciplina(props) {
     const current = new Date().toLocaleString();
 
     const user = "MuriloUrquiza";
+
     return (
         <Container style={{maxWidth: '800px'}}>
-              <Row >
+              <Row>
                 <Col style={{ display: "flex", justifyContent: "start" }}>
                   <Icon.Person style={{ margin: "5px" }} />
                   <FormLabel>{user}</FormLabel>
@@ -40,7 +41,6 @@ function BlocoCadaDisciplina(props) {
                 <Col style={{display: "flex", justifyContent: "end",}}>
                   <div className="backConteudoDisciplina">{props.assunto}</div>
                 </Col>
-                 
               </Row>
               <hr></hr>
               <ConteudoDisciplinaTeste style={{maxWidth: '800px'}} pdf={props.pdf} descricao={props.descricao}/>

@@ -16,6 +16,7 @@ import {
 import * as Icon from "react-bootstrap-icons";
 import FontePoppins from "../../components/FontePoppins";
 import Cabecalho from "../../components/Cabecalho";
+import CabecalhoLogado from "../../components/CabecalhoLogado";
 
 import { Link } from 'react-router-dom';
 
@@ -27,9 +28,6 @@ import { InputArquivo } from '../../pages/SubmeterConteudo/dadosCursos';
 import { createContent } from "../../services/api";
 
 import { getContent } from "../../services/api";
-
-
-
 
 function Disciplinas(props) {
   const current = new Date().toLocaleString();
@@ -152,10 +150,20 @@ const [descricao, setDescricao] = useState('');
     setArquivoSelecionado(null);
   }
 
+  const isAuthenticated = sessionStorage.getItem('access_token') !== null;
+
+  let usuarioLogado = '';
+
+  if (!isAuthenticated) {
+    usuarioLogado = <Cabecalho />;
+  } else {
+    usuarioLogado = <CabecalhoLogado />;
+  }
+
   return (
     <div className="App imageRegistros">
       <FontePoppins/>
-      <Cabecalho/>
+      {usuarioLogado}
       <Container className={props.cor}>
         <h1 className="tituloDisciplina">{props.materia}</h1>
       </Container>
@@ -266,9 +274,9 @@ const [descricao, setDescricao] = useState('');
             </Stack>
             {
               banco.map((conteudoData, index) => (
-                <Link to={`/conteudo-disciplina/${index}`} className="contentArea" key={index}>
+                <div className="contentArea" key={index}>
                   <BlocoCadaDisciplina titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
-                </Link>
+                </div>
             ))}
           <Link to='/conteudo-disciplina' className="contentArea">
             <Container>

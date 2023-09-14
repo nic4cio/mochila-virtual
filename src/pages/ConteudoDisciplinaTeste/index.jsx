@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import * as Icon from "react-bootstrap-icons";
 
 import FontePoppins from '../../components/FontePoppins';
-import "./style.css";
+
 
 import invariante from '../../components/Pdf/Invariante.pdf';
 
@@ -52,7 +52,6 @@ function ConteudoDisciplina(props) {
                 
                 <AddComentario />
                 <Comentario comentario="Muito bom"/>
-                <Comentario comentario="Excelente conteúdo de como identificar laços!"/>
                 <div className="marginBottomConteudo"></div>
             </tbody>
         </div>
