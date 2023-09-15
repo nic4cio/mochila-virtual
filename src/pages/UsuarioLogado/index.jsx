@@ -1,12 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FontePoppins from '../../components/FontePoppins';
 import CabecalhoLogado from "../../components/CabecalhoLogado";
 import foto from "../../assets/homem-generico.png";
 import estrela from "../../assets/estrela.png";
 import mochila from "../../assets/mochila-azul-preenchida.png";
 import "./style.css";
+import axios from 'axios';
 
 const UsuarioLogado = () => {
+
+  const accessToken = sessionStorage.getItem('access_token'); // Get the access_token from local storage
+  const api = axios.create({
+    baseURL: import.meta.env.VITE_API_URL,
+    headers: {
+      common: {
+        'Authorization': `Bearer ${accessToken}`, // Include the access_token
+      },
+    },
+  });
+
+  const [userData, setUserData] = useState({});
+
+  // Example: Get user data
+const getUserData = async () => {
+  try {
+    const response = await api.get('/users/me');
+
+    // Handle the user data in the response
+    const userData = response.data;
+    console.log('User Data:', userData);
+    setUserData(userData);
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+  }
+};
+
+  // Call the function to retrieve user data when the component mounts
+  useEffect(() => {
+    getUserData();
+  }, []); // Pass an empty dependency array to run this effect only once
 
   window.scrollTo(0, 0); //Reinicia o scroll
 
@@ -32,7 +64,8 @@ const UsuarioLogado = () => {
               <img src={foto} alt="Foto usuário" className='foto-usuario'/>
             </button>
             <p className='info-usuario'>
-              Vinícius Maia de Holanda<br />
+              {userData.firstName /* Display user's firstName */}
+              <br />
               Conta: <span className='alaranjado'>Estudante</span>
               <div className='azul-turquesa'>Ciência da Computação</div>
             </p>
@@ -79,8 +112,8 @@ const UsuarioLogado = () => {
                     <input type="email" placeholder="  E-mail" className="input-modal"/>
                     <input type="password" placeholder="  Senha" className="input-modal"/>
 
-                    <div><button onClick={closeModal} class="btn-cancelar">Cancelar</button></div>
-                    <div><button onClick={closeModal} class="btn-salvar">Salvar</button></div>
+                    <div><button onClick={closeModal} className="btn-cancelar">Cancelar</button></div>
+                    <div><button onClick={closeModal} className="btn-salvar">Salvar</button></div>
                   </div>
                   
                 </div>
