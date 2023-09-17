@@ -15,6 +15,8 @@ import CuradorLogado from "../pages/CuradorLogado";
 import SolicitarCurador from "../pages/SolicitarCurador";
 import SubmeterConteudo from "../pages/SubmeterConteudo";
 import ConteudosAprovados from "../pages/ConteudosAprovados";
+import AprovarCuradoria from "../pages/AprovarCuradoria";
+
 
 // periodo 1
 import Cdi from "../pagesCC/Periodo1/cdi";
@@ -103,6 +105,7 @@ function Rotas() {
             <Route path='/solicitar-curador' element={<SolicitarCurador/> } />
             <Route path='/submeter-conteudo' element={<SubmeterConteudo/> } />
             <Route path='/conteudos-aprovados' element={<ConteudosAprovados/> } />
+            <Route path='/aprovar-curadoria' element={<AprovarCuradoria/> } />
 
             <Route path='/materias/cdi' element={<Cdi/>} />
             <Route path='/materias/cse' element={<Cse/>} />
