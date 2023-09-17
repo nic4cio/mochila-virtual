@@ -1,0 +1,89 @@
+.indicador-periodo {
+    font-weight: bold;
+}
+
+.linha-vertical {
+    width: 4px;
+    height: 700px;
+    background-color: #FFF;
+    margin-left: 49%;
+    margin-right: 49%;
+}
+
+.aprove-conteudos {
+    float: left;
+    margin-left: 20%;
+}
+
+.aceite-curadores {
+    float: right;
+}
+
+.box-curadoria {
+    padding-left: 20px;
+    border: none;
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+    height: 100px;
+    background-color: #1F2A2F;
+    color: #FFF;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.box-curadoria:hover {
+    border: 2px solid #87E4FE;
+}
+
+.btn-aceitar, .btn-rejeitar {
+    margin-top: 5px;
+    background-color: #74FF92;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 20px;
+    border-radius: 20px;
+}
+
+.btn-rejeitar {
+    margin-left: 5px;
+    background-color: #FF7474;
+}
+
+.btn-aceitar:hover, .btn-rejeitar:hover {
+    background-color: #FFF;
+}
+
+.fundo-materia {
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+    padding: 0px 4px;
+    border-radius: 20px;
+}
+
+.scroll-container-curadoria {
+    max-width: 80%;
+    min-width: 660px;
+    border: 1px solid red;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: darkgray lightgray;
+}
+
+.scroll-container-curadoria::-webkit-scrollbar {
+    width: 9px;
+}
+
+.scroll-container-curadoria::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 20px;
+}
+
+.scroll-container-curadoria::-webkit-scrollbar-track {
+    background-color: #34343400;
+    border-radius: 2px;
+}
