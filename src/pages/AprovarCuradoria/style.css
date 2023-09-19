@@ -3,11 +3,11 @@
 }
 
 .linha-vertical {
-    width: 4px;
+    width: 5px;
     height: 700px;
-    background-color: #FFF;
-    margin-left: 49%;
-    margin-right: 49%;
+    background-color: #ADADAD;
+    margin-left:60%;
+    border-radius: 20px;
 }
 
 .aprove-conteudos {
@@ -17,6 +17,9 @@
 
 .aceite-curadores {
     float: right;
+    position: relative;
+    margin-right: 26%;
+    top: -700px;
 }
 
 .box-curadoria {
@@ -64,10 +67,64 @@
     border-radius: 20px;
 }
 
+.fundo-materia-ia {
+    background-color: #E9FD7A;
+    color: black;
+    font-weight: bold;
+    padding: 0px 4px;
+    border-radius: 20px;
+}
+
+.fundo-materia-ga {
+    background-color: #8979FD;
+    color: black;
+    font-weight: bold;
+    padding: 0px 4px;
+    border-radius: 20px;
+}
+
+
+.titulo-box-curadoria{
+    margin-top: 10px;
+}
+
+.foto-modal-aprovar-curadoria{
+    margin-top: 9px;
+    margin-left: 450px;
+    border-radius: 50%;
+    width: 300px;
+}
+
+.btn-aceitar-modal, .btn-recusar-modal {
+    margin-left: 5px;
+    background-color: #74FF92;
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.btn-recusar-modal {
+    margin-left: 5px;
+    background-color: #FF7474;
+}
+
+.btn-aceitar-modal:hover, .btn-recusar-modal:hover {
+    background-color: #FFF;
+}
+
+.foto-usuario-box-curador{
+    border-radius: 50%;
+    width: 60px;
+    position: relative;
+    bottom: 20px;
+    left: 30px;
+}
+
 .scroll-container-curadoria {
     max-width: 80%;
     min-width: 660px;
-    border: 1px solid red;
     overflow-x: scroll;
     white-space: nowrap;
     scrollbar-width: thin;
@@ -87,3 +144,4 @@
     background-color: #34343400;
     border-radius: 2px;
 }
+
