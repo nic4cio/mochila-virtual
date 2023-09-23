@@ -54,8 +54,8 @@ function Disciplinas() {
       <FontePoppins/>
       {usuarioLogado}
       <Container className="body">
-        <h3>Conteúdos Aprovados</h3>
         <Stack>
+          <h1 style={{margin: '0px auto', padding: '30px'}}>Conteúdos Aprovados</h1>
             {
               banco.map((conteudoData, index) => (
                 <div className="contentArea" key={index}>

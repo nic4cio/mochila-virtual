@@ -127,10 +127,12 @@ const [descricao, setDescricao] = useState('');
     const conteudoData = {
       titulo: title,
       assunto: assunto,
-      pdf: arquivoSelecionado ? URL.createObjectURL(arquivoSelecionado) : '',
+      pdf: arquivoSelecionado,
       descricao: descricao,
       materia: props.materia,
     };
+
+    console.log(conteudoData.pdf);
 
     try {
       await createContent(conteudoData);
