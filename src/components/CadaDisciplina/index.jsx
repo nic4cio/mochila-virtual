@@ -127,7 +127,7 @@ const [descricao, setDescricao] = useState('');
     const conteudoData = {
       titulo: title,
       assunto: assunto,
-      pdf: arquivoSelecionado,
+      pdf: arquivoSelecionado ? URL.createObjectURL(arquivoSelecionado) : '',
       descricao: descricao,
       materia: props.materia,
     };
@@ -250,6 +250,10 @@ const [descricao, setDescricao] = useState('');
                     <option value={props.assuntos[13]}>{props.assuntos[13]}</option>
                     <option value={props.assuntos[14]}>{props.assuntos[14]}</option>
                     <option value="Outros">Outros</option>
+                    <option value="AB1">AB1</option>
+                    <option value="AB2">AB2</option>
+                    <option value="Reavaliação">Reavaliação</option>
+                    <option value="Final">Final</option>
                   </select>
                   <div>
                     <label htmlFor="arquivo" className='subtitulo-dados'>3. Anexe seu PDF:</label><br />
@@ -276,9 +280,10 @@ const [descricao, setDescricao] = useState('');
             </Stack>
             {
               banco.map((conteudoData, index) => (
+                (props.materia == conteudoData.materia &&
                 <div className="contentArea" key={index}>
                   <BlocoCadaDisciplina titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
-                </div>
+                </div>)
             ))}
           <Link to='/conteudo-disciplina' className="contentArea">
             <Container>

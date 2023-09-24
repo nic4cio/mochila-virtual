@@ -49,7 +49,7 @@ function MatCuradoria(props) {
                         <div style={{margin:'10px 10px 0px 10px'}}>{conteudoData.descricao}</div><br />
                         <button className='btn-aceitar'>T</button>
                         <button className='btn-rejeitar'>F</button>
-                        {cont++}
+                        {console.log(cont++)}
                     </button>
                   ))
                 }
@@ -58,6 +58,7 @@ function MatCuradoria(props) {
                 }
             </div>
         </div>
+        
     );
 }
 

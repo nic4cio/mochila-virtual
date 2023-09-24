@@ -136,56 +136,6 @@ const AprovarCuradoria = () => {
         <MatCuradoria cor="titleCardbox-sistemas-de-informacao" materia="Gerência de Projeto"/>
 
         <br />
-        {/*
-        <div className='materia-dinamica'>
-            <div className="indicador-periodo">4°Período</div>
-
-            Em <span className='fundo-materia'>PAA</span>
-          
-            <div className="scroll-container-curadoria">
-                <button onClick={openModal} className="box-curadoria">
-                    Tomás<br />
-                    "Lista de ativida..."<br />
-                    <button className='btn-aceitar'></button>
-                    <button className='btn-rejeitar'></button>
-                </button>
-
-                <button onClick={openModal} className="box-curadoria">
-                    Tomás<br />
-                    "Lista de ativida..."<br />
-                    <button className='btn-aceitar'></button>
-                    <button className='btn-rejeitar'></button>
-                </button>
-
-                <button onClick={openModal} className="box-curadoria">
-                    Tomás<br />
-                    "Lista de ativida..."<br />
-                    <button className='btn-aceitar'></button>
-                    <button className='btn-rejeitar'></button>
-                </button>
-
-                <button onClick={openModal} className="box-curadoria">
-                    Tomás<br />
-                    "Lista de ativida..."<br />
-                    <button className='btn-aceitar'></button>
-                    <button className='btn-rejeitar'></button>
-                </button>
-            </div>
-        </div>
-
-        <br />
-
-        <div className='materia-dinamica'>
-            <div className="indicador-periodo">5°Período</div>
-
-            Em <span className='fundo-materia-ia'>IA</span>
-          
-            <br />
-            <br />
-            <div>Nenhum conteúdo publicado no momento. Você está atualizado.</div>
-            
-        </div>
-      */}
 
       </div>
       <div className='linha-vertical'></div>
