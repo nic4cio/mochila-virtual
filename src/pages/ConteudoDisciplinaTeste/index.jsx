@@ -27,7 +27,8 @@ function ConteudoDisciplina(props) {
     return (
         <div className="imageRegistros">
             <FontePoppins />
-            <tbody className="">
+            <tbody >
+                <h3 >{props.titulo} !</h3>
                 <h5 >{props.descricao}</h5>
                 <div> 
                     <iframe src={props.pdf} height={ 600 } className="pdfConteudo"></iframe>

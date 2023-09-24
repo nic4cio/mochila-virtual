@@ -111,7 +111,17 @@
     background-color: #FF7474;
 }
 
-.btn-aceitar-modal:hover, .btn-recusar-modal:hover {
+.btn-recusar-modal-2 {
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #FF7474;
+    margin: 10px 20px 0px 20px;
+}
+
+.btn-aceitar-modal:hover, .btn-recusar-modal:hover, .btn-recusar-modal-2:hover {
     background-color: #FFF;
 }
 

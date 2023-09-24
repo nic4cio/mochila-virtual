@@ -1,6 +1,7 @@
 .imageRegistros {
     /* background-image: url('../../assets/teste2.jpeg'); */
     min-height: 100vh;
+    margin: 20px;
 }
 
 .corpoConteudo {

@@ -162,8 +162,14 @@ const [descricao, setDescricao] = useState('');
     usuarioLogado = <CabecalhoLogado />;
   }
 
+  let cont = 0;
+
   return (
     <div className="App imageRegistros">
+      {
+      banco.map((conteudoData, index) => (
+       props.materia == conteudoData.materia && console.log(cont++)))
+      }
       <FontePoppins/>
       {usuarioLogado}
       <Container className={props.cor}>
@@ -173,7 +179,7 @@ const [descricao, setDescricao] = useState('');
         <Row>
           <Col>
             <div className="descriptionArea">
-              <h4>{props.publicacoes} Publicações</h4>
+              <h4>{cont} Publicações</h4>
               <hr/>
 
               <h4 style={{ marginBottom:"15px" }}>Professor:</h4>
@@ -285,33 +291,9 @@ const [descricao, setDescricao] = useState('');
                   <BlocoCadaDisciplina titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
                 </div>)
             ))}
-          <Link to='/conteudo-disciplina' className="contentArea">
-            <Container>
-              <Row>
-                <Col style={{ display: "flex", justifyContent: "start" }}>
-                  <Icon.Person style={{ margin: "5px" }} />
-                  <FormLabel>ViniciusMaia</FormLabel>
-                </Col>
-                <Col style={{ display: "flex", justifyContent: "end" }}>
-                  <Icon.ArrowUp style={{ margin: "2px" }} />28
-                  <Icon.ArrowDown style={{ margin: "2px" }} />2
-                </Col>
-              </Row>
-              <Stack>
-                <h2>Como identificar variante de laço</h2>
-                <h6>{current}</h6>
-              </Stack>
-              <Row style={{marginTop:"40px"}}>
-                <Col>
-                  <FormLabel>Verificado</FormLabel>
-                  <img src={Verificado} style={{marginLeft:"8px", height:'22px'}}/>
-                </Col>
-                <Col style={{display: "flex", justifyContent: "end"}}>
-                  <div className="backConteudoDisciplina">Complexidade</div>
-                </Col>
-              </Row>
-            </Container>
-          </Link>
+            {
+              cont == 0 && <span style={{margin: '20px auto', fontSize:'20px'}}>Sem conteúdos no momento! </span>
+            }
         </Stack>
       </Container>
     </div>
