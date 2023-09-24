@@ -139,7 +139,7 @@ const AprovarCuradoria = () => {
 
       </div>
       <div className='linha-vertical'></div>
-
+      {/*
       <div className='aceite-curadores'>
 
         <h3> Aceite curadores</h3><br />
@@ -173,8 +173,7 @@ const AprovarCuradoria = () => {
                 <img src={foto} alt="Foto usuário" className='foto-usuario-box-curador'/>
           </button>
         </div>
-
-        {/* MOdal exercícios */}
+      </div>*/}
         {isModalOpen && (
               <div className="modal-overlay">
                 <div className="modal-content">
@@ -200,9 +199,8 @@ const AprovarCuradoria = () => {
                 </div>
               </div>
             )}
-        {/* FIM MODAL */}
 
-        {/* Modal curador */}
+        {/* Modal curador 
         {isSecondModalOpen && (
         <div className="modal-overlay">
             <div className="modal-content">
@@ -217,9 +215,10 @@ const AprovarCuradoria = () => {
             </div>
         </div>
         )}
-        {/* FIM MODAL */}
+         FIM MODAL 
 
     </div>
+    */}
     </div>
   );
 };

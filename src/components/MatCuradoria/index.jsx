@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { getContent } from "../../services/api";
 
+import CadaMatCuradoria from '../CadaMatCuradoria';
+
 function MatCuradoria(props) {
     const [isModalOpen, setModalOpen] = useState(false);
     const [isSecondModalOpen, setSecondModalOpen] = useState(false);
@@ -44,19 +46,14 @@ function MatCuradoria(props) {
             <div className="scroll-container-curadoria">
                 {
                   banco.map((conteudoData, index) => (conteudoData.materia == props.materia &&
-                    <button onClick={openModal} className="box-curadoria" key={index}>
-                        <span style={{fontSize:'20px'}}>{conteudoData.titulo}</span><br />
-                        <div style={{margin:'10px 10px 0px 10px'}}>{conteudoData.descricao}</div><br />
-                        <button className='btn-aceitar'>T</button>
-                        <button className='btn-rejeitar'>F</button>
-                        {console.log(cont++)}
-                    </button>
+                    <CadaMatCuradoria key={index} titulo={conteudoData.titulo} descricao={conteudoData.descricao} pdf={conteudoData.pdf} cont={console.log(cont++)}/>
                   ))
                 }
                 {
                   (cont == 0 && <span style={{marginLeft: '30px'}}>Sem conteúdos. Você está atualizado! </span>)
                 }
             </div>
+            
         </div>
         
     );
