@@ -5,7 +5,7 @@ function Oac() {
     let cor = "titleCardbox2";
     let materia = "Organização e Arquitetura de computadores";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Rafael Amorim";
     //let curadores = "";
     let assuntos = [
         "Arquitetura de Software",

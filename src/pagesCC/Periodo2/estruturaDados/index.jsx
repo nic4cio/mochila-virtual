@@ -5,7 +5,7 @@ function EstruturaDados() {
     let cor = "titleCardbox2";
     let materia = "Estrutura de Dados";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Roberta Vilhena";
     //let curadores = "";
     let assuntos = [
         "Arrays",

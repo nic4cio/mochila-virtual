@@ -5,7 +5,7 @@ function Pds() {
     let cor = "titleCardbox6";
     let materia = "Projeto e Desenvolvimento de Sistemas";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Alan, Rodrigo, Ranilson e Willy";
     //let curadores = "";
     let assuntos = [
         "Requisitos de Software",

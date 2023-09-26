@@ -5,7 +5,7 @@ function AprendMaquina() {
     let cor = "titleCardbox-computacao-visual";
     let materia = "Aprendizagem de Máquina";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Aydano Machado";
     //let curadores = "";
     let assuntos = [
         "Limites e Continuidade",

@@ -5,7 +5,7 @@ function Pdi() {
     let cor = "titleCardbox-computacao-visual";
     let materia = "Processamento de Imagem";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Tiago Vieira";
     //let curadores = "";
     let assuntos = [
         "Limites e Continuidade",

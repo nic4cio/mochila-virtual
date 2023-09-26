@@ -5,7 +5,7 @@ function Grafos() {
     let cor = "titleCardbox3";
     let materia = "Teoria dos Grafos";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Rian Pinheiro";
     //let curadores = "";
     let assuntos = [
         "Grafos e Subgrafos",

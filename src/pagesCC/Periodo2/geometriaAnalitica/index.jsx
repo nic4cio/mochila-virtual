@@ -5,7 +5,7 @@ function GeometriaAnalitica() {
     let cor = "titleCardbox2";
     let materia = "Geometria Analítica";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Libel Fonseca";
     //let curadores = "";
     let assuntos = [
         "Sistemas de Coordenadas",

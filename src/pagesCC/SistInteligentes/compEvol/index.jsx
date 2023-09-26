@@ -5,7 +5,7 @@ function compEvol() {
     let cor = "titleCardbox-sistemas-inteligentes";
     let materia = "Computação Evolucionária";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Roberta Vilhena";
     //let curadores = "";
     let assuntos = [
         "Introdução à Computação Evolucionária",

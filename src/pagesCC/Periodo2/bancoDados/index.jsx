@@ -5,7 +5,7 @@ function BancoDados() {
     let cor = "titleCardbox2";
     let materia = "Banco de Dados";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Maria Cristina";
     //let curadores = "";
     let assuntos = [
         "Modelo de Dados",

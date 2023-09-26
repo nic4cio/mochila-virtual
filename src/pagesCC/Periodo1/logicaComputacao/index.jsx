@@ -5,7 +5,7 @@ function LogicaComputacao() {
     let cor = "titleCardbox";
     let materia = "Lógica para Computação";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Fabio Paraguacu";
     //let curadores = "";
     let assuntos = [
         "Lógica Proposicional",

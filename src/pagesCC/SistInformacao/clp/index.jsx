@@ -5,7 +5,7 @@ function Clp() {
     let cor = "titleCardbox-sistemas-de-informacao";
     let materia = "CLP";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Rafael Amorim";
     //let curadores = "";
     let assuntos = [
         "Introdução às Linguagens de Programação",

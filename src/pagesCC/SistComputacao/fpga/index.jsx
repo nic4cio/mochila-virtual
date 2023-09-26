@@ -5,7 +5,7 @@ function Fgpa() {
     let cor = "titleCardbox-sistemas-de-computacao";
     let materia = "Fgpa";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Erick Barboza";
     //let curadores = "";
     let assuntos = [
         "Introdução aos FPGAs",

@@ -5,7 +5,7 @@ function Cg() {
     let cor = "titleCardbox5";
     let materia = "Computação Gráfica";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Marcelo Oliveira";
     //let curadores = "";
     let assuntos = [
         "Rasterização e Vetorização",

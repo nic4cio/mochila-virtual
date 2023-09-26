@@ -5,7 +5,7 @@ function MicroAplicacoes() {
     let cor = "titleCardbox-sistemas-de-computacao";
     let materia = "Microcontroladores e Aplicações";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Erick Barboza";
     //let curadores = "";
     let assuntos = [
         "Introdução a Microcontroladores",

@@ -5,7 +5,7 @@ function Cdi() {
     let cor = "titleCardbox";
     let materia = "Cálculo Diferencial e Integral";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Libel Fonseca";
     //let curadores = "";
     let assuntos = [
         "Limites e Continuidade",

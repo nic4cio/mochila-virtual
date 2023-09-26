@@ -5,7 +5,7 @@ function VisaoComputacional() {
     let cor = "titleCardbox-computacao-visual";
     let materia = "Visão Computacional";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Tiago Vieira";
     //let curadores = "";
     let assuntos = [
         "Limites e Continuidade",

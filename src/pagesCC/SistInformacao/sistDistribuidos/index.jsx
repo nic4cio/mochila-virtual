@@ -5,7 +5,7 @@ function SistDistribuidos() {
     let cor = "titleCardbox-sistemas-de-informacao";
     let materia = "Sistemas Distribuídos";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Leonardo Viana";
     //let curadores = "";
     let assuntos = [
         "Introdução a Sistemas Distribuídos",

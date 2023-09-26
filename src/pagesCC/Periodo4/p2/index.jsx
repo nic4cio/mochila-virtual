@@ -5,7 +5,7 @@ function P2() {
     let cor = "titleCardbox4";
     let materia = "Programação 2";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Mario Hozano";
     //let curadores = "";
     let assuntos = [
         "Padrões de Projeto (Design Patterns)",

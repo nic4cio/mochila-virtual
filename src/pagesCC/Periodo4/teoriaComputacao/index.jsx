@@ -5,7 +5,7 @@ function TeoriaComp() {
     let cor = "titleCardbox4";
     let materia = "Teoria da Computação";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Fabio Paraguacu";
     //let curadores = "";
     let assuntos = [
         "Autômatos",

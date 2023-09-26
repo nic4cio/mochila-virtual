@@ -5,7 +5,7 @@ function SistOperacional() {
     let cor = "titleCardbox5";
     let materia = "Sistemas Operacionais";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Andre Aquino";
     //let curadores = "";
     let assuntos = [
         "Funções Básicas do SO",

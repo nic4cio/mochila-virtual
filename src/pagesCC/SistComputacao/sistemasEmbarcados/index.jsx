@@ -5,7 +5,7 @@ function sistemasEmbarcados() {
     let cor = "titleCardbox-sistemas-de-computacao";
     let materia = "Sistemas Embarcados";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Erick Barboza";
     //let curadores = "";
     let assuntos = [
         "Introdução a Sistemas Embarcados",

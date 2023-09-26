@@ -5,7 +5,7 @@ function Cse() {
     let cor = "titleCardbox";
     let materia = "Computação, Sociedade e Ética";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Petrucio Barros";
     //let curadores = "";
     let assuntos = [
         "Privacidade de Dados",

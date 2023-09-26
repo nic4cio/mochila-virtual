@@ -5,7 +5,7 @@ function CienciaDados() {
     let cor = "titleCardbox-sistemas-inteligentes";
     let materia = "Ciência de Dados";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Bruno Pimentel";
     //let curadores = "";
     let assuntos = [
         "Introdução à Ciência de Dados",

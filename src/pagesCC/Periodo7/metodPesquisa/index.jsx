@@ -5,7 +5,7 @@ function MetodPesquisa() {
     let cor = "titleCardbox7";
     let materia = "Metodologia de Pesquisa";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Marcelo Oliveira";
     //let curadores = "";
     let assuntos = [
         "Formulação do Problema de Pesquisa",

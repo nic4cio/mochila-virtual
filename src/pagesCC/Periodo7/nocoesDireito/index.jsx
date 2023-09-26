@@ -5,7 +5,7 @@ function NocoesDireito() {
     let cor = "titleCardbox7";
     let materia = "Noções de Direito";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Helder Lima";
     //let curadores = "";
     let assuntos = [
         "Regras e Leis",

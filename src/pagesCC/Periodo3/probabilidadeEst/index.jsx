@@ -5,7 +5,7 @@ function ProbEst() {
     let cor = "titleCardbox3";
     let materia = "Probabilidade e Estatística";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Petrucio Barros";
     //let curadores = "";
     let assuntos = [
         "Probabilidade",

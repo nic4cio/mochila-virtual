@@ -5,7 +5,7 @@ function Paa() {
     let cor = "titleCardbox4";
     let materia = "PAA";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Rian Pinheiro";
     //let curadores = "";
     let assuntos = [
         "Análise de Complexidade",

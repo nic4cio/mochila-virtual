@@ -5,7 +5,7 @@ function GerenciaProjeto() {
     let cor = "titleCardbox-sistemas-de-informacao";
     let materia = "Gerência de Projeto";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Rafael Amorim";
     //let curadores = "";
     let assuntos = [
         "Introdução à Gerência de Projetos",

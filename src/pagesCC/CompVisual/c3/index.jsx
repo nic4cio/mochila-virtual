@@ -5,7 +5,7 @@ function Calculo3() {
     let cor = "titleCardbox-computacao-visual";
     let materia = "Calculo 3";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Marcos Almeida";
     //let curadores = "";
     let assuntos = [
         "Limites e Continuidade",

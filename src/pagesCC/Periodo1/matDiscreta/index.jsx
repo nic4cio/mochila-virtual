@@ -5,7 +5,7 @@ function MatDiscreta() {
     let cor = "titleCardbox";
     let materia = "Matemática Discreta";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Bruno Pimentel";
     //let curadores = "";
     let assuntos = [
         "Teoria dos Conjuntos",

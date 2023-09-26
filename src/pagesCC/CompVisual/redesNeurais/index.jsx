@@ -5,7 +5,7 @@ function RedesNeurais() {
     let cor = "titleCardbox-computacao-visual";
     let materia = "Redes Neurais e Aprendizado Profundo";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Tiago Vieira";
     //let curadores = "";
     let assuntos = [
         "Limites e Continuidade",

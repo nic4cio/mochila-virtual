@@ -5,7 +5,7 @@ function Ia() {
     let cor = "titleCardbox5";
     let materia = "Inteligência Artificial";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Evandro Costa";
     //let curadores = "";
     let assuntos = [
         "Aprendizado de Máquina (Machine Learning)",

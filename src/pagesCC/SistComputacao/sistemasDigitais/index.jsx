@@ -5,7 +5,7 @@ function SistemasDigitais() {
     let cor = "titleCardbox-sistemas-de-computacao";
     let materia = "Sistemas Digitais";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Bruno Nogueira";
     //let curadores = "";
     let assuntos = [
         "Álgebra de Boole",

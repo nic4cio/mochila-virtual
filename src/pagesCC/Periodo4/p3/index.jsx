@@ -5,7 +5,7 @@ function P3() {
     let cor = "titleCardbox4";
     let materia = "Programação 3";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Ranilson Paiva";
     //let curadores = "";
     let assuntos = [
         "Frameworks de Desenvolvimento Web",

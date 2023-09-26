@@ -3,9 +3,9 @@ import CadaDisciplina from "../../../components/CadaDisciplina/index.jsx"
 function Ihm() {
 
     let cor = "titleCardbox-sistemas-de-informacao";
-    let materia = "Interação humano-máquina";
+    let materia = "Interação homem-máquina";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Fabio Paraguacu";
     //let curadores = "";
     let assuntos = [
         "Fundamentos da Segurança de Sistemas",

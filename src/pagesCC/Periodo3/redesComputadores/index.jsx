@@ -5,7 +5,7 @@ function RedesComp() {
     let cor = "titleCardbox3";
     let materia = "Redes de Computadores";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Almir Pereira";
     //let curadores = "";
     let assuntos = [
         "Topologias de Rede",

@@ -5,7 +5,7 @@ function Compiladores() {
     let cor = "titleCardbox5";
     let materia = "Compiladores";
     let publicacoes = "10";
-    let professor = "N sei";
+    let professor = "Arturo Dominguez";
     //let curadores = "";
     let assuntos = [
         "Fases do Compilador",
