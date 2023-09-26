@@ -80,6 +80,10 @@ select{
     border: none;
 }
 
+.custom-button:hover{
+    background-color: #343434;
+}
+
 .titulo-curadoria{
     font-size: 40px;
     color: #FFF;

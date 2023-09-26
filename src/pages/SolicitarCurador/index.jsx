@@ -17,7 +17,7 @@ const SolicitarCurador = () => {
   const [arquivoSelecionado, setArquivoSelecionado] = useState(null);
   const [cursoSelecionado, setCursoSelecionado] = useState("Curso");
   const [periodoSelecionado, setPeriodoSelecionado] = useState("Período");
-  const [disciplinasSelecionadas, setDisciplinasSelecionadas] = useState([]);
+  const [disciplinasSelecionadasLocal, setDisciplinasSelecionadasLocal] = useState([]);
   const referenciaInputArquivo = useRef(null);
 
   const lidarComMudancaDeArquivo = (e) => {
@@ -37,25 +37,44 @@ const SolicitarCurador = () => {
   };
 
   const lidarComMudancaDePeriodo = (e) => {
-    setPeriodoSelecionado(e.target.value);
-    setDisciplinasSelecionadas([]);
+    const novoPeriodoSelecionado = e.target.value;
+    setPeriodoSelecionado(novoPeriodoSelecionado);
+
+    if (cursoSelecionado !== "Curso") {
+      if (disciplinasSelecionadasPorCursoPeriodo[cursoSelecionado] && disciplinasSelecionadasPorCursoPeriodo[cursoSelecionado][novoPeriodoSelecionado]) {
+        setDisciplinasSelecionadasLocal(disciplinasSelecionadasPorCursoPeriodo[cursoSelecionado][novoPeriodoSelecionado]);
+      } else {
+        const periodoAnterior = disciplinasSelecionadasPorCursoPeriodo[cursoSelecionado] && Object.keys(disciplinasSelecionadasPorCursoPeriodo[cursoSelecionado]).find(periodo => periodo !== "Período");
+        if (periodoAnterior) {
+          setDisciplinasSelecionadasLocal(disciplinasSelecionadasPorCursoPeriodo[cursoSelecionado][periodoAnterior]);
+        } else {
+          setDisciplinasSelecionadasLocal([]);
+        }
+      }
+    }
   };
 
   const lidarComCliqueNaDisciplina = (curso, periodo, disciplina) => {
-    const indiceDisciplina = disciplinasSelecionadas.findIndex(
-      (item) => item.curso === curso && item.periodo === periodo && item.disciplina === disciplina
+    const novasDisciplinasSelecionadas = [...disciplinasSelecionadasLocal];
+
+    const indiceDisciplina = novasDisciplinasSelecionadas.findIndex((item) =>
+      item.curso === curso && item.periodo === periodo && item.disciplina === disciplina
     );
+
     if (indiceDisciplina === -1) {
-      setDisciplinasSelecionadas([
-        ...disciplinasSelecionadas,
-        { curso, periodo, disciplina }
-      ]);
+      novasDisciplinasSelecionadas.push({ curso, periodo, disciplina });
     } else {
-      setDisciplinasSelecionadas([
-        ...disciplinasSelecionadas.slice(0, indiceDisciplina),
-        ...disciplinasSelecionadas.slice(indiceDisciplina + 1)
-      ]);
+      novasDisciplinasSelecionadas.splice(indiceDisciplina, 1);
     }
+
+    setDisciplinasSelecionadasLocal(novasDisciplinasSelecionadas);
+
+    const novasDisciplinasSelecionadasPorCursoPeriodo = { ...disciplinasSelecionadasPorCursoPeriodo };
+    if (!novasDisciplinasSelecionadasPorCursoPeriodo[curso]) {
+      novasDisciplinasSelecionadasPorCursoPeriodo[curso] = {};
+    }
+    novasDisciplinasSelecionadasPorCursoPeriodo[curso][periodo] = novasDisciplinasSelecionadas;
+    setDisciplinasSelecionadasPorCursoPeriodo(novasDisciplinasSelecionadasPorCursoPeriodo);
   };
 
   return (
@@ -99,7 +118,9 @@ const SolicitarCurador = () => {
                       value={disciplina}
                       curso={cursoSelecionado}
                       periodo={periodoSelecionado}
-                      selecionado={disciplinasSelecionadas.some((item) => item.curso === cursoSelecionado && item.periodo === periodoSelecionado && item.disciplina === disciplina)}
+                      selecionado={disciplinasSelecionadasLocal.some((item) =>
+                        item.curso === cursoSelecionado && item.periodo === periodoSelecionado && item.disciplina === disciplina
+                      )}
                       onClick={() => lidarComCliqueNaDisciplina(cursoSelecionado, periodoSelecionado, disciplina)}
                     >
                       {disciplina}
