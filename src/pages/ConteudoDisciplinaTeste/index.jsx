@@ -23,6 +23,7 @@ function ConteudoDisciplina(props) {
             setMostrarAlerta(false);
         }, 4000); 
     };
+                          
 
     return (
         <div className="imageRegistros">
@@ -30,8 +31,10 @@ function ConteudoDisciplina(props) {
             <tbody >
                 <h3 >{props.titulo} !</h3>
                 <h5 >{props.descricao}</h5>
-                <div> 
+                <div style={{textAlign:'center'}}>
                     <iframe src={props.pdf} height={ 600 } className="pdfConteudo"></iframe>
+                    <a href={props.pdf} target="_blank" style={{textDecoration:'none', color:'#78D6CF', fontSize:'20px'}}>Acesse o LINK do Conteúdo</a>
+                    <hr />
                 </div>
                 <div className="abaxioPDFConteudo">
                     <span>

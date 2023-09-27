@@ -149,7 +149,7 @@ select{
     margin-right: 80px;
 }
 
-#esconderFormulario {
+#esconderFormulario, #esconderFormulario2 {
     display: none;
     border: 5px solid black;
     margin: 0px auto;

@@ -82,7 +82,19 @@ const lidarComAlertaEnviar = () => {
   mostrarFormulario();
 };
 
+const lidarComAlertaEnviar2 = () => {
+  Swal.fire({
+      title: 'Conteúdo Enviado!',
+      text: 'Quando um curador aprovar ele será publicado.',
+      icon: 'success', // Ícone personalizado (warning, success, error, etc.)
+      confirmButtonText: 'OK',
+  });
+
+  mostrarFormulario2();
+};
+
 const mostrarFormulario = () => {
+  document.getElementById('esconderFormulario2').style.display = 'none';
   const elemento = document.getElementById('esconderFormulario');
   if (elemento.style.display === 'block') {
     elemento.style.display = 'none'; 
@@ -90,6 +102,69 @@ const mostrarFormulario = () => {
     elemento.style.display = 'block'; 
   }
 };
+
+const mostrarFormulario2 = () => {
+  document.getElementById('esconderFormulario').style.display = 'none';
+  const elemento = document.getElementById('esconderFormulario2');
+  if (elemento.style.display === 'block') {
+    elemento.style.display = 'none'; 
+  } else {
+    elemento.style.display = 'block'; 
+  }
+};
+
+const [arquivoSelecionado2, setArquivoSelecionado2] = useState('');
+
+const linkHandler = (event) => {
+  setArquivoSelecionado2(event.target.value);
+}
+
+const [title2, setTitle2] = useState(''); 
+const [assunto2, setAssunto2] = useState(''); 
+const [descricao2, setDescricao2] = useState(''); 
+
+  const tituloHandler2 = (event) => {
+    setTitle2(event.target.value);
+  }
+
+  const assuntoHandler2 = (event) => {
+    setAssunto2(event.target.value);
+  }
+
+  const descricaoHandler2 = (event) => {
+    setDescricao2(event.target.value);
+  }
+
+  const submitHandler2 = async (event) => {
+    event.preventDefault();
+
+    const conteudoData = {
+      titulo: title2,
+      assunto: assunto2,
+      pdf: arquivoSelecionado2,
+      descricao: descricao2,
+      materia: props.materia,
+    };
+
+    console.log(conteudoData.pdf);
+
+    try {
+      await createContent(conteudoData);
+    }catch (error) {
+      console.error(error.response.data.message);
+      setErrorMessage(error.response.data.message)
+    }
+
+    setBanco(prevBanco => {
+      return [conteudoData, ...prevBanco];
+    });
+
+    console.log(conteudoData);
+    setTitle2('');
+    setAssunto2('');
+    setDescricao2('');
+    setArquivoSelecionado2('');
+  }
 
 const [errorMessage, setErrorMessage] = useState('');
 const [arquivoSelecionado, setArquivoSelecionado] = useState(null);
@@ -225,14 +300,14 @@ const [descricao, setDescricao] = useState('');
               <label style={{marginRight: '10px'}}>PDF</label>
                 <Icon.Upload color="green" />
               </Button>
-              <Button variant="light" onClick={alerta}>
+              <Button variant="light" onClick={mostrarFormulario2}>
                 <label style={{marginRight: '10px'}}>Link</label>
                 <Icon.Share color="green" />
               </Button>
             </Stack>
             <Stack direction="horizontal" id="esconderFormulario">
                 <div className="titulo-dados marrom">
-                  Submeter Conteúdo!
+                  Submeter PDF!
                 </div><hr/>
                 <form onSubmit={submitHandler}>
                   <div className="subtitulo-dados">1. Título:</div>
@@ -281,6 +356,49 @@ const [descricao, setDescricao] = useState('');
                   <textarea className="text-area" value={descricao} onChange={descricaoHandler} name="comentario" rows="4" cols="25"></textarea><br />
 
                   <button type='submit' className="enviar" onClick={lidarComAlertaEnviar}>Enviar</button>
+
+                </form>
+            </Stack>
+            <Stack direction="horizontal" id="esconderFormulario2">
+                <div className="titulo-dados marrom">
+                  Submeter Link!
+                </div><hr/>
+                <form onSubmit={submitHandler2}>
+                  <div className="subtitulo-dados">1. Título:</div>
+                  <input type="text" className='titulo-input' value={title2} onChange={tituloHandler2}/>
+                  <div className="subtitulo-dados">2. Assunto:</div>
+                  <select id="seuSelect" value={assunto2} onChange={assuntoHandler2}>
+                    <option value="">Escolha sua opção</option>
+                    <option value={props.assuntos[0]}>{props.assuntos[0]}</option>
+                    <option value={props.assuntos[1]}>{props.assuntos[1]}</option>
+                    <option value={props.assuntos[2]}>{props.assuntos[2]}</option>
+                    <option value={props.assuntos[3]}>{props.assuntos[3]}</option>
+                    <option value={props.assuntos[4]}>{props.assuntos[4]}</option>
+                    <option value={props.assuntos[5]}>{props.assuntos[5]}</option>
+                    <option value={props.assuntos[6]}>{props.assuntos[6]}</option>
+                    <option value={props.assuntos[7]}>{props.assuntos[7]}</option>
+                    <option value={props.assuntos[8]}>{props.assuntos[8]}</option>
+                    <option value={props.assuntos[9]}>{props.assuntos[9]}</option>
+                    <option value={props.assuntos[10]}>{props.assuntos[10]}</option>
+                    <option value={props.assuntos[11]}>{props.assuntos[11]}</option>
+                    <option value={props.assuntos[12]}>{props.assuntos[12]}</option>
+                    <option value={props.assuntos[13]}>{props.assuntos[13]}</option>
+                    <option value={props.assuntos[14]}>{props.assuntos[14]}</option>
+                    <option value="Outros">Outros</option>
+                    <option value="AB1">AB1</option>
+                    <option value="AB2">AB2</option>
+                    <option value="Reavaliação">Reavaliação</option>
+                    <option value="Final">Final</option>
+                  </select>
+                  <div>
+                    <label htmlFor="arquivo" className='subtitulo-dados'>3. Cole seu Link:</label><br />
+                    <input type="text" className='titulo-input' value={arquivoSelecionado2} onChange={linkHandler}/>
+                  </div>
+
+                  <div className="subtitulo-dados">4. Escreva uma breve descrição:</div>
+                  <textarea className="text-area" value={descricao2} onChange={descricaoHandler2} name="comentario" rows="4" cols="25"></textarea><br />
+
+                  <button type='submit' className="enviar" onClick={lidarComAlertaEnviar2}>Enviar</button>
 
                 </form>
             </Stack>
