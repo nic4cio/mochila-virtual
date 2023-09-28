@@ -166,3 +166,12 @@ select{
     padding: 20px 30px;
     border-radius: 20px;
 }
+
+#esconderFormulario2 {
+    display: none;
+    border: 5px solid black;
+    margin: 0px auto;
+    background: #162125;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
