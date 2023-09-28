@@ -30,8 +30,8 @@ function BlocoCadaDisciplina(props) {
     };
 
     return (
-      <div>
-        <Container onClick={openModal} style={{maxWidth: '800px', backgroundColor:"#161F23", color:'white', border:'none', cursor:'pointer'}}>
+      <div className="contentArea">
+        <Container onClick={openModal} style={{width:'800px', border:'none', cursor:'pointer'}}>
               <Row>
                 <Col style={{ display: "flex", justifyContent: "start" }}>
                   <Icon.Person style={{ margin: "5px" }} />
@@ -43,7 +43,7 @@ function BlocoCadaDisciplina(props) {
                 </Col>
               </Row>
               <Stack>
-                <h2>{props.titulo}</h2>
+                <h2 style={{ wordWrap: 'break-word' }}>{props.titulo}</h2>
                 <h6>{current}</h6>
               </Stack>
               <Row style={{marginTop:"40px"}}>
@@ -55,7 +55,6 @@ function BlocoCadaDisciplina(props) {
                   <div className="backConteudoDisciplina">{props.assunto}</div>
                 </Col>
               </Row>
-              
         </Container>
           {isModalOpen && (
                     <div className="modal-overlay-2">

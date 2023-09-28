@@ -144,6 +144,7 @@ const [descricao2, setDescricao2] = useState('');
       pdf: arquivoSelecionado2,
       descricao: descricao2,
       materia: props.materia,
+      status: 'AGUARDANDO_APROVACAO',
     };
 
     console.log(conteudoData.pdf);
@@ -241,10 +242,6 @@ const [descricao, setDescricao] = useState('');
 
   return (
     <div className="App imageRegistros">
-      {
-      banco.map((conteudoData, index) => (
-       props.materia == conteudoData.materia && console.log(cont++)))
-      }
       <FontePoppins/>
       {usuarioLogado}
       <Container className={props.cor}>
@@ -404,7 +401,7 @@ const [descricao, setDescricao] = useState('');
             </Stack>
             {
               banco.map((conteudoData, index) => (
-                (props.materia == conteudoData.materia &&
+                (((props.materia == conteudoData.materia && conteudoData.status === 'APROVADO') && ++cont > 0) &&
                 <div className="contentArea" key={index}>
                   <BlocoCadaDisciplina titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
                 </div>)

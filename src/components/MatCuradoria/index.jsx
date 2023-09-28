@@ -45,9 +45,10 @@ function MatCuradoria(props) {
           
             <div className="scroll-container-curadoria">
                 {
-                  banco.map((conteudoData, index) => (conteudoData.materia == props.materia &&
-                    <CadaMatCuradoria key={index} titulo={conteudoData.titulo} descricao={conteudoData.descricao} pdf={conteudoData.pdf} cont={console.log(cont++)}/>
-                  ))
+                    
+                  banco.map((conteudoData, index) => (conteudoData.materia == props.materia) && conteudoData.status == 'AGUARDANDO_APROVACAO' && ++cont > 0 &&
+                    <CadaMatCuradoria key={index} id={conteudoData.id} titulo={conteudoData.titulo} descricao={conteudoData.descricao} pdf={conteudoData.pdf}/>
+                  )
                 }
                 {
                   (cont == 0 && <span style={{marginLeft: '30px'}}>Sem conteúdos. Você está atualizado! </span>)

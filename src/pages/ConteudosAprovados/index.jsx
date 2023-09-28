@@ -49,46 +49,24 @@ function Disciplinas() {
     usuarioLogado = <CabecalhoLogado />;
   }
 
+  let cont = 0;
+
   return (
     <div className="App imageRegistros">
       <FontePoppins/>
       {usuarioLogado}
       <Container className="body">
         <Stack>
-          <h1 style={{margin: '0px auto', padding: '30px'}}>Conteúdos Aprovados</h1>
+          <h1 style={{margin: '0px auto', padding: '30px'}}>Conteúdos Aprovados</h1><hr style={{width:'800px', margin:'30px auto'}}/>
             {
               banco.map((conteudoData, index) => (
-                <div className="contentArea" key={index}>
-                  <BlocoCadaDisciplina titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
-                </div>
+                ((conteudoData.status == 'APROVADO' && ++cont > 0) &&
+                <BlocoCadaDisciplina key={index} titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
+                )
             ))}
-          <Link to='/conteudo-disciplina' className="contentArea">
-            <Container>
-              <Row>
-                <Col style={{ display: "flex", justifyContent: "start" }}>
-                  <Icon.Person style={{ margin: "5px" }} />
-                  <FormLabel>ViniciusMaia</FormLabel>
-                </Col>
-                <Col style={{ display: "flex", justifyContent: "end" }}>
-                  <Icon.ArrowUp style={{ margin: "2px" }} />28
-                  <Icon.ArrowDown style={{ margin: "2px" }} />2
-                </Col>
-              </Row>
-              <Stack>
-                <h2>Como identificar variante de laço</h2>
-                <h6>{current}</h6>
-              </Stack>
-              <Row style={{marginTop:"40px"}}>
-                <Col>
-                  <FormLabel>Verificado</FormLabel>
-                  <img src={Verificado} style={{marginLeft:"8px", height:'22px'}}/>
-                </Col>
-                <Col style={{display: "flex", justifyContent: "end"}}>
-                  <div className="backConteudoDisciplina">Complexidade</div>
-                </Col>
-              </Row>
-            </Container>
-          </Link>
+            {
+              cont == 0 && <span style={{margin: '20px auto', fontSize:'20px'}}>Sem conteúdos no momento! </span>
+            }
         </Stack>
       </Container>
     </div>
