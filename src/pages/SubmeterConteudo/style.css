@@ -128,6 +128,10 @@ select{
     margin-bottom: 10px;
 }
 
+.checkbox-assuntos{
+    width: 30px;
+}
+
 .paragrofo-explicando{
     width: 500px;
     margin-left: -220px;
@@ -135,6 +139,11 @@ select{
     font-size: 20px;
     font-weight: bold;
     text-align: justify;
+}
+
+.aaa {
+    max-width: 250px;
+    min-width: 250px;
 }
 
 .branco{
@@ -149,7 +158,7 @@ select{
     margin-right: 80px;
 }
 
-#esconderFormulario, #esconderFormulario2 {
+#esconderFormulario {
     display: none;
     border: 5px solid black;
     margin: 0px auto;
