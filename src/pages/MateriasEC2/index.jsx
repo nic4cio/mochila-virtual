@@ -107,7 +107,7 @@ function MateriasEC2 () {
                     <Link to="/materias/sistemas-controle2"><button className="box7">SISTEMAS DE CONTROLE 2</button></Link>
                     <Link to="/materias/microcontroladores"><button className="box7">MICROCONTROL E APLIC</button></Link>
                     <Link to="/materias/instrumentacao-eletronica"><button className="box7">INSTRUMENTAÇÃO ELET</button></Link>
-                    <Link to="/materias/pdi"><button className="box7">PROC DIGITAL DE SINAIS</button></Link>
+                    <Link to="/materias/processamento-digital-sinais"><button className="box7">PROC DIGITAL DE SINAIS</button></Link>
                 </div>
             </div>
 

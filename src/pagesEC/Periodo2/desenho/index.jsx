@@ -1,4 +1,4 @@
-import CadaDisciplina from "../../../components/CadaDisciplina/index.jsx"
+import CadaDisciplina from "../../../components/CadaDisciplina"
 
 function Desenho() {
 
