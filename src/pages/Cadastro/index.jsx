@@ -10,6 +10,8 @@ import { registerUser } from '../../services/api';
 
 import Swal from 'sweetalert2';
 
+import { dadosCursos } from '../SubmeterConteudo/dadosCursos';
+
 function Cadastrar() {
 
   window.scrollTo(0, 0); // Reinicia o scroll
@@ -18,6 +20,12 @@ function Cadastrar() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [cursoSelecionado, setCursoSelecionado] = useState("Curso");
+
+  const lidarComMudancaDeCurso = (e) => {
+    const cursoSelecionado = e.target.value;
+    setCursoSelecionado(cursoSelecionado);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -33,7 +41,8 @@ function Cadastrar() {
     }
 
     try {
-      const response = await registerUser({ email, firstName, password, confirmPassword });
+      const curso = JSON.stringify(cursoSelecionado)
+      const response = await registerUser({ email, firstName, password, confirmPassword, curso });
 
       // If Registration successful, redirect to login page
       console.log('Registration successful:', response.data);
@@ -95,6 +104,15 @@ function Cadastrar() {
              value={confirmPassword}
              onChange={(e) => setConfirmPassword(e.target.value)}
             />
+            <div>
+              <select value={cursoSelecionado} onChange={lidarComMudancaDeCurso}>
+                {Object.keys(dadosCursos).map((curso) => (
+                  <option key={curso} value={curso}>
+                    {curso}
+                  </option>
+                ))}
+              </select>
+            </div>
             <span className="verdeRegistros">Já possui uma conta? <Link to="/login">Clique aqui para fazer login!</Link></span>
             <button type="submit">Entrar</button>
           </form>
