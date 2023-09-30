@@ -210,8 +210,10 @@ const [descricao, setDescricao] = useState('');
 
     console.log(conteudoData.pdf);
 
+    const token = sessionStorage.getItem('access_token');
+
     try {
-      await createContent(conteudoData);
+      await createContent(conteudoData, token);
     }catch (error) {
       console.error(error.response.data.message);
       setErrorMessage(error.response.data.message)

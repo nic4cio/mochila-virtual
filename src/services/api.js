@@ -13,9 +13,15 @@ export const loginUser = async (userData) => {
 };
 
 export const createContent = async (content) => {
-  return api.post('/conteudos', content);
-}
+  const token = sessionStorage.getItem('access_token'); // Retrieve the token here
 
-export const getContent = async (content) => {
-  return api.get('/conteudos', content);
-}
+  return api.post('/conteudos', content, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};
+
+export const getContent = async () => {
+  return api.get('/conteudos');
+};
