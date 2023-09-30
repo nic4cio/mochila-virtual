@@ -47,7 +47,7 @@ function MatCuradoria(props) {
                 {
                     
                   banco.map((conteudoData, index) => (conteudoData.materia == props.materia) && conteudoData.status == 'AGUARDANDO_APROVACAO' && ++cont > 0 &&
-                    <CadaMatCuradoria key={index} id={conteudoData.id} titulo={conteudoData.titulo} descricao={conteudoData.descricao} pdf={conteudoData.pdf}/>
+                    <CadaMatCuradoria key={index} conteudoData={conteudoData} id={conteudoData.id} titulo={conteudoData.titulo} descricao={conteudoData.descricao} pdf={conteudoData.pdf}/>
                   )
                 }
                 {

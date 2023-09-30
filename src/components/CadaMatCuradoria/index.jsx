@@ -4,12 +4,10 @@ import Swal from 'sweetalert2';
 
 import axios from 'axios';
 
+import { updateContent } from '../../services/api.js'
+
 function CadaMatCuradoria (props) {
     const [isModalOpen, setModalOpen] = useState(false);
-
-    const [newStatus, setNewStatus] = useState(''); // Estado para armazenar o novo status
-    const [conteudoId, setConteudoId] = useState(1); // Substitua pelo ID do conteúdo correto
-    const [isLoading, setIsLoading] = useState(false); // Estado para controlar o carregamento
 
     const openModal = () => {
         setModalOpen(true);
@@ -17,30 +15,24 @@ function CadaMatCuradoria (props) {
 
     const closeModal = async () => {
         setModalOpen(false);
-    // teste
-        setIsLoading(true);
+
+        const token = sessionStorage.getItem('access_token');
 
         try {
-        // Substitua 'URL_DO_SEU_BACKEND' pela URL real do seu servidor
-        const response = await axios.patch(`http://localhost:3333/conteudos/${props.id}`, {
-            status: 'APROVADO',
-        });
-
-        // Lide com a resposta se necessário
-        console.log('Status atualizado com sucesso:', response.data);
-
-        } catch (error) {
-        // Lide com erros, por exemplo, exibindo uma mensagem de erro ao usuário
-        console.error('Erro ao atualizar o status:', error);
-        } finally {
-        setIsLoading(false);
+            await updateContent(props.id, props.conteudoData, token);
+        }catch (error) {
+            console.error(error.response.data.message);
         }
-        // fazer o Patch -> status = 'Aprovado'
+
         Swal.fire({
             title: 'Conteúdo Publicado!',
-            icon: 'success', // Ícone personalizado (warning, success, error, etc.)
+            icon: 'success',
             confirmButtonText: 'OK',
-        });
+          }).then((result) => {
+            if (result.isConfirmed) {
+              location.reload();
+            }
+          });
     };
 
     const closeModal2 = () => {
@@ -70,8 +62,8 @@ function CadaMatCuradoria (props) {
                     </div>
 
                     <div>
-                        <button onClick={closeModal} disabled={isLoading} class="btn-aceitar-modal">T</button>
-                        <button onClick={closeModal2} class="btn-recusar-modal">F</button>
+                        <button onClick={closeModal} className="btn-aceitar-modal">T</button>
+                        <button onClick={closeModal2} className="btn-recusar-modal">F</button>
                     </div>
                 </div>
               </div>

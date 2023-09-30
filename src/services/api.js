@@ -25,3 +25,13 @@ export const createContent = async (content) => {
 export const getContent = async () => {
   return api.get('/conteudos');
 };
+
+export const updateContent = async (id, content) => {
+  const token = sessionStorage.getItem('access_token'); // Retrieve the token here
+
+  return api.patch('/conteudos/' + id, content, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};
