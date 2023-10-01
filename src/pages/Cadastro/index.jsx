@@ -104,8 +104,8 @@ function Cadastrar() {
              value={confirmPassword}
              onChange={(e) => setConfirmPassword(e.target.value)}
             />
-            <div>
-              <select value={cursoSelecionado} onChange={lidarComMudancaDeCurso}>
+            <div style={{width:'500px', backgroundColor:'#D9D9D9', margin:'0px auto 10px', borderRadius:'20px'}}>
+              <select value={cursoSelecionado} onChange={lidarComMudancaDeCurso} className='escolhaCurso'>
                 {Object.keys(dadosCursos).map((curso) => (
                   <option key={curso} value={curso}>
                     {curso}

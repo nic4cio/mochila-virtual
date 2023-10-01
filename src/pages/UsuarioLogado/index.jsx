@@ -7,6 +7,8 @@ import mochila from "../../assets/mochila-azul-preenchida.png";
 import "./style.css";
 import axios from 'axios';
 
+import { Link } from 'react-router-dom';
+
 const UsuarioLogado = () => {
 
   const accessToken = sessionStorage.getItem('access_token'); // Get the access_token from local storage
@@ -52,6 +54,22 @@ const getUserData = async () => {
   const closeModal = () => {
     setModalOpen(false);
   };
+
+  let curso = '';
+
+  if(userData.curso == '"CC"' || userData.curso == 'CC'){
+    curso = 'Ciência da Computação';
+  } else {
+    curso = 'Engenharia da Computação';
+  }
+
+  let usuario = '';
+
+  if(userData.role == 'USER'){
+    usuario = 'Usuário';
+  } else {
+    usuario = 'Curador';
+  }
     
     return (
       <div>
@@ -66,8 +84,8 @@ const getUserData = async () => {
             <p className='info-usuario'>
               {userData.firstName /* Display user's firstName */}
               <br />
-              Conta: <span className='alaranjado'>Estudante</span>
-              <div className='azul-turquesa'>Ciência da Computação</div>
+              Conta: <span className='alaranjado'>{usuario}</span>
+              <div className='azul-turquesa'>{curso}</div>
             </p>
 
             <div className='clear'></div>
@@ -92,9 +110,9 @@ const getUserData = async () => {
                   <div className='clear'></div>
 
                   <div className="scroll-container">
-                      <button className="box-mochila">CONTEÚDOS SALVOS</button>
-                      <button className="box-mochila">CONTEÚDOS APROVADOS</button>
-                      <button className="box-mochila">SUBMETER CONTEÚDOS</button>
+                      <Link to={"/conteudos-aprovados"}><button className="box-mochila">CONTEÚDOS APROVADOS</button></Link>
+                      <Link to={"/submeter-conteudo"}><button className="box-mochila">SUBMETER CONTEÚDOS</button></Link>
+                      {userData.role != 'USER' && <Link to={"/submeter-conteudo"}><button className="box-mochila">CURADORIA</button></Link>}
                   </div>
 
             </div>

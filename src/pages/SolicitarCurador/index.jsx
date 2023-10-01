@@ -5,6 +5,8 @@ import foto from "../../assets/homem-generico.png";
 import styled from 'styled-components';
 import "./style.css";
 
+import Cabecalho from "../../components/Cabecalho";
+
 import { dadosCursos, corPorCursoPeriodo, OpcaoDisciplina, InputArquivo } from './dadosCursos';
 
 const SolicitarCurador = () => {
@@ -79,7 +81,7 @@ const SolicitarCurador = () => {
 
   return (
     <div>
-      <CabecalhoLogado />
+      <CabecalhoLogado home="" curador="menuaSpanRegistros" disciplinas="" suaMochila=""/>
       <FontePoppins />
 
       <div id="conteudo-geral">
