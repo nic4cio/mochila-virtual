@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 import axios from 'axios';
 
-import { updateContent } from '../../services/api.js'
+import { updateContent, recusarContent } from '../../services/api.js'
 
 import '../CadaMatCuradoria/style.css'
 
@@ -42,7 +42,8 @@ function CadaMatCuradoria (props) {
         const token = sessionStorage.getItem('access_token');
 
         if(1 + parseInt(valorSelecionado) + parseInt(valorSelecionado2) + parseInt(valorSelecionado3) >= 7){
-           try {
+
+            try {
                 await updateContent(props.id, props.conteudoData, token);
             }catch (error) {
                 console.error(error.response.data.message);
@@ -58,21 +59,44 @@ function CadaMatCuradoria (props) {
                 }
             }); 
         } else {
+
+            try {
+                await recusarContent(props.id, props.conteudoData, token);
+            }catch (error) {
+                console.error(error.response.data.message);
+            }
+
             Swal.fire({
                 title: 'Conteúdo Recusado!',
-                icon: 'error', // Ícone personalizado (warning, success, error, etc.)
+                icon: 'error',
                 confirmButtonText: 'OK',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                location.reload();
+                }
             });
         }
     };
 
-    const closeModal2 = () => {
+    const closeModal2 = async () => {
         setModalOpen(false);
         //Enviar um email para o usuario
+        const token = sessionStorage.getItem('access_token');
+
+        try {
+            await recusarContent(props.id, props.conteudoData, token);
+        }catch (error) {
+            console.error(error.response.data.message);
+        }
+
         Swal.fire({
             title: 'Conteúdo Recusado!',
-            icon: 'error', // Ícone personalizado (warning, success, error, etc.)
+            icon: 'error',
             confirmButtonText: 'OK',
+        }).then((result) => {
+            if (result.isConfirmed) {
+            location.reload();
+            }
         });
     };
 
@@ -84,21 +108,6 @@ function CadaMatCuradoria (props) {
                 <button className='btn-aceitar'>T</button>
                 <button className='btn-rejeitar'>F</button>
             </button>
-            {isModalOpen && (
-              <div className="modal-overlay">
-                <div className="modal-content">
-                  <div className="top" >{props.descricao}</div>
-                    <div style={{margin:'20px'}}> 
-                        <iframe src={props.pdf} height={ 600 } className="pdfConteudo"></iframe>
-                    </div>
-
-                    <div>
-                        <button onClick={closeModal} className="btn-aceitar-modal">T</button>
-                        <button onClick={closeModal2} className="btn-recusar-modal">F</button>
-                    </div>
-                </div>
-              </div>
-            )}
             {isModalOpen && (
               <div className="modal-overlay">
                 <div className="modal-content">

@@ -35,3 +35,13 @@ export const updateContent = async (id, content) => {
     },
   });
 };
+
+export const recusarContent = async (id, content) => {
+  const token = sessionStorage.getItem('access_token'); // Retrieve the token here
+
+  return api.patch('/conteudos/recusar/' + id, content, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};
