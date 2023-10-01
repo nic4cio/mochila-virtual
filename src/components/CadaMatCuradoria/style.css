@@ -1,0 +1,70 @@
+input[type="radio"] {
+    width: 17px;
+    height: 17px;
+}
+
+.testandoNow {
+    margin: 5px 15px;
+    padding: 3px 8px;
+    cursor: pointer;
+    background-color: #FF7474;
+    border-radius: 10px;
+}
+
+.testandoNow2 {
+    margin: 5px 15px;
+    padding: 3px 8px;
+    cursor: pointer;
+    background-color: rgb(241, 192, 101);
+    border-radius: 10px;
+}
+
+.testandoNow3 {
+    margin: 5px 15px;
+    padding: 3px 8px;
+    cursor: pointer;
+    background-color: #74FF92;
+    border-radius: 10px;
+}
+
+.custom-radio {
+    font-size: 20px;
+    margin: 8px;
+    color: black;
+}
+
+.enviarCuradoria {
+    margin-left: 5px;
+    background-color: #09c9bc;
+    border: none;
+    outline: none;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.recusarCuradoria {
+    margin-left: 5px;
+    background-color: #fa8a0a;
+    border: none;
+    outline: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.fecharCuradoria {
+    background-color: #fa0a0a;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 25px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.enviarCuradoria:hover, .recusarCuradoria:hover, .fecharCuradoria:hover {
+    background-color: #FFF;
+}
