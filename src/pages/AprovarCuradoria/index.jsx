@@ -111,7 +111,7 @@ const getUserData = async () => {
         <MatCuradoria cor="titleCardbox3" materia="Linguagens Formais, Autômatos e Computibilidade"/>
         <MatCuradoria cor="titleCardbox3" materia="Programação 2"/>
         <MatCuradoria cor="titleCardbox3" materia="Física 2"/>
-        <MatCuradoria cor="titleCardbox3" materia="Calculo 3"/>
+        <MatCuradoria cor="titleCardbox3" materia="Cálculo 3"/>
         <MatCuradoria cor="titleCardbox3" materia="Metodologia de Pesquisa"/>
         <MatCuradoria cor="titleCardbox3" materia="Sistemas Digitais"/>
         <MatCuradoria cor="titleCardbox3" materia="Química Tecnológica"/>
@@ -243,7 +243,7 @@ const getUserData = async () => {
         <div className="indicador-periodo">Computação Visual</div>
 
         <MatCuradoria cor="titleCardbox-computacao-visual" materia="Aprendizagem de Máquina"/>
-        <MatCuradoria cor="titleCardbox-computacao-visual" materia="Calculo 3"/>
+        <MatCuradoria cor="titleCardbox-computacao-visual" materia="Cálculo 3"/>
         <MatCuradoria cor="titleCardbox-computacao-visual" materia="Processamento de Imagem"/>
         <MatCuradoria cor="titleCardbox-computacao-visual" materia="Redes Neurais e Aprendizado Profundo"/>
         <MatCuradoria cor="titleCardbox-computacao-visual" materia="Visão Computacional"/>

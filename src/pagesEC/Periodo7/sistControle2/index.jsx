@@ -2,7 +2,7 @@ import CadaDisciplina from "../../../components/CadaDisciplina/index.jsx"
 
 function Calculo1() {
 
-    let cor = "titleCardbox8";
+    let cor = "titleCardbox7";
     let materia = "Sistemas de Controle 2";
     let publicacoes = "10";
     let professor = "Icaro Queiroz";

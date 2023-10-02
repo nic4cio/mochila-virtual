@@ -82,30 +82,30 @@ import CompEvol from "../pagesCC/SistInteligentes/compEvol";
 import ProtectedRoute from "./ProtectedRoute";
 
 // p1
-import C1 from "../pagesEC/Periodo1/c1";
-import Ingles from "../pagesEC/Periodo1/ingles";
-import IntroEng from "../pagesEC/Periodo1//introEng";
+import C1 from "../pagesEC/Periodo1/c1/index";
+import Ingles from "../pagesEC/Periodo1/ingles/index";
+import IntroEng from "../pagesEC/Periodo1//introEng/index";
 
 // p2
-import C2 from "../pagesEC/Periodo2/calculo2";
-import CirDig from "../pagesEC/Periodo2/circuitosDigitais";
-import Desenho from "../pagesEC/Periodo2/desenho";
-import Fisica1 from "../pagesEC/Periodo2/fisica1";
+import C2 from "../pagesEC/Periodo2/calculo2/index";
+import CirDig from "../pagesEC/Periodo2/circuitosDigitais/index";
+import Desenho from "../pagesEC/Periodo2/desenho/index";
+import Fisica1 from "../pagesEC/Periodo2/fisica1/index";
 
 // p3
-import Fisica2 from "../pagesEC/Periodo3/fisica2";
-import LinForm from "../pagesEC/Periodo3/lingFormal";
-import QuimTec from "../pagesEC/Periodo3/quimicaTec";
+import Fisica2 from "../pagesEC/Periodo3/fisica2/index";
+import LinForm from "../pagesEC/Periodo3/lingFormal/index";
+import QuimTec from "../pagesEC/Periodo3/quimicaTec/index";
 
 // p4
-import C4 from "../pagesEC/Periodo4/c4";
-import EngSoft from "../pagesEC/Periodo4/engSoft";
-import Fisica3 from "../pagesEC/Periodo4/fisica3";
-import VarComp from "../pagesEC/Periodo4/varComplexas";
+import C4 from "../pagesEC/Periodo4/c4/index";
+import EngSoft from "../pagesEC/Periodo4/engSoft/index";
+import Fisica3 from "../pagesEC/Periodo4/fisica3/index";
+import VarComp from "../pagesEC/Periodo4/varComplexas/index";
 
 // p5
-import CircElet from "../pagesEC/Periodo5/circuitosEletricos";
-import SinSist from "../pagesEC/Periodo5/sinaisSistemas";
+import CircElet from "../pagesEC/Periodo5/circuitosEletricos/index";
+import SinSist from "../pagesEC/Periodo5/sinaisSistemas/index";
 
 // p6
 import Eletro from "../pagesEC/Periodo6/eletronica";
