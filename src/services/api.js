@@ -92,3 +92,29 @@ export const getContentVotes = async (contentId) => {
   const response = await api.get('/content-rating/'+ parseInt(contentId) +'/votes');
   return response.data;
 };
+
+export const createComment = async (conteudoId, texto) => {
+  const token = sessionStorage.getItem('access_token');
+
+  try {
+    const response = await api.post(
+      `/comentarios/${conteudoId}`,
+      {texto: texto}, // Send the comment data as the request body
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response.data; // This response may contain additional information
+  } catch (error) {
+    console.error('Error creating comment:', error);
+    throw error;
+  }
+};
+
+
+export const getConteudoComments = async (contentId) => {
+  const response = await api.get(`/comentarios/conteudo/${parseInt(contentId)}`);
+  return response.data;
+};

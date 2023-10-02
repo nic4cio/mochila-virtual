@@ -1,43 +1,43 @@
 import { useState } from 'react';
+import { createComment } from '../../services/api';
 
-import Comentario from "../Comentario";
+function AddComentario({ conteudoId }) {
+  const [comentario, setComentario] = useState('');
 
-const dadosComentarios = [
-];
+  const componentesHandler = (event) => {
+    setComentario(event.target.value);
+  };
 
-function AddComentario() {
-    const [comentario, setComentario] = useState(''); // Estado para manter os componentes
-    const [banco, setBanco] = useState(dadosComentarios);
+  const adicionarComponente = async (event) => {
+    event.preventDefault();
 
-    const componentesHandler = (event) => {
-        setComentario(event.target.value);
-    };
+    try {
+      // Call the createComment function with the conteudoId and comentario text
+      await createComment(conteudoId, comentario); // Pass the comment as an object
+      // You may want to update the UI here if needed
+      setComentario('');
+    } catch (error) {
+      console.error('Error creating comment:', error);
+    }
+  };
 
-    const adicionarComponente = (event) => {
-        event.preventDefault();
-    
-        const comentarioData = {
-          comentario: comentario
-        };
-    
-        setBanco(preBanco => {
-          return [comentarioData, ...preBanco];
-        });
-
-        setComentario('');
-      }
-
-    return(
-        <div>
-            <form onSubmit={adicionarComponente} className="comentarioCaixaConteudo">
-                <input type="text" className="formConteudo" value={comentario} onChange={componentesHandler} placeholder="Escreva seu comentário" size="35"/>
-                <button type='submit' className="comentarioConteudo">+ Adicionar comentário</button>
-            </form>
-            {banco.map((componente, index) => (
-                <Comentario key={index} comentario={componente.comentario} />
-            ))}
-        </div>
-    );
+  return (
+    <div>
+      <form onSubmit={adicionarComponente} className="comentarioCaixaConteudo">
+        <input
+          type="text"
+          className="formConteudo"
+          value={comentario}
+          onChange={componentesHandler}
+          placeholder="Escreva seu comentário"
+          size="35"
+        />
+        <button type="submit" className="comentarioConteudo">
+          + Adicionar comentário
+        </button>
+      </form>
+    </div>
+  );
 }
 
 export default AddComentario;
