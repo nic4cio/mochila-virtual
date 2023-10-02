@@ -10,11 +10,15 @@ import * as Icon from "react-bootstrap-icons";
 
 import Verificado from "../../assets/Verificado.svg"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import ConteudoDisciplinaTeste from "../../pages/ConteudoDisciplinaTeste";
 
+import { getContentVotes } from "../../services/api";
+
 function BlocoCadaDisciplina(props) {
+    const [votes, setVotes] = useState({ upvotes: 0, downvotes: 0 });
+
     const current = new Date().toLocaleString();
 
     const user = "MuriloUrquiza";
@@ -29,6 +33,20 @@ function BlocoCadaDisciplina(props) {
         setModalOpen(false);
     };
 
+    useEffect(() => {
+      // Define an async function for fetching content
+      const fetchData = async () => {
+        try {
+          const response = await getContentVotes(props.id);
+          setVotes(response);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
+      fetchData(); // Call the async function to fetch data when the component mounts
+    }, [votes]);
+
+
     return (
       <div className="contentArea">
         <Container onClick={openModal} style={{width:'800px', border:'none', cursor:'pointer'}}>
@@ -38,8 +56,8 @@ function BlocoCadaDisciplina(props) {
                   <FormLabel>{user}</FormLabel>
                 </Col>
                 <Col style={{ display: "flex", justifyContent: "end" }}>
-                  <Icon.ArrowUp style={{ margin: "2px" }} />28
-                  <Icon.ArrowDown style={{ margin: "2px" }} />2
+                  <Icon.ArrowUp style={{ margin: "2px" }} />{votes.upvotes}
+                  <Icon.ArrowDown style={{ margin: "2px" }} />{votes.downvotes}
                 </Col>
               </Row>
               <Stack>
@@ -60,7 +78,7 @@ function BlocoCadaDisciplina(props) {
                     <div className="modal-overlay-2">
                       <div className="modal-content-2">
                         <button onClick={closeModal} className="btn-recusar-modal-2">X</button>
-                        <ConteudoDisciplinaTeste pdf={props.pdf} descricao={props.descricao} titulo={props.titulo}/>
+                        <ConteudoDisciplinaTeste id={props.id} pdf={props.pdf} descricao={props.descricao} titulo={props.titulo}/>
                       </div>
                     </div>
                   )}

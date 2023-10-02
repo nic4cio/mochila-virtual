@@ -10,11 +10,14 @@ import invariante from '../../components/Pdf/Invariante.pdf';
 import Comentario from "../../components/Comentario";
 import AddComentario from '../../components/AddComentario';
 
-import { useState } from 'react';
+import { getContentVotes, upvoteContent, downvoteContent } from "../../services/api";
+
+import { useState, useEffect } from 'react';
 
 function ConteudoDisciplina(props) {
     window.scrollTo(0, 0); //Reinicia o scroll
     const [mostrarAlerta, setMostrarAlerta] = useState(false);
+    const [votes, setVotes] = useState({ upvotes: 0, downvotes: 0 });
 
     const Compartilhar = () => {
 
@@ -23,7 +26,37 @@ function ConteudoDisciplina(props) {
             setMostrarAlerta(false);
         }, 4000); 
     };
-                          
+         
+    useEffect(() => {
+        // Define an async function for fetching content
+        const fetchData = async () => {
+          try {
+            const response = await getContentVotes(props.id);
+            setVotes(response);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+        fetchData(); // Call the async function to fetch data when the component mounts
+      }, [votes]);
+
+      const handleUpvote = async () => {
+          try {
+            const updatedContent = await upvoteContent(props.id);
+            setVotes(updatedContent.votes); // Atualize o número de votos após a resposta da API
+          } catch (error) {
+            console.error(error)
+          }
+      };
+
+      const handleDownvote = async () => {
+        try {
+          const updatedContent = await downvoteContent(props.id);
+          setVotes(updatedContent.votes); // Atualize o número de votos após a resposta da API
+        } catch (error) {
+            console.error(error)
+        }
+      };
 
     return (
         <div className="imageRegistros">
@@ -38,8 +71,8 @@ function ConteudoDisciplina(props) {
                 </div>
                 <div className="abaxioPDFConteudo">
                     <span>
-                        <Icon.ArrowUp style={{ margin: "2px" , color: "green"}} />28
-                        <Icon.ArrowDown style={{ margin: "2px", color: "red" }} />2
+                        <button onClick={handleUpvote}><Icon.ArrowUp style={{ margin: "2px" , color: "green"}} />{votes && votes.upvotes !== undefined ? votes.upvotes : 0}</button>
+                        <button onClick={handleDownvote}><Icon.ArrowDown style={{ margin: "2px", color: "red" }} />{votes && votes.downvotes !== undefined ? votes.downvotes : 0}</button>
                     </span>
                     <button className="linkConteudo" href="">Comentários</button>
                     <button onClick={Compartilhar} className="linkConteudo">Compartilhar</button>

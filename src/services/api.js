@@ -55,3 +55,40 @@ export const curadoriaUser = async (id, user) => {
     },
   });
 };
+
+export const upvoteContent = async (userId, contentId) => {
+  const token = sessionStorage.getItem('access_token');
+
+  try {
+    const response = await api.post('/content-rating/upvote/' + parseInt(userId), parseInt(contentId), {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data; // Esta resposta pode incluir o novo número de votos ou outra informação útil
+  } catch (error) {
+    console.error('Erro ao upvotar conteúdo:', error);
+    throw error;
+  }
+};
+
+export const downvoteContent = async (userId, contentId) => {
+  const token = sessionStorage.getItem('access_token');
+
+  try {
+    const response = await api.post('/content-rating/downvote/' + parseInt(userId), parseInt(contentId), {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data; // Esta resposta pode incluir o novo número de votos ou outra informação útil
+  } catch (error) {
+    console.error('Erro ao downvotar conteúdo:', error);
+    throw error;
+  }
+};
+
+export const getContentVotes = async (contentId) => {
+  const response = await api.get('/content-rating/'+ parseInt(contentId) +'/votes');
+  return response.data;
+};
