@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import FontePoppins from '../../components/FontePoppins';
 import CabecalhoLogado from "../../components/CabecalhoLogado";
 import foto from "../../assets/homem-generico.png";
@@ -9,10 +9,52 @@ import Cabecalho from "../../components/Cabecalho";
 
 import { dadosCursos, corPorCursoPeriodo, OpcaoDisciplina, InputArquivo } from './dadosCursos';
 
+import { curadoriaUser } from '../../services/api';
+
+import axios from 'axios';
+
 const SolicitarCurador = () => {
+  const accessToken = sessionStorage.getItem('access_token');
+  const api = axios.create({
+    baseURL: import.meta.env.VITE_API_URL,
+    headers: {
+      common: {
+        'Authorization': `Bearer ${accessToken}`, // Include the access_token
+      },
+    },
+  });
+
+  const [userData, setUserData] = useState({});
+
+  // Example: Get user data
+const getUserData = async () => {
+  try {
+    const response = await api.get('/users/me');
+
+    // Handle the user data in the response
+    const userData = response.data;
+    console.log('User Data:', userData);
+    setUserData(userData);
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+  }
+};
+
+  // Call the function to retrieve user data when the component mounts
+  useEffect(() => {
+    getUserData();
+  }, []);
   window.scrollTo(0, 0); // Reinicia o scroll
 
-  const lidarComAlertaEnviar = () => {
+  const lidarComAlertaEnviar = async () => {
+    const token = sessionStorage.getItem('access_token');
+
+    try {
+      await curadoriaUser(userData.id, userData, token);
+    }catch (error) {
+      console.error(error.response.data.message);
+    }
+
     alert("Formulário enviado!");
   };
 

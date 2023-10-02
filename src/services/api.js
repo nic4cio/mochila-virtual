@@ -45,3 +45,13 @@ export const recusarContent = async (id, content) => {
     },
   });
 };
+
+export const curadoriaUser = async (id, user) => {
+  const token = sessionStorage.getItem('access_token'); // Retrieve the token here
+
+  return api.patch('/users/' + id, user, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};

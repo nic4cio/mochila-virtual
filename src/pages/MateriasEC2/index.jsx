@@ -10,7 +10,7 @@ function MateriasEC2 () {
                 <div className="scroll-container">
                     <Link to="/materias/ingles-instrumental"><button className="box">INGLÊS INSTRUMENTAL</button></Link>
                     <Link to="/materias/programacao1"><button className="box">PROGRAMAÇÃO 1</button></Link>
-                    <Link to="/materias/matematoca-discreta"><button className="box">MATEMÁTICA DISCRETA</button></Link>
+                    <Link to="/materias/matematica-discreta"><button className="box">MATEMÁTICA DISCRETA</button></Link>
                     <Link to="/materias/calculo1"><button className="box">CÁLCULO 1</button></Link>
                     <Link to="/materias/geometria-analitica"><button className="box">GEOMETRIA ANALÍTICA</button></Link>
                     <Link to="/materias/introducao-ec"><button className="box">INTRO À ENG DA COMP</button></Link>

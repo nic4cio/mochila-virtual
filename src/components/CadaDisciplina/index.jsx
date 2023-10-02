@@ -255,6 +255,11 @@ const [descricao, setDescricao] = useState('');
         <Row>
           <Col>
             <div className="descriptionArea">
+            {
+              banco.map((conteudoData, index) => (
+                (((props.materia == conteudoData.materia && conteudoData.status === 'APROVADO') && ++cont > 0)
+                )
+            ))}
               <h4>{cont} Publicações</h4>
               <hr/>
 
@@ -405,7 +410,7 @@ const [descricao, setDescricao] = useState('');
             </Stack>
             {
               banco.map((conteudoData, index) => (
-                (((props.materia == conteudoData.materia && conteudoData.status === 'APROVADO') && ++cont > 0) &&
+                (((props.materia == conteudoData.materia && conteudoData.status === 'APROVADO')) &&
                 <div className="contentArea" key={index}>
                   <BlocoCadaDisciplina titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
                 </div>)

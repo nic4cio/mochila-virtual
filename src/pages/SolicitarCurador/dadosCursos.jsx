@@ -23,6 +23,7 @@ export const dadosCursos = {
         "Sistemas Inteligentes",
         "Sistemas de Computação",
         "Sistemas de Informação",
+        "As Matérias Possíveis"
         ],
         disciplinas: {
         "1º Período": ["P1", "LÓG", "CSÉ", "MD", "CDI"],
@@ -36,6 +37,7 @@ export const dadosCursos = {
         "Sistemas Inteligentes": ["C3", "AMÁQ", "RNAP", "CEVO", "CD"],
         "Sistemas de Computação": ["C3", "SDG", "FPGA", "SE", "MICR"],
         "Sistemas de Informação": ["CLP", "SDI", "IHM", "Gp", "SEG"],
+        "As Matérias Possíveis": [],
         },
     },
     "EC": {
@@ -51,6 +53,7 @@ export const dadosCursos = {
         "8º Período",
         "Eletivas",
         "Eletivas 2",
+        "As Matérias Possíveis"
         ],
         disciplinas: {
         "1º Período": ["INGL", "P1", "MD", "C1", "GA", "IENG"],
@@ -63,6 +66,7 @@ export const dadosCursos = {
         "8º Período": ["CGPI", "SIEM", "SIDI", "AUIN", "ROBÓ", "MÉSO"],
         "Eletivas": ["CLP", "SEVE", "COMI", "PRLP", "GEPJ", "LAPR", "FLIB", "DBON", "PDPS", "TECÉ"],
         "Eletivas 2": ["LAED", "TSID", "LAEL", "LACE", "REPE", "ITIN", "IA2", "DCQC"],
+        "As Matérias Possíveis": [],
         },
     },
 };

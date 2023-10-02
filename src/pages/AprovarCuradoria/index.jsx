@@ -8,8 +8,41 @@ import { getContent } from "../../services/api";
 
 import MatCuradoria from "../../components/MatCuradoria";
 
+import axios from 'axios';
+
 
 const AprovarCuradoria = () => {
+  const accessToken = sessionStorage.getItem('access_token'); // Get the access_token from local storage
+  const api = axios.create({
+    baseURL: import.meta.env.VITE_API_URL,
+    headers: {
+      common: {
+        'Authorization': `Bearer ${accessToken}`, // Include the access_token
+      },
+    },
+  });
+
+  const [userData, setUserData] = useState({});
+
+  // Example: Get user data
+const getUserData = async () => {
+  try {
+    const response = await api.get('/users/me');
+
+    // Handle the user data in the response
+    const userData = response.data;
+    console.log('User Data:', userData);
+    setUserData(userData);
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+  }
+};
+
+  // Call the function to retrieve user data when the component mounts
+  useEffect(() => {
+    getUserData();
+  }, []); // Pass an empty dependency array to run this effect only once
+
   window.scrollTo(0, 0); // Reinicia o scroll
 
   // Abrir e fechar modal
@@ -49,16 +82,117 @@ const AprovarCuradoria = () => {
 
   let cont = 0;
 
+  let aprovar = 
 
-  return (
-    <div>
-      <CabecalhoLogado />
-      <FontePoppins />
+  <div className='aprove-conteudos'>
 
-      <br />
-      <br />
+        <h3>Aprove conteúdos</h3>
+        <div className="indicador-periodo">1°Período</div>
 
-      <div className='aprove-conteudos'>
+        <MatCuradoria cor="titleCardbox" materia="Inglês Instrumental"/>
+        <MatCuradoria cor="titleCardbox" materia="Programação 1"/>
+        <MatCuradoria cor="titleCardbox" materia="Matemática Discreta"/>
+        <MatCuradoria cor="titleCardbox" materia="Cálculo 1"/>
+        <MatCuradoria cor="titleCardbox" materia="Geometria Analítica"/>
+        <MatCuradoria cor="titleCardbox" materia="Introdução à Engenharia da Computação"/>
+
+        <div className="indicador-periodo">2°Período</div>
+
+        <MatCuradoria cor="titleCardbox2" materia="Lógica para Computação"/>
+        <MatCuradoria cor="titleCardbox2" materia="Estrutura de Dados"/>
+        <MatCuradoria cor="titleCardbox2" materia="Física 1"/>
+        <MatCuradoria cor="titleCardbox2" materia="Cálculo 2"/>
+        <MatCuradoria cor="titleCardbox2" materia="Álgebra Linear"/>
+        <MatCuradoria cor="titleCardbox2" materia="Circuitos Digitais"/>
+        <MatCuradoria cor="titleCardbox2" materia="Desenho"/>
+
+        <div className="indicador-periodo">3°Período</div>
+
+        <MatCuradoria cor="titleCardbox3" materia="Linguagens Formais, Autômatos e Computibilidade"/>
+        <MatCuradoria cor="titleCardbox3" materia="Programação 2"/>
+        <MatCuradoria cor="titleCardbox3" materia="Física 2"/>
+        <MatCuradoria cor="titleCardbox3" materia="Calculo 3"/>
+        <MatCuradoria cor="titleCardbox3" materia="Metodologia de Pesquisa"/>
+        <MatCuradoria cor="titleCardbox3" materia="Sistemas Digitais"/>
+        <MatCuradoria cor="titleCardbox3" materia="Química Tecnológica"/>
+
+        <div className="indicador-periodo">4°Período</div>
+
+        <MatCuradoria cor="titleCardbox4" materia="Probabilidade e Estatística"/>
+        <MatCuradoria cor="titleCardbox4" materia="Engenharia de Software"/>
+        <MatCuradoria cor="titleCardbox4" materia="Cálculo 4"/>
+        <MatCuradoria cor="titleCardbox4" materia="Variáveis Complexas"/>
+        <MatCuradoria cor="titleCardbox4" materia="Organização e Arquitetura de computadores"/>
+        <MatCuradoria cor="titleCardbox4" materia="Física 3"/>
+
+        <div className="indicador-periodo">5°Período</div>
+
+        <MatCuradoria cor="titleCardbox5" materia="PAA"/>
+        <MatCuradoria cor="titleCardbox5" materia="Circuitos Elétricos"/>
+        <MatCuradoria cor="titleCardbox5" materia="Redes de Computadores"/>
+        <MatCuradoria cor="titleCardbox5" materia="Sinais e Sistemas"/>
+        <MatCuradoria cor="titleCardbox5" materia="Inteligência Artificial"/>
+        <MatCuradoria cor="titleCardbox5" materia="Sistemas Operacionais"/>
+        <MatCuradoria cor="titleCardbox5" materia="Teoria dos Grafos"/>
+
+        <div className="indicador-periodo">6°Período</div>
+
+        <MatCuradoria cor="titleCardbox6" materia="Princípios de Comunicação"/>
+        <MatCuradoria cor="titleCardbox6" materia="Eletrônica"/>
+        <MatCuradoria cor="titleCardbox6" materia="Métodos Numéricos"/>
+        <MatCuradoria cor="titleCardbox6" materia="Sistemas de Controle 1"/>
+        <MatCuradoria cor="titleCardbox6" materia="Computação, Sociedade e Ética"/>
+        <MatCuradoria cor="titleCardbox6" materia="Empreendedorismo"/>
+        <MatCuradoria cor="titleCardbox6" materia="Fenômenos de Transporte"/>
+
+        <div className="indicador-periodo">7°Período</div>
+
+        <MatCuradoria cor="titleCardbox7" materia="Banco de Dados"/>
+        <MatCuradoria cor="titleCardbox7" materia="Noções de Direito"/>
+        <MatCuradoria cor="titleCardbox7" materia="Sistemas de Controle 2"/>
+        <MatCuradoria cor="titleCardbox7" materia="Microcontroladores e Aplicações"/>
+        <MatCuradoria cor="titleCardbox7" materia="Instrumentação Eletrônica"/>
+        <MatCuradoria cor="titleCardbox7" materia="Processamento Digital de Sinais"/>
+
+        <div className="indicador-periodo">8°Período</div>
+
+        <MatCuradoria cor="titleCardbox8" materia="Computação Gráfica"/>
+        <MatCuradoria cor="titleCardbox8" materia="Sistemas Embarcados"/>
+        <MatCuradoria cor="titleCardbox8" materia="Sistemas Distribuídos"/>
+        <MatCuradoria cor="titleCardbox8" materia="Automação Industrial"/>
+        <MatCuradoria cor="titleCardbox8" materia="Robótica"/>
+        <MatCuradoria cor="titleCardbox8" materia="Mecânica dos Sólidos"/>
+
+        <div className="indicador-periodo">Eletivas</div>
+
+        <MatCuradoria cor="titleCardeletivas-ec" materia="CLP"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Sistemas de Evento Discretos"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Compiladores"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Paradigmas de Linguagem de Programação"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Gerência de Projeto"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Laboratório de Programação"/>
+
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Fundamentos de Libras"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Desenvolvimento Baseado em Ontologias"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Tópicos Especiais em Circuitos Elétricos"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Laboratório de Estrutura de Dados"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Tópicos em Sistemas Distribuídos: Algoritmos Distribuídos I"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Laboratório de Eletrônica"/>
+
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Laboratório de Circuitos Eletrônicos"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Tópicos em Sistemas Distribuídos: Algoritmos Distribuídos II"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Redes de Petri"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Introdução a Teoria da Informação"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Inteligência Artificial 2"/>
+        <MatCuradoria cor="titleCardeletivas-ec" materia="Desenvolvimento com QT/C++"/>
+
+        <br />
+
+      </div>;
+
+      if(userData.curso == '"CC"' || userData.curso == 'CC'){
+        aprovar = 
+        <div className='aprove-conteudos'>
 
         <h3>Aprove conteúdos</h3>
         <div className="indicador-periodo">1°Período</div>
@@ -137,7 +271,18 @@ const AprovarCuradoria = () => {
 
         <br />
 
-      </div>
+      </div>;
+      }
+
+  return (
+    <div>
+      <CabecalhoLogado />
+      <FontePoppins />
+
+      <br />
+      <br />
+
+      {aprovar}
       <div className='linha-vertical'></div>
       {/*
       <div className='aceite-curadores'>

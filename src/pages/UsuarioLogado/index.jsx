@@ -112,7 +112,7 @@ const getUserData = async () => {
                   <div className="scroll-container">
                       <Link to={"/conteudos-aprovados"}><button className="box-mochila">CONTEÚDOS APROVADOS</button></Link>
                       <Link to={"/submeter-conteudo"}><button className="box-mochila">SUBMETER CONTEÚDOS</button></Link>
-                      {userData.role != 'USER' && <Link to={"/submeter-conteudo"}><button className="box-mochila">CURADORIA</button></Link>}
+                      {userData.role != 'USER' && <Link to={"/aprovar-curadoria"}><button className="box-mochila">CURADORIA</button></Link>}
                   </div>
 
             </div>
