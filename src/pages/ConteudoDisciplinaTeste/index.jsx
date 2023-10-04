@@ -37,7 +37,7 @@ function ConteudoDisciplina(props) {
       }
     };
     fetchData(); // Call the async function to fetch data when the component mounts
-  }, [props.id]);
+  }, [votes]);
 
   const handleUpvote = async () => {
     try {

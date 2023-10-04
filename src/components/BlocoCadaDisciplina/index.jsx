@@ -44,7 +44,7 @@ function BlocoCadaDisciplina(props) {
         }
       };
       fetchData(); // Call the async function to fetch data when the component mounts
-    }, [votes]);
+    }, [isModalOpen]);
 
 
     return (
