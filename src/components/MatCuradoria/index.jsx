@@ -4,24 +4,6 @@ import { getContent } from "../../services/api";
 import CadaMatCuradoria from '../CadaMatCuradoria';
 
 function MatCuradoria(props) {
-    const [isModalOpen, setModalOpen] = useState(false);
-    const [isSecondModalOpen, setSecondModalOpen] = useState(false);
-
-    const openModal = () => {
-        setModalOpen(true);
-    };
-
-    const openSecondModal = () => {
-        setSecondModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setModalOpen(false);
-    };
-
-    const closeSecondModal = () => {
-        setSecondModalOpen(false);
-    };
 
     const [banco, setBanco] = useState([]);
 

@@ -1,9 +1,3 @@
-import Cabecalho from "../../components/Cabecalho";
-import "bootstrap/dist/css/bootstrap.min.css";
-import * as Icon from "react-bootstrap-icons";
-
-import FontePoppins from '../../components/FontePoppins';
-
 import invariante from '../../components/Pdf/Invariante.pdf';
 
 import Comentario from "../../components/Comentario";
@@ -12,6 +6,10 @@ import AddComentario from '../../components/AddComentario';
 import { getContentVotes, upvoteContent, downvoteContent, getConteudoComments } from "../../services/api";
 
 import { useState, useEffect } from 'react';
+
+import FontePoppins from "../../components/FontePoppins";
+
+import * as Icon from "react-bootstrap-icons";
 
 function ConteudoDisciplina(props) {
   window.scrollTo(0, 0); // Reinicia o scroll

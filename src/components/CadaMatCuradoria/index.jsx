@@ -2,8 +2,6 @@ import { useState } from 'react';
 
 import Swal from 'sweetalert2';
 
-import axios from 'axios';
-
 import { updateContent, recusarContent } from '../../services/api.js'
 
 import '../CadaMatCuradoria/style.css'
@@ -113,7 +111,7 @@ function CadaMatCuradoria (props) {
                 <div className="modal-content">
                   <div className="top" style={{ display: 'flex', justifyContent: 'space-between' }}>{props.descricao} <button onClick={closeModal3} className="fecharCuradoria">X</button></div>
                     <div style={{margin:'10px 20px 5px'}}> 
-                        <iframe src={props.pdf} height={ 600 } className="pdfConteudo"></iframe>
+                        <iframe src={props.pdf} height={ 570 } className="pdfConteudo"></iframe>
                     </div>
 
                     <h3 style={{color:'black', margin:'0px 10px'}}>Avalie o Conteúdo ⬇ <h6 style={{marginTop:'10px'}}>Essa avaliação consiste em 3 critérios:</h6></h3>

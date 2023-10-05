@@ -19,6 +19,8 @@ function AddComentario({ conteudoId }) {
     } catch (error) {
       console.error('Error creating comment:', error);
     }
+
+    window.location.reload();
   };
 
   return (

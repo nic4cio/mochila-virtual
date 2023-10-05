@@ -26,6 +26,10 @@ export const getContent = async () => {
   return api.get('/conteudos');
 };
 
+export const getUser = async () => {
+  return api.get('/users');
+};
+
 export const updateContent = async (id, content) => {
   const token = sessionStorage.getItem('access_token'); // Retrieve the token here
 
@@ -46,10 +50,41 @@ export const recusarContent = async (id, content) => {
   });
 };
 
-export const curadoriaUser = async (id, user) => {
+export const curadoriaUser = async (id, historico, matCurador) => {
   const token = sessionStorage.getItem('access_token'); // Retrieve the token here
 
-  return api.patch('/users/' + id, user, {
+  const solicitarCuradorData = {
+    historico: historico,
+    motivoCurador: matCurador,
+  };
+
+  return api.patch('/users/' + id, solicitarCuradorData, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};
+/*
+export const serCuradorUser = async (id, matCurador) => {
+  const token = sessionStorage.getItem('access_token'); // Retrieve the token here
+
+  return api.patch('/users/serCurador/' + id, matCurador, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};*/
+
+export const serCuradorUser = async (id, matCurador) => {
+  const token = sessionStorage.getItem('access_token'); // Recupere o token aqui
+
+  // Certifique-se de que 'matCurador' seja um array de strings
+  const matCuradorData = {
+    id: id,
+    matCurador: matCurador,
+  };
+
+  return api.patch('/users/serCurador/' + id, matCuradorData, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -118,3 +153,4 @@ export const getConteudoComments = async (contentId) => {
   const response = await api.get(`/comentarios/conteudo/${parseInt(contentId)}`);
   return response.data;
 };
+

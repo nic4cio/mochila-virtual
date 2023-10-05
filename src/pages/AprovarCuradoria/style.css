@@ -28,7 +28,7 @@
     border: none;
     display: inline-block;
     text-align: left;
-    min-width: 200px;
+    min-width: 220px;
     height:140px;
     background-color: #1F2A2F;
     color: #FFF;
@@ -41,7 +41,7 @@
     border: 2px solid #87E4FE;
 }
 
-.btn-aceitar, .btn-rejeitar {
+.btn-aceitar, .btn-rejeitar,  .btn-analisar {
     margin-top: 5px;
     background-color: #74FF92;
     border: none;
@@ -54,6 +54,14 @@
 .btn-rejeitar {
     margin-left: 5px;
     background-color: #FF7474;
+}
+
+.btn-analisar {
+    font-size: 14px;
+    width: 68px;
+    height: 30px;
+    margin-left: 5px;
+    background-color: #18c9e9;
 }
 
 .btn-aceitar:hover, .btn-rejeitar:hover {

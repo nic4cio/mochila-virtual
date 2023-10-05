@@ -3,7 +3,7 @@ import CadaDisciplina from "../../../components/CadaDisciplina/index.jsx"
 function Calculo3() {
 
     let cor = "titleCardbox-computacao-visual";
-    let materia = "Calculo 3";
+    let materia = "Cálculo 3";
     let publicacoes = "10";
     let professor = "Marcos Almeida";
     //let curadores = "";

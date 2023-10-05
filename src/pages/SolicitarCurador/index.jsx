@@ -50,7 +50,7 @@ const getUserData = async () => {
     const token = sessionStorage.getItem('access_token');
 
     try {
-      await curadoriaUser(userData.id, userData, token);
+      await curadoriaUser(userData.id, arquivoSelecionado ? URL.createObjectURL(arquivoSelecionado) : '', descricao, token);
     }catch (error) {
       console.error(error.response.data.message);
     }
@@ -63,6 +63,12 @@ const getUserData = async () => {
   const [periodoSelecionado, setPeriodoSelecionado] = useState("Período");
   const [disciplinasSelecionadasLocal, setDisciplinasSelecionadasLocal] = useState([]);
   const referenciaInputArquivo = useRef(null);
+
+  const [descricao, setDescricao] = useState("");
+
+  const handleDescricao = (event) => {
+    setDescricao(event.target.value);
+  };
 
   const lidarComMudancaDeArquivo = (e) => {
     const arquivo = e.target.files[0];
@@ -130,13 +136,13 @@ const getUserData = async () => {
         <div id="conteudo-esquerda">
           <div className="titulo-curadoria">Solicitar ser curador</div>
           <img src={foto} alt="Foto usuário" className='foto-usuario-solicitar' />
+          <div className="subtitulo-dados" style={{maxWidth:'430px', textAlign:"Center"}}>Você será curador em todas as matérias possíveis diante seu histórico!</div>
         </div>
 
         <div id="conteudo-direita">
           <form action="">
             <div className="titulo-dados">Olá, <span className="marrom">Vinícius</span>. Envie os dados abaixo:</div>
-            <div className="subtitulo-dados">Em qual(is) matéria(s) você deseja ser curador?</div>
-
+{/*
             <select value={cursoSelecionado} onChange={lidarComMudancaDeCurso}>
               {Object.keys(dadosCursos).map((curso) => (
                 <option key={curso} value={curso}>
@@ -174,7 +180,7 @@ const getUserData = async () => {
                 <br />
                 <br />
               </div>
-            )}
+            )}*/}
 
             <div>
               <label htmlFor="arquivo" className='subtitulo-dados'>Anexe seu histórico analítico:</label><br />
@@ -193,7 +199,7 @@ const getUserData = async () => {
             </div>
 
             <div className="subtitulo-dados">Escreva razões de porque você gostaria de ser curador</div>
-            <textarea className="text-area" name="comentario" rows="4" cols="25"></textarea><br />
+            <textarea className="text-area" name="comentario" rows="4" cols="25" value={descricao} onChange={handleDescricao}></textarea><br />
 
             <button className="enviar" onClick={lidarComAlertaEnviar}>Enviar</button>
           </form>

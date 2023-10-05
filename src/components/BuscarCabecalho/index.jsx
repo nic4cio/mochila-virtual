@@ -5,9 +5,9 @@ function BuscarCabecalho() {
     return (
         <div className="logoRegistros">
         <Link to={"/home"}><img alt="" src={logoImage}/></Link>
-            <form>
-              <input type="text" size="25" placeholder="Buscar materiais, disciplinas, ..."></input>
-            </form>
+            <Link to={"/conteudos-aprovados"}><form> 
+                <input type="text" size="25" placeholder="Buscar materiais, disciplinas, ..." />
+            </form></Link>
         </div>
     );
 }
