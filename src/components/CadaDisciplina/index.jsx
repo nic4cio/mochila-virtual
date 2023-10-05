@@ -94,22 +94,30 @@ const lidarComAlertaEnviar2 = () => {
 };
 
 const mostrarFormulario = () => {
-  document.getElementById('esconderFormulario2').style.display = 'none';
-  const elemento = document.getElementById('esconderFormulario');
-  if (elemento.style.display === 'block') {
-    elemento.style.display = 'none'; 
+  if (!isAuthenticated) {
+    alerta();
   } else {
-    elemento.style.display = 'block'; 
+    document.getElementById('esconderFormulario2').style.display = 'none';
+    const elemento = document.getElementById('esconderFormulario');
+    if (elemento.style.display === 'block') {
+      elemento.style.display = 'none'; 
+    } else {
+      elemento.style.display = 'block'; 
+    }
   }
 };
 
 const mostrarFormulario2 = () => {
-  document.getElementById('esconderFormulario').style.display = 'none';
-  const elemento = document.getElementById('esconderFormulario2');
-  if (elemento.style.display === 'block') {
-    elemento.style.display = 'none'; 
+  if (!isAuthenticated) {
+    alerta();
   } else {
-    elemento.style.display = 'block'; 
+    document.getElementById('esconderFormulario').style.display = 'none';
+    const elemento = document.getElementById('esconderFormulario2');
+    if (elemento.style.display === 'block') {
+      elemento.style.display = 'none'; 
+    } else {
+      elemento.style.display = 'block'; 
+    }
   }
 };
 

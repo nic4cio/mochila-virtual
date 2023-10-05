@@ -63,7 +63,7 @@ function Cadastrar() {
       });
       
     } catch (error) {
-      setErrorMessage('Error registering user'); // Handle error message display
+      setErrorMessage(error.response.data.message); // Handle error message display
       console.error('Error registering user:', error);
     }
   };

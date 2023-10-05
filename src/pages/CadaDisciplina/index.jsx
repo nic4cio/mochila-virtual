@@ -83,11 +83,15 @@ const lidarComAlertaEnviar = () => {
 };
 
 const mostrarFormulario = () => {
-  const elemento = document.getElementById('esconderFormulario');
-  if (elemento.style.display === 'block') {
-    elemento.style.display = 'none'; 
+  if (!isAuthenticated) {
+    alerta();
   } else {
-    elemento.style.display = 'block'; 
+    const elemento = document.getElementById('esconderFormulario');
+    if (elemento.style.display === 'block') {
+      elemento.style.display = 'none'; 
+    } else {
+      elemento.style.display = 'block'; 
+    }
   }
 };
 
