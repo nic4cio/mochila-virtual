@@ -27,7 +27,7 @@ import BlocoCadaDisciplina from "../BlocoCadaDisciplina";
 import { InputArquivo } from '../../pages/SubmeterConteudo/dadosCursos';
 import { createContent } from "../../services/api";
 
-import { getContent } from "../../services/api";
+import { getContent, getUser } from "../../services/api";
 
 function Disciplinas(props) {
   const current = new Date().toLocaleString();
@@ -52,14 +52,7 @@ function Disciplinas(props) {
     "AB 1",
     "AB 2",
     "Reavaliação",
-    "Final"
-  ];
-
-  let curadores = [
-    "@GabrielNicacio",
-    "@MuriloUrquiza",
-    "@ViniciusMaia",
-    "@ArthurSampaio"
+    "Final",
   ];
 
   const alerta = () => {
@@ -252,6 +245,39 @@ const [descricao, setDescricao] = useState('');
 
   let cont = 0;
 
+  const [banco2, setBanco2] = useState([]);
+
+      useEffect(() => {
+          const fetchData = async () => {
+          try {
+              const response = await getUser(); 
+              setBanco2(response.data); 
+          } catch (error) {
+              console.error('Error fetching data:', error);
+          }
+          };
+  
+          fetchData(); 
+      }, []);
+
+      let cont2 = 0;
+
+  const [valoresSelecionados, setValoresSelecionados] = useState([]);
+
+  const handleSelecionarAssunto = (event) => {
+    const valorSelecionado = event.target.value;
+    const isChecked = event.target.checked;
+
+    if (isChecked) {
+      // Adicionar valor selecionado ao array
+      setValoresSelecionados([...valoresSelecionados, valorSelecionado]);
+    } else {
+      // Remover valor selecionado do array
+      const novosValoresSelecionados = valoresSelecionados.filter((item) => item !== valorSelecionado);
+      setValoresSelecionados(novosValoresSelecionados);
+    }
+  };
+
   return (
     <div className="App imageRegistros">
       <FontePoppins/>
@@ -265,7 +291,7 @@ const [descricao, setDescricao] = useState('');
             <div className="descriptionArea">
             {
               banco.map((conteudoData, index) => (
-                (((props.materia == conteudoData.materia && conteudoData.status === 'APROVADO') && ++cont > 0)
+                (((props.materia == conteudoData.materia && conteudoData.status === 'APROVADO') && (valoresSelecionados == '' || valoresSelecionados.includes(conteudoData.assunto)) && ++cont > 0)
                 )
             ))}
               <h4>{cont} Publicações</h4>
@@ -276,34 +302,35 @@ const [descricao, setDescricao] = useState('');
               <hr/>
 
               <h4>Curadores:</h4>
-              {
-                curadores.map((curador) => (
-                  <h6 className="curadorDisciplinas">{curador}</h6>
-                ))
+              {        
+                banco2.map((conteudoData, index) => (conteudoData.role == 'CURADOR') && (conteudoData.matCurador.includes(props.materia)) && ++cont2 > 0 &&
+                  <h6 key={index} className="curadorDisciplinas">@{conteudoData.firstName}</h6>
+                )
               }
+              {
+                  (cont2 == 0 && <span style={{marginLeft: '30px'}}>Sem curador.</span>)
+                }
               <hr/>
 
               <h4>Buscar assunto:</h4>
-              {
-                props.assuntos.map((assunto) => (
-                  <Stack className="filterArea">
-                    <Form.Check label={assunto} />
-                  </Stack>
-                ))
-              }
+              {props.assuntos.map((assunto, index) => (
+                <Stack key={index} className="filterArea">
+                <Form.Check label={assunto} value={assunto} checked={valoresSelecionados.includes(assunto)} onChange={handleSelecionarAssunto}/>
+              </Stack>
+              ))}
               <Stack className="filterArea">
-                <Form.Check label="Outros"/>
+                <Form.Check label="Outros" value="Outros" checked={valoresSelecionados.includes("Outros")} onChange={handleSelecionarAssunto}/>
               </Stack>
               <hr/>
 
               <h4>Buscar listas:</h4>
-              {
-                listas.map((lista) => (
-                  <Stack className="filterArea">
-                    <Form.Check label={lista} />
-                  </Stack>
-                ))
-              }
+              <div>
+                {listas.map((assunto, index) => (
+                  <Stack key={index} className="filterArea">
+                  <Form.Check label={assunto} value={assunto} checked={valoresSelecionados.includes(assunto)} onChange={handleSelecionarAssunto}/>
+                </Stack>
+                ))}
+              </div>
             </div>
           </Col>
           <Col></Col>
@@ -418,7 +445,7 @@ const [descricao, setDescricao] = useState('');
             </Stack>
             {
               banco.map((conteudoData, index) => (
-                (((props.materia == conteudoData.materia && conteudoData.status === 'APROVADO')) &&
+                (((props.materia == conteudoData.materia && conteudoData.status === 'APROVADO' && (valoresSelecionados == '' || valoresSelecionados.includes(conteudoData.assunto)))) &&
                 <div className="contentArea" key={index}>
                   <BlocoCadaDisciplina id={conteudoData.id} titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
                 </div>)

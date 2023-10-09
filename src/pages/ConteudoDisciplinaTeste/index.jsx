@@ -37,12 +37,15 @@ function ConteudoDisciplina(props) {
     fetchData(); // Call the async function to fetch data when the component mounts
   }, [votes]);
 
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleUpvote = async () => {
     try {
       const updatedContent = await upvoteContent(props.id);
       setVotes(updatedContent.votes); // Atualize o número de votos após a resposta da API
     } catch (error) {
-      console.error(error)
+      console.error(error);
+      setErrorMessage(error.response.data.message);
     }
   };
 
@@ -51,7 +54,8 @@ function ConteudoDisciplina(props) {
       const updatedContent = await downvoteContent(props.id);
       setVotes(updatedContent.votes); // Atualize o número de votos após a resposta da API
     } catch (error) {
-      console.error(error)
+      console.error(error);
+      setErrorMessage(error.response.data.message);;
     }
   };
 
@@ -69,6 +73,8 @@ function ConteudoDisciplina(props) {
     fetchComments();
   }, [props.id]);
 
+  const isAuthenticated = sessionStorage.getItem('access_token') !== null;
+
   return (
     <div className="imageRegistros">
       <FontePoppins />
@@ -79,6 +85,8 @@ function ConteudoDisciplina(props) {
           <iframe src={props.pdf} height={600} className="pdfConteudo"></iframe>
           <a href={props.pdf} target="_blank" style={{ textDecoration: 'none', color: '#78D6CF', fontSize: '20px' }} rel="noreferrer">Acesse o LINK do Conteúdo</a>
           <hr />
+
+        {errorMessage && <p className="alert alert-danger error-message" >{errorMessage}</p>}
         </div>
         <div className="abaxioPDFConteudo">
           <span>
@@ -90,7 +98,6 @@ function ConteudoDisciplina(props) {
           <button className="linkConteudo" href="">Download</button>
           <button className="linkConteudoDenunciar" href="">Denunciar</button>
         </div>
-
         {/* Vai ser mostrado no alerta */}
         {mostrarAlerta && (
           <div className="alertaAreaTransferencia">
@@ -98,7 +105,7 @@ function ConteudoDisciplina(props) {
           </div>
         )}
 
-        <AddComentario conteudoId={props.id} />
+        {isAuthenticated && <AddComentario conteudoId={props.id} />}
         {comments.map((comment, index) => (
           <Comentario key={index} comentario={comment.texto} />
         ))}
