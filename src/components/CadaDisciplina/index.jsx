@@ -64,26 +64,43 @@ function Disciplinas(props) {
     });
 };
 
-const lidarComAlertaEnviar = () => {
-  Swal.fire({
+const lidarComAlertaEnviar = (erro) => {
+  if(erro == 1){
+    Swal.fire({
+      title: 'Falha!',
+      icon: 'error', // Ícone personalizado (warning, success, error, etc.)
+      confirmButtonText: 'OK',
+  });
+  } else{
+    Swal.fire({
       title: 'Conteúdo Enviado!',
       text: 'Quando um curador aprovar ele será publicado.',
       icon: 'success', // Ícone personalizado (warning, success, error, etc.)
       confirmButtonText: 'OK',
-  });
+    });
 
-  mostrarFormulario();
+    mostrarFormulario();
+  }
+  
 };
 
-const lidarComAlertaEnviar2 = () => {
-  Swal.fire({
+const lidarComAlertaEnviar2 = (erro) => {
+  if(erro == 1){
+    Swal.fire({
+      title: 'Falha!',
+      icon: 'error', // Ícone personalizado (warning, success, error, etc.)
+      confirmButtonText: 'OK',
+  });
+  } else{
+    Swal.fire({
       title: 'Conteúdo Enviado!',
       text: 'Quando um curador aprovar ele será publicado.',
       icon: 'success', // Ícone personalizado (warning, success, error, etc.)
       confirmButtonText: 'OK',
-  });
+    });
 
-  mostrarFormulario2();
+    mostrarFormulario2();
+  }
 };
 
 const mostrarFormulario = () => {
@@ -154,20 +171,23 @@ const [descricao2, setDescricao2] = useState('');
 
     try {
       await createContent(conteudoData, token);
+      setErrorMessage('');
+      lidarComAlertaEnviar2(0);
     }catch (error) {
       console.error(error.response.data.message);
-      setErrorMessage(error.response.data.message)
+      setErrorMessage(error.response.data.message);
+      lidarComAlertaEnviar2(1);
     }
 
     setBanco(prevBanco => {
       return [conteudoData, ...prevBanco];
     });
 
-    console.log(conteudoData);
     setTitle2('');
     setAssunto2('');
     setDescricao2('');
     setArquivoSelecionado2('');
+
   }
 
 const [errorMessage, setErrorMessage] = useState('');
@@ -217,20 +237,25 @@ const [descricao, setDescricao] = useState('');
 
     try {
       await createContent(conteudoData, token);
+      setErrorMessage('');
+
+      lidarComAlertaEnviar(0);
     }catch (error) {
       console.error(error.response.data.message);
       setErrorMessage(error.response.data.message)
+
+      lidarComAlertaEnviar(1);
     }
 
     setBanco(prevBanco => {
       return [conteudoData, ...prevBanco];
     });
 
-    console.log(conteudoData);
     setTitle('');
     setAssunto('');
     setDescricao('');
-    setArquivoSelecionado(null);
+    setArquivoSelecionado('');
+    
   }
 
   const isAuthenticated = sessionStorage.getItem('access_token') !== null;
@@ -335,6 +360,7 @@ const [descricao, setDescricao] = useState('');
           </Col>
           <Col></Col>
         </Row>
+        
         <Stack>
             <Stack direction="horizontal" gap={1} className="shareContent">
               <Button variant="light" onClick={mostrarFormulario}>
@@ -346,6 +372,7 @@ const [descricao, setDescricao] = useState('');
                 <Icon.Share color="green" />
               </Button>
             </Stack>
+            {errorMessage && <p className="alert alert-danger error-message" >{"Preencha todos os campos!"}</p>}
             <Stack direction="horizontal" id="esconderFormulario">
                 <div className="titulo-dados marrom">
                   Submeter PDF!
@@ -396,7 +423,7 @@ const [descricao, setDescricao] = useState('');
                   <div className="subtitulo-dados">4. Escreva uma breve descrição:</div>
                   <textarea className="text-area" value={descricao} onChange={descricaoHandler} name="comentario" rows="4" cols="25"></textarea><br />
 
-                  <button type='submit' className="enviar" onClick={lidarComAlertaEnviar}>Enviar</button>
+                  <button type='submit' className="enviar">Enviar</button>
 
                 </form>
             </Stack>
@@ -439,7 +466,7 @@ const [descricao, setDescricao] = useState('');
                   <div className="subtitulo-dados">4. Escreva uma breve descrição:</div>
                   <textarea className="text-area" value={descricao2} onChange={descricaoHandler2} name="comentario" rows="4" cols="25"></textarea><br />
 
-                  <button type='submit' className="enviar" onClick={lidarComAlertaEnviar2}>Enviar</button>
+                  <button type='submit' className="enviar">Enviar</button>
 
                 </form>
             </Stack>
