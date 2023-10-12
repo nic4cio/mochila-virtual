@@ -474,7 +474,7 @@ const [descricao, setDescricao] = useState('');
               banco.map((conteudoData, index) => (
                 (((props.materia == conteudoData.materia && conteudoData.status === 'APROVADO' && (valoresSelecionados == '' || valoresSelecionados.includes(conteudoData.assunto)))) &&
                 <div className="contentArea" key={index}>
-                  <BlocoCadaDisciplina id={conteudoData.id} titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao}/>
+                  <BlocoCadaDisciplina userId={conteudoData.userId} id={conteudoData.id} titulo={conteudoData.titulo} pdf={conteudoData.pdf} assunto={conteudoData.assunto} descricao={conteudoData.descricao} createdAt={conteudoData.createdAt}/>
                 </div>)
             ))}
             {

@@ -14,14 +14,60 @@ import { useState, useEffect } from 'react';
 
 import ConteudoDisciplinaTeste from "../../pages/ConteudoDisciplinaTeste";
 
-import { getContentVotes } from "../../services/api";
+import { getContentVotes, getUser } from "../../services/api";
 
 function BlocoCadaDisciplina(props) {
     const [votes, setVotes] = useState({ upvotes: 0, downvotes: 0 });
 
-    const current = new Date().toLocaleString();
+    const [banco2, setBanco2] = useState([]);
 
-    const user = "MuriloUrquiza";
+    useEffect(() => {
+        const fetchData = async () => {
+        try {
+            const response = await getUser(); 
+            setBanco2(response.data); 
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+        };
+
+        fetchData(); 
+    }, []);
+
+    const date = props.createdAt;
+    var index = 0;
+    var indexDay = 8;
+    var indexMonth = 5;
+    var indexYear = 0;
+    const createdAtDay = [];
+    const createdAtMonth = [];
+    const createdAtYear = [];
+
+    while(indexDay <= 9){
+      createdAtDay[index] = date[indexDay];
+      index++;
+      indexDay++;
+    }
+
+    index = 0;
+
+    while(indexMonth <= 6){
+      createdAtMonth[index] = date[indexMonth];
+      index++;
+      indexMonth++;
+    }
+
+    index = 0;
+
+    while(indexYear <= 3){
+      createdAtYear[index] = date[indexYear];
+      index++;
+      indexYear++;
+    }
+
+    // const current = new Date().toLocaleString();
+
+    // const user = "MuriloUrquiza";
 
     const [isModalOpen, setModalOpen] = useState(false);
 
@@ -53,7 +99,11 @@ function BlocoCadaDisciplina(props) {
               <Row>
                 <Col style={{ display: "flex", justifyContent: "start" }}>
                   <Icon.Person style={{ margin: "5px" }} />
-                  <FormLabel>{user}</FormLabel>
+                  {        
+                    banco2.map((conteudoData, index) => conteudoData.id == props.userId &&
+                      <FormLabel key={index} conteudoData = {conteudoData}>{conteudoData.firstName}</FormLabel>
+                    )
+                  }
                 </Col>
                 <Col style={{ display: "flex", justifyContent: "end" }}>
                   <Icon.ArrowUp style={{ margin: "2px" }} />{votes.upvotes}
@@ -62,7 +112,7 @@ function BlocoCadaDisciplina(props) {
               </Row>
               <Stack>
                 <h2 style={{ wordWrap: 'break-word' }}>{props.titulo}</h2>
-                <h6>{current}</h6>
+                <h6>{createdAtDay}/{createdAtMonth}/{createdAtYear}</h6>
               </Stack>
               <Row style={{marginTop:"40px"}}>
                 <Col>
@@ -78,7 +128,7 @@ function BlocoCadaDisciplina(props) {
                     <div className="modal-overlay-2">
                       <div className="modal-content-2">
                         <button onClick={closeModal} className="btn-recusar-modal-2">X</button>
-                        <ConteudoDisciplinaTeste id={props.id} pdf={props.pdf} descricao={props.descricao} titulo={props.titulo}/>
+                        <ConteudoDisciplinaTeste user={props.user} id={props.id} pdf={props.pdf} descricao={props.descricao} titulo={props.titulo}/>
                       </div>
                     </div>
                   )}

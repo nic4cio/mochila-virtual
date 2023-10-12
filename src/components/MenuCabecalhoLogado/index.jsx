@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import usuarioFoto from '../../assets/homem-generico.png'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 
 // Esses props não tão funcionando ainda ;-;
 function MenuCabecalhoLogado(props) {
@@ -30,6 +31,10 @@ function MenuCabecalhoLogado(props) {
       console.error('Error fetching user data:', error);
     }
   };
+
+  const handleLogout = () => {
+    sessionStorage.clear();
+  }
   
     // Call the function to retrieve user data when the component mounts
     useEffect(() => {
@@ -52,6 +57,7 @@ function MenuCabecalhoLogado(props) {
             <span><Link to="/usuario-logado"><span className={props.suaMochila}>Sua Mochila</span></Link></span>
             <span><img src={usuarioFoto} alt="foto-usuario" style={{width: "50px", borderRadius: "50%"}} /></span>
             <span style={{color: "#BF7A47", marginLeft: "10px"}}>Olá, {userData.firstName /* Display user's firstName */}!</span>
+            <span><Button variant="outline-light"><Link to="/" onClick={handleLogout}>Sair</Link></Button></span>
         </div>
     );
 }

@@ -107,7 +107,7 @@ function ConteudoDisciplina(props) {
 
         {isAuthenticated && <AddComentario conteudoId={props.id} />}
         {comments.map((comment, index) => (
-          <Comentario key={index} comentario={comment.texto} />
+          <Comentario key={index} userId={comment.userId} comentario={comment.texto} />
         ))}
         <div className="marginBottomConteudo"></div>
       </tbody>
