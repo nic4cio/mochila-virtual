@@ -12,6 +12,16 @@ export const loginUser = async (userData) => {
   return api.post('/auth/signin', userData);
 };
 
+export const editUser = async (id, userData) => {
+  const token = sessionStorage.getItem('access_token'); // Recupere o token aqui
+
+  return api.patch('/users/edit/' + id, userData, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
 export const createContent = async (content) => {
   const token = sessionStorage.getItem('access_token'); // Retrieve the token here
 

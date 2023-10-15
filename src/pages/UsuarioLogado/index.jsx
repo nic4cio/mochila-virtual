@@ -6,8 +6,11 @@ import estrela from "../../assets/estrela.png";
 import mochila from "../../assets/mochila-azul-preenchida.png";
 import "./style.css";
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 import { Link } from 'react-router-dom';
+
+import { editUser } from '../../services/api';
 
 const UsuarioLogado = () => {
 
@@ -36,6 +39,40 @@ const getUserData = async () => {
     console.error('Error fetching user data:', error);
   }
 };
+
+
+const [firstName, setFirstName] = useState(userData.firstName)
+const [password, setPassword] = useState(userData.password)
+
+const handleEdit = async (e) => {
+  e.preventDefault();
+
+  const userContent = {
+    firstName: firstName,
+    password: password,
+  }
+
+  try {
+    await editUser(userData.id, userContent);
+    Swal.fire({
+      title: 'Sucesso!',
+      text: 'Usuário alterado com sucesso!',
+      icon: 'success',
+      confirmButtonText: 'OK',
+      timer: 3000,
+      timerProgressBar: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.reload(true)
+        setFirstName('')
+        setPassword('')
+      }
+    });
+  }
+  catch (error){
+    console.error(error);
+  }
+}
 
   // Call the function to retrieve user data when the component mounts
   useEffect(() => {
@@ -127,15 +164,13 @@ const getUserData = async () => {
 
                   <img src={foto} alt="Foto usuário" className='foto-usuario-modal'/>
                   
-                  <div className='inputs-posicao'>
-                    <input type="text" placeholder="  Nome" className="input-modal"/>
-                    <input type="email" placeholder="  E-mail" className="input-modal"/>
-                    <input type="password" placeholder="  Senha" className="input-modal"/>
+                  <form className='inputs-posicao' onSubmit={handleEdit}>
+                    <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="  Nome" className="input-modal"/>
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="  Senha" className="input-modal"/>
 
                     <div><button onClick={closeModal} className="btn-cancelar">Cancelar</button></div>
-                    <div><button onClick={closeModal} className="btn-salvar">Salvar</button></div>
-                  </div>
-                  
+                    <div><button type="submit" className="btn-salvar">Salvar</button></div>
+                  </form>
                 </div>
               </div>
             )}
