@@ -8,21 +8,21 @@ function Pdi() {
     let professor = "Tiago Vieira";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Fundamentos de Processamento de Imagem",
+        "Pré-processamento de Imagem",
+        "Transformações Geométricas",
+        "Segmentação de Imagem",
+        "Extração de Características",
+        "Morfologia Matemática",
+        "Filtros de Imagem",
+        "Correspondência de Imagens",
+        "Transformada de Fourier e Espacial",
+        "Detecção de Borda",
+        "Reconhecimento de Padrões em Imagens",
+        "Processamento de Imagem em Cores",
+        "Processamento de Imagem em Tempo Real",
+        "Visão Computacional",
+        "Aplicações de Processamento de Imagem"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

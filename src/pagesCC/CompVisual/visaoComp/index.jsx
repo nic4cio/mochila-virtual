@@ -8,21 +8,21 @@ function VisaoComputacional() {
     let professor = "Tiago Vieira";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Fundamentos de Processamento de Imagem",
+        "Pré-processamento de Imagem",
+        "Detecção de Borda",
+        "Segmentação de Imagem",
+        "Extração de Características",
+        "Correspondência de Características",
+        "Transformação Geométrica",
+        "Rastreamento de Objetos",
+        "Visão Estéreo e Disparidade",
+        "Classificação de Objetos",
+        "Detecção de Objetos",
+        "Redes Neurais Convolutivas (CNNs)",
+        "Visão Computacional 3D",
+        "Aplicações de Visão Computacional",
+        "Desafios Éticos em Visão Computacional"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll

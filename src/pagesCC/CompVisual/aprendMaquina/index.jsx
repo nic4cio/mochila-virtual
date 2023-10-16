@@ -8,21 +8,21 @@ function AprendMaquina() {
     let professor = "Aydano Machado";
     //let curadores = "";
     let assuntos = [
-        "Limites e Continuidade",
-        "Derivadas e Regras de derivação",
-        "Aplicações de Derivada",
-        "Teorema do Valor médio e Rolle",
-        "Regra de L'Hôpital",
-        "Aplicações",
-        "Definição da Integral Definida",
-        "Propriedades da Integral Definida",
-        "Teorema Fundamental do Cálculo",
-        "Regras de Integração",
-        "Aplicações da Integral Definida",
-        "Cálculo de Áreas e Volumes",
-        "Integral Imprópria",
-        "Séries e Sequências",
-        "Equações Diferenciais"
+        "Introdução ao Aprendizado de Máquina",
+        "Pré-processamento de Dados",
+        "Aprendizado Supervisionado",
+        "Algoritmos de Classificação",
+        "Algoritmos de Regressão",
+        "Aprendizado Não Supervisionado",
+        "Algoritmos de Agrupamento",
+        "Redução de Dimensionalidade",
+        "Aprendizado por Reforço",
+        "Redes Neurais Artificiais",
+        "Frameworks de Aprendizado de Máquina",
+        "Avaliação de Modelos",
+        "Seleção de Recursos",
+        "Ética e Viés em Aprendizado de Máquina",
+        "Aplicações do Aprendizado de Máquina"
     ];
 
     window.scrollTo(0, 0); //Reinicia o scroll
