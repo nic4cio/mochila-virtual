@@ -151,7 +151,7 @@ const handleEdit = async (e) => {
                   <div className="scroll-container">
                       <Link to={"/conteudos-aprovados"}><button className="box-mochila">CONTEÚDOS APROVADOS</button></Link>
                       <Link to={"/submeter-conteudo"}><button className="box-mochila">SUBMETER CONTEÚDOS</button></Link>
-                      {userData.role == 'CURADOR' && <Link to={"/aprovar-curadoria"}><button className="box-mochila">CURADORIA</button></Link>}
+                      {(userData.role == 'CURADOR' || userData.email == 'mugr@ic.ufal.br') && <Link to={"/aprovar-curadoria"}><button className="box-mochila">CURADORIA</button></Link>}
                   </div>
 
             </div>
