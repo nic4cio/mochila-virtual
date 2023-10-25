@@ -19,8 +19,6 @@ import { getContent } from "../../services/api";
 import logoImage from '../../assets/mochila-azul-verde.png';
 
 function Disciplinas() {
-  const current = new Date().toLocaleString();
-
   const [banco, setBanco] = useState([]);
   const [input, setInput] = useState([]);
 

@@ -1,5 +1,3 @@
-import invariante from '../../components/Pdf/Invariante.pdf';
-
 import Comentario from "../../components/Comentario";
 import AddComentario from '../../components/AddComentario';
 
@@ -55,7 +53,7 @@ function ConteudoDisciplina(props) {
       setVotes(updatedContent.votes); // Atualize o número de votos após a resposta da API
     } catch (error) {
       console.error(error);
-      setErrorMessage(error.response.data.message);;
+      setErrorMessage(error.response.data.message);
     }
   };
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import FontePoppins from '../../components/FontePoppins';
 import CabecalhoLogado from "../../components/CabecalhoLogado";
 import foto from "../../assets/homem-generico.png";

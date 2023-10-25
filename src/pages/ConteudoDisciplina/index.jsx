@@ -5,8 +5,6 @@ import * as Icon from "react-bootstrap-icons";
 import FontePoppins from '../../components/FontePoppins';
 import "./style.css";
 
-import invariante from '../../components/Pdf/Invariante.pdf';
-
 import Comentario from "../../components/Comentario";
 import AddComentario from '../../components/AddComentario';
 

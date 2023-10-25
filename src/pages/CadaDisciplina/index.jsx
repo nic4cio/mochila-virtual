@@ -1,5 +1,5 @@
 import Logo from "../../assets/pdslogo.svg";
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Verificado from "../../assets/Verificado.svg"
 import "../../pages/Estilo/Disciplinas.css";
 import "bootstrap/dist/css/bootstrap.min.css";
