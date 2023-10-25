@@ -34,37 +34,6 @@ function BlocoCadaDisciplina(props) {
         fetchData(); 
     }, []);
 
-    const date = props.createdAt;
-    var index = 0;
-    var indexDay = 8;
-    var indexMonth = 5;
-    var indexYear = 0;
-    const createdAtDay = [];
-    const createdAtMonth = [];
-    const createdAtYear = [];
-
-    while(indexDay <= 9){
-      createdAtDay[index] = date[indexDay];
-      index++;
-      indexDay++;
-    }
-
-    index = 0;
-
-    while(indexMonth <= 6){
-      createdAtMonth[index] = date[indexMonth];
-      index++;
-      indexMonth++;
-    }
-
-    index = 0;
-
-    while(indexYear <= 3){
-      createdAtYear[index] = date[indexYear];
-      index++;
-      indexYear++;
-    }
-
     // const current = new Date().toLocaleString();
 
     // const user = "MuriloUrquiza";
@@ -112,7 +81,6 @@ function BlocoCadaDisciplina(props) {
               </Row>
               <Stack>
                 <h2 style={{ wordWrap: 'break-word' }}>{props.titulo}</h2>
-                <h6>{createdAtDay}/{createdAtMonth}/{createdAtYear}</h6>
               </Stack>
               <Row style={{marginTop:"40px"}}>
                 <Col>
