@@ -11,6 +11,8 @@ import { dadosCursos, corPorCursoPeriodo, OpcaoDisciplina, InputArquivo } from '
 
 import { curadoriaUser } from '../../services/api';
 
+import Swal from 'sweetalert2';
+
 import axios from 'axios';
 
 const SolicitarCurador = () => {
@@ -47,6 +49,8 @@ const getUserData = async () => {
   window.scrollTo(0, 0); // Reinicia o scroll
 
   const lidarComAlertaEnviar = async () => {
+    event.preventDefault();
+
     const token = sessionStorage.getItem('access_token');
 
     try {
@@ -55,7 +59,11 @@ const getUserData = async () => {
       console.error(error.response.data.message);
     }
 
-    alert("Formulário enviado!");
+    Swal.fire({
+      title: 'Enviado para análise!',
+      icon: 'success', // Ícone personalizado (warning, success, error, etc.)
+      confirmButtonText: 'OK',
+    });
   };
 
   const [arquivoSelecionado, setArquivoSelecionado] = useState(null);
@@ -140,47 +148,8 @@ const getUserData = async () => {
         </div>
 
         <div id="conteudo-direita">
-          <form action="">
-            <div className="titulo-dados">Olá, <span className="marrom">Vinícius</span>. Envie os dados abaixo:</div>
-{/*
-            <select value={cursoSelecionado} onChange={lidarComMudancaDeCurso}>
-              {Object.keys(dadosCursos).map((curso) => (
-                <option key={curso} value={curso}>
-                  {curso}
-                </option>
-              ))}
-            </select>
-            <select value={periodoSelecionado} onChange={lidarComMudancaDePeriodo}>
-              {dadosCursos[cursoSelecionado].periodos.map((periodo) => (
-                <option key={periodo} value={periodo}>
-                  {periodo}
-                </option>
-              ))}
-            </select>
-
-            {periodoSelecionado !== "Período" && (
-              <div>
-                <br />
-                <div className="subject-container">
-                  {dadosCursos[cursoSelecionado].disciplinas[periodoSelecionado].map((disciplina) => (
-                    <OpcaoDisciplina
-                      key={disciplina}
-                      value={disciplina}
-                      curso={cursoSelecionado}
-                      periodo={periodoSelecionado}
-                      selecionado={disciplinasSelecionadasLocal.some((item) =>
-                        item.curso === cursoSelecionado && item.periodo === periodoSelecionado && item.disciplina === disciplina
-                      )}
-                      onClick={() => lidarComCliqueNaDisciplina(cursoSelecionado, periodoSelecionado, disciplina)}
-                    >
-                      {disciplina}
-                    </OpcaoDisciplina>
-                  ))}
-                </div>
-                <br />
-                <br />
-              </div>
-            )}*/}
+          <form onSubmit={lidarComAlertaEnviar}>
+            <div className="titulo-dados">Olá. Envie os dados abaixo:</div>
 
             <div>
               <label htmlFor="arquivo" className='subtitulo-dados'>Anexe seu histórico analítico:</label><br />
@@ -201,7 +170,7 @@ const getUserData = async () => {
             <div className="subtitulo-dados">Escreva razões de porque você gostaria de ser curador</div>
             <textarea className="text-area" name="comentario" rows="4" cols="25" value={descricao} onChange={handleDescricao}></textarea><br />
 
-            <button className="enviar" onClick={lidarComAlertaEnviar}>Enviar</button>
+            <button type='submit' className="enviar">Enviar</button>
           </form>
         </div>
       </div>
